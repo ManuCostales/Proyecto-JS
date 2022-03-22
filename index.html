@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/users.js" defer></script>
+    <script src="./js/projects.js" defer></script>
+    <script src="./js/expense.js" defer></script>
+    <script src="js/sign-in.js" ></script>
+    <script src="./js/dashboard.js" defer></script>
+    <script src="./js/log-in.js" defer></script>
+    <script src="./js/new-project.js" defer></script>
+    <title>Proyecto JS</title>
+</head>
+<body onload= "init()">
+
+    <!-- HEADER -->
+
+    <header id="header" class="header">
+
+        <!-- UPPER NAV -->
+
+        <nav id="upperNav" class="upperNav">
+            <h2 id ="pageTitle" class="upperNav__h2"><span class="s">S</span><span class="pace">pace</span><span class="t">T</span><span class="rack">rack</span><span class="it">IT</span></h2>
+            <ul id="upperNav__ul" class="upperNav__ul">
+                <li class="upperNav__ul--search">
+                    <p>SEARCH</p>
+                    <input type="text">
+                </li>
+                <li class="upperNav__ul--notifications">
+                    <p>NOTIFICATIONS</p>
+                    <img src="./img/notifications.svg" alt="Notifications">
+                </li>
+                <li class="upperNav__ul--user">
+                    <p id="nav-current-user">USER</p>
+                    <button id="log-off" class="log__off">
+                        <img src="./img/user_nav.svg" alt="User">
+                    </button>
+                </li>
+                <li class="upperNav__ul--colors">
+                    <div class="upperNav__ul--buttons">
+                        <div class="lp"></div><div class="bl"></div><div class="lg"></div><div class="dp"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- SIDE NAV -->
+
+        <nav id="sideNav" class="sideNav">
+            <ul id="sideNav__ul" class="sideNav__ul">
+                <li class="sideNav__ul--li sideNav__ul--dashboard current">
+                    <img src="./img/sidenav_dashboard.svg" alt="Dashboard">
+                    <a href="./index.html">Dashboard</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--projects">
+                    <img src="./img/sidenav_projects.svg" alt="Projects">
+                    <a href="./projects.html">Projects</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--teams">
+                    <img src="./img/sidenav_teams.svg" alt="Teams">
+                    <a href="">Teams</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--tickets">
+                    <img src="./img/sidenav_tickets.svg" alt="Tickets">
+                    <a href="">Tickets</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--history">
+                    <img src="./img/sidenav_history.svg" alt="History">
+                    <a href="">History</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--calendar">
+                    <img src="./img/sidenav_calendar.svg" alt="Calendar">
+                    <a href="">Calendar</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--user">
+                    <img src="./img/sidenav_user.svg" alt="User">
+                    <a href="">User</a>
+                </li>
+            </ul>
+
+            <img src="./img/logo_sidenav.svg" alt="SpaceTrackIT" id="sideNav__footer" class="sideNav__footer">
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main id="main" class="main">
+        
+        <!-- SECTION INFO -->
+
+        <section id="section__info" class="section__info">
+
+            <h1 id="sectionTitle" class="sectionTitle">DASHBOARD</h1>           
+
+            <div id="section__info--div" class="section__info--div">
+                <p id="showDate__text"></p>
+            </div>
+
+        </section>
+
+        <!-- DASHBOARD BOARDS -->
+
+        <section id="boards" class="projectTeams__boards">
+
+            <!-- PROJECTS BOARD -->
+
+            <div class="projects" id="projects">
+
+                <div class="header">
+                    <div class="title">
+                        <img src="./img/board_project_title.svg" alt="">
+                        <h3>Projects</h3>
+                    </div>
+                    <a href="">Go to</a>
+                </div>
+        
+                <div class="gradient--purple separator__big--purpleOrange"></div>
+        
+                <div class="table" id="projectsDashboard">
+        
+                    <div class="table__header">
+        
+                        <div class="cell">PROJECT</div>
+                        <div class="cell project__host--title">HOST</div>
+                        <div class="cell project__creator--title">CREATOR</div>
+                        <div class="cell project__date--title">DATE</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+        
+                    </div>
+        
+                    <div class="row">
+        
+                        <div class="cell project__title" data-title="project">E-Commerce</div>
+                        <div class="cell project__host" data-title="host">Apple</div>
+                        <div class="cell project__creator" data-title="creator">David Leif</div>
+                        <div class="cell project__date" data-title="date">03/21</div>
+                        <div class="cell" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="cell" data-title="view"><button class="btnView">View</button></div>
+        
+                    </div>
+        
+                    <div class="row">
+        
+                        <div class="cell project__title" data-title="project">DW-Page Burlock Strine Systems</div>
+                        <div class="cell project__host" data-title="host">Microsoft Experience</div>
+                        <div class="cell project__creator" data-title="creator">Adrian Last</div>
+                        <div class="cell project__date" data-title="date">06/20</div>
+                        <div class="cell" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="cell" data-title="view"><button class="btnView">View</button></div>
+        
+                    </div>
+        
+                </div>
+        
+                <div class="more">
+                    <button class="btnMore">...See More</button>
+                </div>
+        
+        
+                <div class="footer">
+                    <div class="gradient--purple separator__small--purpleOrange"></div>
+                    <div class="trueFooter">
+                        <div class="active">
+                            <p>ACTIVE PROJECTS: 6</p>
+                        </div>
+            
+                        <button class="btnNewProject" id="btnNewProject"><a href="./projects.html">New Project</a></button>
+                    </div>
+                </div>
+        
+            </div>
+
+            <!-- TEAMS BOARD -->
+
+            <div class="projects teams" id="teams">
+
+                <div class="header">
+                    <div class="title">
+                        <img src="./img/board_team_title.svg" alt="">
+                        <h3>Teams</h3>
+                    </div>
+                    <a href="">Go to</a>
+                </div>
+        
+                <div class="gradient--purple separator__big--bluePurple"></div>
+        
+                <div class="table">
+        
+                    <div class="table__header">
+        
+                        <div class="cell">TEAM</div>
+                        <div class="cell team__project--title">PROJECT</div>
+                        <div class="cell team__members--title">MEMBERS</div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+        
+                    </div>
+        
+                    <div class="row">
+        
+                        <div class="cell team__title" data-title="team">Developers</div>
+                        <div class="cell team__project" data-title="team_project">E-Commerce</div>
+                        <div class="cell team__members" data-title="members">6</div>
+                        <div class="cell" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="cell" data-title="view"><button class="btnView">View</button></div>
+        
+                    </div>
+        
+                    <div class="row">
+        
+                        <div class="cell team__title" data-title="team">UI Designers</div>
+                        <div class="cell team__project" data-title="team_project">DW-Page Burlock Strine Systems</div>
+                        <div class="cell team__members" data-title="members">5</div>
+                        <div class="cell" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="cell" data-title="view"><button class="btnView">View</button></div>
+        
+                    </div>
+        
+                </div>
+        
+                <div class="more">
+                    <button class="btnMore">...See More</button>
+                </div>
+        
+        
+                <div class="footer">
+                    <div class="gradient--purple separator__small--bluePurple"></div>
+                    <div class="trueFooter">
+                        <div class="active">
+                            <p>ACTIVE TEAMS: 6</p>
+                        </div>
+            
+                        <button class="btnNewProject" id="btnNewProject">New Team</button>
+                    </div>
+                </div>
+        
+            </div>
+            
+        </section>
+
+        <!-- ISSUES/TICKETS BOARD: -->
+
+        <section id="issuesBoard" class="issuesBoard">
+
+
+            <div class="issues" id="issues">
+
+                <div class="header">
+                    <div class="title">
+                        <img src="./img/board_issues_title.svg" alt="">
+                        <h3>Tickets</h3>
+                    </div>
+                    <a href="">Go to</a>
+                </div>
+        
+                <div class="gradient--purple separator__big--lbYellow"></div>
+
+                <!-- ISSUES GRAPHIC BOARD -->
+                
+                <div id="issuesGraphic__board" class="issues__graphic--board">
+
+                    <!-- ISSUES INFO -->
+
+                    <div id="issuesGraphic__info" class="issuesGraphic__info">
+                        <h4>STATISTICS</h4>
+                        <div id="showIssues" class="issuesGraphic__show dropdown">
+                            <p>SHOW:</p>
+                            <button class="dropbtn">▼</button>
+                            <ul id="issuesDropdown" class="dropdown-content">
+                                <li>By Type</li>
+                                <li>By Date</li>
+                                <li>By Priority</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ISSUES GRAPHICS -->
+
+                    <div id="issuesGraphics" class="issues__graphics">
+
+                        <!-- ISSUES GRAPHIC ONE -->
+
+                        <div id="graphicOne" class="graphic--body graphic__one">
+                            <h6 id="graphicOne__title" class="graphic--title graphic__one--title">By Type:</h6>
+                            <div id="graphicOne__chart" class="graphic--chart graphic__one--chart">
+                                <img src="./img/graphic.svg" alt="Graphic One" id="graphicOne__img" class="graphic--img graphic__one--img">
+                                <ul id="graphicOne__data" class="graphic--data graphic__one--data">
+                                    <li><div class="color--info color--1"></div>Bug</li>
+                                    <li><div class="color--info color--2"></div>Feature</li>
+                                    <li><div class="color--info color--3"></div>Request</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- ISSUES GRAPHIC TWO -->
+
+                        <div id="graphicTwo" class="graphic--body graphic__Two">
+                            <h6 id="graphicTwo__title" class="graphic--title graphic__two--title">By Status:</h6>
+                            <div id="graphicTwo__chart" class="graphic--chart graphic__two--chart">
+                                <img src="./img/graphic.svg" alt="Graphic Two" id="graphicTwo__img" class="graphic--img graphic__two--img">
+                                <ul id="graphicTwo__data" class="graphic--data graphic__two--data">
+                                    <li><div class="color--info color--1"></div>Bug</li>
+                                    <li><div class="color--info color--2"></div>Feature</li>
+                                    <li><div class="color--info color--3"></div>Request</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- ISSUES GRAPHIC THREE -->
+
+                        <div id="graphicThree" class="graphic--body graphic__three">
+                            <h6 id="graphicThree__title" class="graphic--title graphic__three--title">By Priority:</h6>
+                            <div id="graphicThree__chart" class="graphic--chart  graphic__three--chart">
+                                <img src="./img/graphic.svg" alt="Graphic Three" id="graphicThree__img" class="graphic--img graphic__three--img">
+                                <ul id="graphicThree__data" class="graphic--data graphic__three--data">
+                                    <li><div class="color--info color--1"></div>Bug</li>
+                                    <li><div class="color--info color--2"></div>Feature</li>
+                                    <li><div class="color--info color--3"></div>Request</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <!-- ISSUES TABLE -->
+                
+                <div id="issuesTable" class="issuesTable">
+
+                    <div id="issuesGraphic__info" class="issuesGraphic__info">
+                        <h4>LIST</h4>
+                        <div id="showIssues" class="issuesGraphic__show dropdown">
+                            <p>SHOW:</p>
+                            <button class="dropbtn">▼</button>
+                            <ul id="issuesDropdown" class="issuesGraphic__show--dropdown dropdown-content">
+                                <li>All</li>
+                                <li>By Type</li>
+                                <li>By Date</li>
+                                <li>By Priority</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="gradient--purple separator__big--purpleOrange-2"></div>
+
+                    <div id="showIssues" class="issues__order dropdown">
+                        <p>Order By:</p>
+                        <button class="dropbtn">▼</button>
+                        <ul id="issuesDropdown" class="issuesGraphic__show--dropdown dropdown-content">
+                            <li>All</li>
+                            <li>By Type</li>
+                            <li>By Date</li>
+                            <li>By Priority</li>
+                        </ul>
+                    </div>
+            
+                    <div class="table">
+            
+                        <div class="table__header">
+            
+                            <div class="cell">ID</div>
+                            <div class="cell">TITLE</div>
+                            <div class="cell">TYPE</div>
+                            <div class="cell">PRIORITY</div>
+                            <div class="cell">AUTHOR</div>
+                            <div class="cell">PROJECT</div>
+                            <div class="cell">TEAM</div>
+                            <div class="cell">LAST ENTRY</div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+            
+                        </div>
+            
+                        <div class="row">
+            
+                            <div class="cell issue__id" data-title="issue-id">324</div>
+                            <div class="cell issue__title" data-title="issue-title">Add Nav</div>
+                            <div class="cell issue__type" data-title="issue-type">FEATURE</div>
+                            <div class="cell issue__priority" data-title="issue-priority">HIGH</div>
+                            <div class="cell issue__author" data-title="issue-author">David Leis</div>
+                            <div class="cell issue__project" data-title="issue-project">E-Commmerce</div>
+                            <div class="cell issue__team" data-title="issue-team">Developers</div>
+                            <div class="cell issue__lastEntry" data-title="last-entry">Yesterday</div>
+                            <div class="cell" data-title="notifications"><button class="btnNoti">2</button></div>
+                            <div class="cell" data-title="view"><button class="btnView">View</button></div>
+            
+                        </div>
+            
+                        <div class="row">
+            
+                            <div class="cell issue__id" data-title="issue-id">44</div>
+                            <div class="cell issue__title" data-title="issue-title">Design landing</div>
+                            <div class="cell issue__type" data-title="issue-type">FEATURE</div>
+                            <div class="cell issue__priority" data-title="issue-priority">MEDIUM</div>
+                            <div class="cell issue__author" data-title="issue-author">Evan Dex</div>
+                            <div class="cell issue__project" data-title="issue-project">DW-Page Burlock Strine</div>
+                            <div class="cell issue__team" data-title="issue-team">UI Design</div>
+                            <div class="cell issue__lastEntry" data-title="last-entry">3 Hours</div>
+                            <div class="cell" data-title="notifications"><button class="btnNoti"></button></div>
+                            <div class="cell" data-title="view"><button class="btnView">View</button></div>
+            
+                        </div>
+
+                        <div class="row">
+            
+                            <div class="cell issue__id" data-title="issue-id">56</div>
+                            <div class="cell issue__title" data-title="issue-title">Logo Design</div>
+                            <div class="cell issue__type" data-title="issue-type">FEATURE</div>
+                            <div class="cell issue__priority" data-title="issue-priority">MEDIUM</div>
+                            <div class="cell issue__author" data-title="issue-author">Evan Dex</div>
+                            <div class="cell issue__project" data-title="issue-project">DW-Page Burlock Strine</div>
+                            <div class="cell issue__team" data-title="issue-team">UI Design</div>
+                            <div class="cell issue__lastEntry" data-title="last-entry">8 Hours</div>
+                            <div class="cell" data-title="notifications"><button class="btnNoti"></button></div>
+                            <div class="cell" data-title="view"><button class="btnView">View</button></div>
+            
+                        </div>
+
+                        <div class="row">
+            
+                            <div class="cell issue__id" data-title="issue-id">22</div>
+                            <div class="cell issue__title" data-title="issue-title">Fix Database</div>
+                            <div class="cell issue__type" data-title="issue-type">BUG</div>
+                            <div class="cell issue__priority" data-title="issue-priority">HIGH</div>
+                            <div class="cell issue__author" data-title="issue-author">Evan Dex</div>
+                            <div class="cell issue__project" data-title="issue-project">DW-Page Burlock Strine</div>
+                            <div class="cell issue__team" data-title="issue-team">Developers</div>
+                            <div class="cell issue__lastEntry" data-title="last-entry">20 Min</div>
+                            <div class="cell" data-title="notifications"><button class="btnNoti"></button></div>
+                            <div class="cell" data-title="view"><button class="btnView">View</button></div>
+            
+                        </div>
+            
+                    </div>
+            
+                    <div class="more">
+                        <button class="btnMore">View Full List</button>
+                    </div>
+            
+            
+                    <div class="footer">
+                        <div class="gradient--purple separator__small--purpleOrange-2"></div>
+                        <div class="trueFooter">
+                            <div class="active">
+                                <p>ACTIVE PROJECTS: 6</p>
+                            </div>
+                
+                            <button class="btnNewProject" id="btnNewProject">New Issue</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    
+    <footer id="footer" class="footer">
+
+        <div class="footer__white"></div>
+        <div class="footer__gradient separator__footer"></div>
+
+        <div class="footer__body">
+            <h2 id ="pageTitle" class="upperNav__h2"><span class="s">S</span><span class="pace">pace</span><span class="t">T</span><span class="rack">rack</span><span class="it">IT</span></h2>
+            <img src="./img/footer_logo.svg" alt="SpaceTrackIT Logo" class="footer__logo">
+            <p class="footer__author"><span class="footer__madeBy">Made By</span><br><span class="footer__myName">Manuel Costales</span></p>
+            <ul class="footer__media">
+                <li class="footer__media--li"><a href="" class="footer__media--a"><img src="./img/footer_outlook.svg" alt="" class="footer__media--img"></a></li>
+                <li class="footer__media--li"><a href="" class="footer__media--a"><img src="./img/footer_github.svg" alt="" class="footer__media--img"></a></li>
+                <li class="footer__media--li"><a href="" class="footer__media--a"><img src="./img/footer_linkedin.svg" alt="" class="footer__media--img"></a></li>
+            </ul>
+        </div>
+
+        <p class="footer__disclaimer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nulla voluptate consectetur sed ducimus quaerat adipisci dolorum incidunt suscipit nesciunt!</p>
+
+    </footer>
+
+<script src="./js/particles.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>

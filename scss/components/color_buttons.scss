@@ -1,0 +1,37 @@
+
+
+
+.upperNav__ul--buttons {
+    display:flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+    align-items: flex-start;
+    .lp {
+        background-color: #A39EDE;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+
+    .bl {
+        background-color: #212121;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+
+    .lg {
+        background-color: $LIMEGREEN;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+
+    .dp {
+        background-color: $PURPLE_TITLE;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+}
+    

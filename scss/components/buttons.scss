@@ -1,0 +1,152 @@
+
+
+// SEE MORE/ FULL LIST BUTTON: 
+
+.btnMore {
+    // background-color: rgb(186, 27, 201);
+    background-color:#C85CBB;
+    margin: 0 auto;
+    width: 120px;
+    padding: 0.5rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// VIEW BUTTON: 
+
+.btnView {
+    background-color: #5539FF;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius:25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// BOARD NOTIFICATIONS BUTTON:
+
+.btnNoti {
+    height: 33px;
+    width: 33px;
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #FFA572;
+    text-align: center;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// BUTTON "NEW":
+
+.btnNewProject {
+
+    // background-color: rgb(9, 172, 117);
+    background-color: #F66767;
+    width: 120px;
+    padding: 0.5rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    border: none;
+    a {
+        color: white;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// BUTTON LOGIN FORM: 
+
+.login__form--submit {
+    background-color: $PURPLE_BTN_LOGIN;
+    width: 25%;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    border-radius: 25px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// NAV LOG OFF:
+
+.log__off {
+    background-color: rgba(255, 255, 255,0);
+    &:hover {cursor:pointer}
+}
+
+// BUTTON SIGN IN FOOTER: {
+
+    .login__footer--btn {
+        width: 80%;
+        background-color: $ORANGE_BTN;
+        padding: 0.5rem 0;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
+// ADD MEMBER BUTTON: 
+.add__member--btn {
+    background-color: #7B4DFF;
+    width: 3.5vw;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    font-weight: 800;
+    color: white;
+}
+
+
+// SEARCH BUTTON: 
+.addMembers__search--btn {
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background: rgba(196, 190, 215, 1);
+    border: 2px solid rgb(122, 116, 138);
+    color: white;
+}
+
+// CREATE NEW PROJECT SUBMIT:
+
+.create__project--btn {
+    // box-shadow: 0px 3px 3px 2px rgba(0,0,0,0.16);
+    // box-shadow: inset 0px -3px 5px 0px rgba(0,0,0,0.3);
+    margin: 0 auto;
+    margin-top: 5vh;
+    width: 20%;
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: #7B4DFF;
+    border-radius: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+

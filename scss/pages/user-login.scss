@@ -1,0 +1,87 @@
+html {
+    height: 100vh;
+}
+
+.login__background--one {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../img/main_background-BIG.png);
+    display: flex;
+    // margin: 0vh auto;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+// .login__background--two {
+//     width: 100%;
+//     height: 50vh;
+// }
+
+.login__board {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    background-color: white;
+    min-height: 77vh;
+    width: 25%;
+    border-radius: 25px;
+    .board__title {
+        padding: 3rem;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        font-size: 4rem;
+    }
+    .login {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        .login__title {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            padding: 2rem;
+            gap: 0.2rem;
+            .login__title--h1 {
+                font-family: arial,sans-serif;
+                font-weight: 700;
+                color: $PURPLE_LOGIN;
+                font-size: 1.6rem;
+            }
+            .login__title--p {
+                color: $GRAY_NAV;
+                font-size: 0.8rem;
+            }
+        }
+        .login__form {
+            display: flex;
+            flex-flow: column nowrap;
+            padding: 0rem 2rem;
+            gap: 1.3rem;
+            label {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-end;
+                gap: 0.5rem;
+                font-size: 1rem;
+                color: $GRAY_NAV;
+                font-weight: 500;
+            }
+        }
+        .login__options {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+    }
+    .login__footer {
+        margin-top: 1.5rem;
+        gap: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+}

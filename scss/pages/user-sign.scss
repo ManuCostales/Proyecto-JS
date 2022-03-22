@@ -1,0 +1,79 @@
+html {
+    height: 100vh;
+}
+
+.signIn__board {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    background-color: white;
+    min-height: 83vh;
+    width: 40%;
+    border-radius: 25px;
+    .signIn__title {
+        padding: 3rem;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        font-size: 4rem;
+    }
+    .signIn {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        .signIn__board--title {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            padding: 2rem;
+            gap: 0.2rem;
+            text-align: left;
+            .signIn__title--h1 {
+                font-family: arial,sans-serif;
+                font-weight: 700;
+                color: $PURPLE_LOGIN;
+                font-size: 1.6rem;
+            }
+            .signIn__title--p {
+                color: $GRAY_NAV;
+                font-size: 0.8rem;
+            }
+        }
+        .signIn__form {
+            display: flex;
+            flex-flow: column nowrap;
+            padding: 0rem 2rem;
+            padding-bottom: 1rem;
+            gap: 1.3rem;
+            .signIn__form--row {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                gap: 1rem;
+                .signIn__email  {
+                    width: 65%;
+                }
+                .signIn__form--password-lb, .signIn__form--confirmPassword-lb {
+                    width: 50%;
+                } 
+            }
+            label {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-end;
+                gap: 0.5rem;
+                font-size: 1rem;
+                color: $GRAY_NAV;
+                font-weight: 500;
+            }
+        }
+    }
+    .login__footer {
+        margin-top: 1.5rem;
+        gap: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+}

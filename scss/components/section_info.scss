@@ -1,0 +1,19 @@
+
+
+.section__info {
+    margin: 10vh 0;
+    display: flex;
+    flex-flow: row nowrap;
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+    .sectionTitle {
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+    .section__info--div {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: right;
+    }
+}

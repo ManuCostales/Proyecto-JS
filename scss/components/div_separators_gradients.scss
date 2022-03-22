@@ -1,0 +1,109 @@
+
+// SEPARATOR PURPLE AND ORANGE
+
+.separator__big--purpleOrange {
+    background: $GRADIENT_PURPLEORANGE_1;
+    height: 2rem;
+}
+.separator__big--purpleOrange-2 {
+    background: $GRADIENT_PURPLEORANGE_2;
+    height: 2rem;
+}
+.separator__small--purpleOrange {
+    background: $GRADIENT_PURPLEORANGE_2;
+    height: 0.5rem;
+}
+.separator__small--purpleOrange-2 {
+    background: $GRADIENT_PURPLEORANGE_1;
+    height: 0.5rem;
+}
+
+// SEPARATOR BLUE AND PURPLE
+
+.separator__big--bluePurple {
+    background: $GRADIENT_BLUEPURPLE_1;
+    height: 2rem;
+}
+.separator__small--bluePurple {
+    background: $GRADIENT_BLUEPURPLE_2;
+    height: 0.5rem;
+}
+
+// SEPARATOR LIGHT BLUE AND YELLOW
+
+.separator__big--lbYellow {
+    background: $GRADIENT_LBYELLOW_1;
+    height: 2rem;
+}
+.separator__small--lbYellow {
+    background: $GRADIENT_LBYELLOW_2;
+    height: 0.5rem;
+}
+
+// SEPARATORS EXTRA BIG
+
+.separator__extraBig--purpleOrange {
+    background: $GRADIENT_PURPLEORANGE_1;
+    height: 3rem;
+}
+.separator__extraBig--purpleOrange-2 {
+    background: $GRADIENT_PURPLEORANGE_2;
+    height: 3rem;
+}
+
+.separator__extraBig--bluePurple {
+    background: $GRADIENT_BLUEPURPLE_1;
+    height: 3rem;
+}
+.separator__extraBig--bluePurple-2 {
+    background: $GRADIENT_BLUEPURPLE_2;
+    height: 3rem;
+}
+
+.separator__extraBig--lbbluegreen {
+    background: $GRADIENT_LBGREEN_FOOTER;
+    height: 3rem;
+}
+.separator__extraBig--lbbluegreen-2 {
+    background: $GRADIENT_LBGREEN_FOOTER_2;
+    height: 3rem;
+}
+
+// LB AND GREEN GRADIENT:
+
+.separator__small--lbbluegreen {
+    background: $GRADIENT_LBGREEN_FOOTER;
+    height: 0.5rem;
+}
+.separator__small--lbbluegreen-2 {
+    background: $GRADIENT_LBGREEN_FOOTER_2;
+    height: 0.5rem;
+}
+
+
+// ORANGE AND YELLOW SEPARATORS:
+
+.separator__extraBig--orangeYellow {
+    background: $GRADIENT_ORANGEYELLOW_1;
+    height: 3rem;
+}
+.separator__extraBig--orangeYellow-2 {
+    background: $GRADIENT_ORANGEYELLOW_2;
+    height: 3rem;
+}
+
+.separator__big--orangeYellow {
+    background: $GRADIENT_ORANGEYELLOW_1;
+    height: 2rem;
+}
+.separator__big--orangeYellow-2 {
+    background: $GRADIENT_ORANGEYELLOW_2;
+    height: 2rem;
+}
+
+// SEPARATOR FOOTER
+
+.separator__footer {
+    background: $GRADIENT_LBGREEN_FOOTER;
+    height: 5rem;
+}

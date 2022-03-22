@@ -1,0 +1,63 @@
+.table {
+    width: 100%;
+    display: table;
+    min-height: 40%;
+    .cell {
+        display: table-cell;
+        padding: 0.5rem;
+    }
+    .table__header {
+        display: table-row;
+        background-color:#EAECFF;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #7C7C7C;
+    }
+    .row {
+        display: table-row;
+        .project__title {
+            color: $PURPLE_BTN_VIEW;
+            font-weight: 600;
+        }
+        .team__title {
+            color: $PURPLE_BTN_VIEW;
+            font-weight: 600;
+        }
+    }
+}
+
+
+
+.currentMembers__table {
+    width: 100%;
+    display: table;
+    min-height: 40%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+    .cell {
+        display: table-cell;
+        padding: 0.5rem;
+        vertical-align: middle;
+
+    }
+    .currentMembers__table--header {
+        display: table-row;
+        background-color:#9372D9;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #ffffff;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .row {
+        display: table-row;
+        align-items: center;
+        vertical-align: middle;
+        font-size: 0.9rem;
+        color: #8E8E8E;
+        font-weight: 600;
+        
+    }
+}
+

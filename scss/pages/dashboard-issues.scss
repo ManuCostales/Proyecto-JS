@@ -1,0 +1,40 @@
+
+
+.issuesBoard {
+    width: 100%;
+    margin: 10vh 0;
+    .issues {
+        background-color: $WHITE_BOARDS;
+        width: 100%;
+        border-radius: 10px;
+        padding-bottom: 1vh;
+        margin-top: 10vh;
+        .header {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 1rem;
+            padding: 0.5rem 0;
+            .title {
+                display: flex;
+                align-items: center;
+                h3 {
+                    margin-left: 5px;
+                    font-family: arial;
+                    font-weight: 500;
+                    color: #4D4D4D;
+                    font-size: 1.2rem;
+                }
+            }
+            a {
+                font-size: 1.1rem;
+                font-family: arial;
+                font-weight: 500;
+                color: #731CE2;
+            }
+        }
+
+    }
+}
+

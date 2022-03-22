@@ -1,0 +1,62 @@
+
+
+// Margins and Padding
+
+@mixin m-p($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+$center: 0 auto;
+
+
+// Vertical Centering 
+
+@mixin vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+// Position Fixed Controller 
+
+@mixin pfixed ($top, $right, $bottom, $left) {
+    position: fixed;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+
+// Background MIXIN
+
+@mixin bg($color, $image, $repeat, $size, $position, $attachment) {
+    background-color: $color;
+    background-image: $image;
+    background-repeat: $repeat;
+    background-size: $size;
+    background-position: $position;
+    background-attachment: $attachment;
+}
+
+
+// Animation MIXIN:
+
+@mixin anim ($name, $duration, $fill, $iteration) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-fill-mode: $fill;
+    animation-iteration-count: $iteration;
+}
+
+
+// Flexbox MIXIN 
+
+@mixin flexbox ($display, $flow, $justify, $align) {
+    display: $display;
+    flex-flow: $flow;
+    justify-content: $justify;
+    align-items: $align;
+}

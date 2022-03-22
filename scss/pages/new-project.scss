@@ -1,0 +1,261 @@
+
+
+.newProject__board {
+    background-color: $WHITE-BOARDS;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 20vh;
+    .newProject__header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        .newProject__header--title {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 10px;
+            h1 {
+                font-family: arial;
+                font-size: 1.4rem;
+                color: $GRAY_BOARDS_TITLE;
+            }
+        }
+        p {
+            font-weight: 600;
+            color: $GRAY_BOARDS_CATS;
+        }
+    }
+
+    .newProject__form {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 3rem;
+        gap: 5vh;
+        label {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            color: #757575;
+            font-weight: 700;
+            font-size: 1.2rem;
+            gap: 8px;
+            div {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 5px;
+            }
+            p {
+                font-weight: 300;
+                color: #757575;
+                font-size: 0.8rem;
+            }
+            .newProject__creator--name {
+                font-weight: 400;
+                font-size: 1.5rem;
+            }
+        }
+        .newProject__form--rowOne {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            gap: 5vw;
+            .newProject__title, .newProject__host {
+                width: 32%;
+            }
+        }
+        .newProject__form--rowTwo {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            gap: 5.1vw;
+            .newProject__description {
+                width: 70%;
+                textarea {
+                    width: 100%;
+                background-color: #EAECFF;
+                border-radius: 10px;
+                font-size: 1rem;
+                color: #4D4D4D;
+                outline: none;
+                padding: 1rem;
+                }
+            }
+            .newProject__dates {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 5vh;
+            }
+        }
+        .newProject__form--rowThree {
+            display: flex;
+            justify-content: flex-start;
+            .newProject__repos {
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+                .newProject__repos--input {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    width: 100%;
+                    align-items: center;
+                    gap: 2vw;
+                    input {
+                        width: 90%;
+                        background-color: #EAECFF;
+                        height: 2.5rem;
+                        border-radius: 25px;
+                        font-size: 1rem;
+                        color: #4D4D4D;
+                        outline: none;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .newProject__form--rowFour {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            width: 100%;
+            .newProject__roles {
+                width: 100%;
+                .newProject__roles--input {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    gap: 2vw;
+                }
+            }
+            .newProject__createdRoles {
+                h6 {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #A5A5A5;
+                }
+            }
+            
+        }
+        .addMembers__board {
+            background-color: white;
+            display: flex;
+            flex-flow: column nowrap;
+            border-radius: 10px;
+            box-shadow: 0px 3px 9px 3px rgba(0,0,0,0.16);
+            .addMembers__header {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                padding: 1rem;
+                font-size: 0.8rem;
+                font-weight: 300;
+                color: #7C7C7C;
+            }
+            .newMembers {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                padding: 1rem;
+                padding-top: 2rem;
+                gap: 2vw;
+                .addMembers {
+                    width: 50%;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 1vh;
+                    .addMembers__title--p{
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: #7C7C7C;
+                    }
+                    .addMembers__body {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        background-color: #ECE8F5;
+                        border-radius: 20px;
+                        .addMembers__body--header {
+                            height: 10vh;
+                            width: 100%;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-evenly;
+                            color: white;
+                            .addMembers__friends--title {
+                                width: 50%;
+                                background-color: #CDBAF5;
+                                border-top-left-radius: 20px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                h4 {
+                                    font-weight: 600;
+                                }
+                            }
+                            .addMembers__search--title {
+                                width: 50%;
+                                background-color: #9372D9;
+                                border-top-right-radius: 20px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                h4 {
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                        .addMembers__search--table {
+                            padding: 1rem;
+                            font-size: 0.9rem;
+                            color: #8E8E8E;
+                            font-weight: 600;
+                        }
+                        .addMembers__search--search {
+                            label {
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: center;
+                                font-size: 0.9rem;
+                                padding: 1rem;
+                                align-items: center;
+                                input {
+                                    width: 70%;
+                                    border-radius: 20px;
+                                    background-color: #C4BED7;
+                                    text-align: center;
+                                    height: 2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .currentMembers {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 1vh;
+                    width: 50%;
+                    .currentMembers__title {
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: #7C7C7C;
+                    }
+                    .currentMembers__body {
+                        background-color: #ECE8F5;
+                    }
+                }
+            }
+            .addMembers__footer {
+                padding: 1rem;
+                color: #A5A5A5;
+                font-weight: 600;
+                font-size: 0.7rem;
+            }
+        }
+    }
+    
+
+}
+

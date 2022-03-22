@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Proyecto JS</title>   
+    <script src="./js/users.js" defer></script>
+    <script src="./js/projects.js" defer></script>
+    <script src="./js/expense.js" defer></script>
+</head>
+<body onload="init()">
+    
+    <h1>Create New Project</h1>
+    
+    <div class="creator">
+
+        <form action="" class="creator__project">
+
+            <label for="projectName" class="creator__projectName--lb">Project Title:
+                <input type="text" class="creator__projectName" id="projectName">
+            </label>
+
+            <label for="projectHost" class="creator__projectHost--lb">Project Host:
+                <input type="text" class="creator__projectHost" id="projectHost">
+            </label>
+
+            <label for="projectDescr" class="creator__projectDescr--lb">Description:
+                <input type="text" class="creator__projectDescr" id="projectDescr">
+            </label>
+
+            <label for="projectMembers" class="creator__projectMembers--lb">Members:
+                <input type="text" class="creator__projectMembers" id="projectMembers">
+                <ul class="creator__projectMembers--list">
+
+                </ul>
+            </label>
+            
+            <label for="projectDate">Project Creation Date:
+                <p class="creator__projectDate" id="projectDate"></p>
+            </label>
+
+            <label for="projectDescr" class="creator__projectDescr--lb">Github Repositories:
+                <ul>
+
+                </ul>
+            </label>    
+
+            <button class="submitProject" id="submitProject" type="submit">Crear</button>
+            <button type="reset" id="projectReset" class="register--form__reset">Reset</button>
+        </form>
+
+    </div>
+    
+    <div id="showProjects"></div>
+
+</body>
+</html>

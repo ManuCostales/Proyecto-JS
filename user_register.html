@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/users.js" defer></script>
+    <script src="./js/projects.js" defer></script>
+    <script src="./js/expense.js" defer></script>
+    <script src="js/sign-in.js" defer></script>
+    <script src="./js/dashboard.js" defer></script>
+    <script src="./js/log-in.js" defer></script>
+    <title>Proyecto JS</title>
+</head>
+<body onload="init()">
+    
+    <div class="login__background--one">
+        <div class="signIn__board">
+
+            <div class="signIn__title">
+                <h2 id ="pageTitle" class="upperNav__h2"><span class="s">S</span><span class="pace">pace</span><span class="t">T</span><span class="rack">rack</span><span class="it">IT</span></h2>
+            </div>
+            
+
+            <div class="separator__extraBig--lbbluegreen"></div>
+            
+            <div class="signIn">
+
+                <div class="signIn__board--title">
+                    <h1 class="signIn__title--h1">Sign In</h1>
+                    <p class="signIn__title--p">Fill the form to create a new account.</p>
+                </div>
+
+                <form action="" class="signIn__form">
+                    <div class="signIn__form--names signIn__form--row">
+                        <label for="" class="signIn__form--name-lb">Name:
+                            <input type="text" id="userName" class="input-text">
+                        </label>
+                        <label for="" class="signIn__form--lastName-lb">Last Name:
+                            <input type="text" id="userLastName" class="input-text">
+                        </label>
+                        <label for="" class="signIn__form--nickName-lb">Nick Name:
+                            <input type="text" id="userNickname" class="input-text">
+                        </label>
+                    </div>
+                    <div class="signIn__form--info signIn__form--row">
+                        <label for="" class="signIn__form--email-lb signIn__email">Email:
+                            <input type="email" id="userEmail" class="input-text">
+                        </label>
+                        <label for="" class="signIn__form--phone-lb signIn__phone">Phone Number:
+                            <input type="tel" id="userPhone" class="input-text">
+                        </label>
+                    </div>
+                    <div class="signIn__form--passwords signIn__form--row">
+                        <label for="" class="signIn__form--password-lb">Password:
+                            <input type="password" class="input-text" id="userPassword">
+                        </label>
+                        <label for="" class="signIn__form--confirmPassword-lb">Confirm Password:
+                            <input type="password" class="input-text" id="userConfirmPassword">
+                        </label>
+                    </div>
+
+                    <button class="signIn__form--submit login__form--submit" id="registerUser" type="submit" value="signIn">Sign In</button>
+                </form>
+            
+            </div>
+            
+            <div class="separator__small--lbbluegreen-2"></div>
+
+            <div class="login__footer">
+                <p>Already have an account? Login!</p>
+                <a class="login__footer--btn" href="./user_login.html" >Login</a>
+            </div>
+
+        </div>
+        
+    </div>
+    
+
+</body>
+</html>
