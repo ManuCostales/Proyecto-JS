@@ -19,8 +19,28 @@ class USER {
     }
 }
 
+function oldestUser(){
+
+    let userIdList = userList.map(a => a.id);
+    let minId = Math.min(...userIdList);
+    console.log(...userIdList);
+    console.log(minId);
+    return userList.find(user=>user.id = minId);
+
+}
+
+function newestUser(){
+
+    let userIdList = userList.map(a => a.id);
+    let maxId = Math.max(...userIdList);
+    console.log(...userIdList);
+    console.log(maxId);
+    return userList.find(user=>user.id = maxId);
+
+}
 
 let userList = [];
+
 
 
 let userId

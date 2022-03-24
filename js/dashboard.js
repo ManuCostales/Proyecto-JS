@@ -23,6 +23,10 @@ usernick = USER_CURRENT.nickname;
 navCurrentUser.innerHTML = usernick;
 console.log(usernick);
 
+
+console.log(oldestUser());
+console.log(newestUser())
+
 // LOG OFF BUTTON
 
 function desloguear() {
@@ -61,13 +65,14 @@ function mostrarProyectos() {
 
     projectsDashboard.innerHTML = `<div class="table__header">
         
-                <div class="cell">TEAM</div>
-                <div class="cell team__project--title">PROJECT</div>
-                <div class="cell team__members--title">MEMBERS</div>
-                <div class="cell"></div>
-                <div class="cell"></div>
+                                        <div class="cell">PROJECT</div>
+                                        <div class="cell project__host--title">HOST</div>
+                                        <div class="cell project__creator--title">CREATOR</div>
+                                        <div class="cell project__date--title">DATE</div>
+                                        <div class="cell"></div>
+                                        <div class="cell"></div>
 
-            </div>`;
+                                    </div>`;
 
     projectList.forEach(project =>{
 
@@ -88,3 +93,4 @@ function mostrarProyectos() {
 }
 
 mostrarProyectos();
+

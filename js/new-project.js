@@ -62,6 +62,11 @@ function createProject(){
 
         e.preventDefault();
 
+        projectRoles.length == 10 && alert("You have added 10 Roles");
+        const maxRoles = (projectRoles.length > 20) ? true : false;
+
+        maxRoles ? alert("You have reached the limit of roles") : alert(`You can still add ${19 - projectRoles.length} Roles`)
+
         // Se busca value del input de Role:
         let newRole = document.querySelector("#projectRoles").value;
 
@@ -89,6 +94,10 @@ function createProject(){
         document.getElementById("projectRoles").value = "";
 
     }
+
+    
+
+    
 
     let addRole = document.querySelector("#addRole").addEventListener("click", (e)=>createRole(e))
 

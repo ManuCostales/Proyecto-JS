@@ -11,3 +11,14 @@ Manejar variables desde las funciones.
 4.Creacion de eventos.
 
 5.Ejecucion del codigo/invocacion de funciones.
+
+
+Nullish op, linea 155, new-project.js
+
+operador AND, linea 65/66, new-project.js´
+
+operador ternario, linea 66/68, new-project.js
+
+destructuring project class
+
+Funciones con spread operator en users.

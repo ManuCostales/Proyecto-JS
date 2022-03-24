@@ -28,15 +28,29 @@ class PROJECT {
 
 let projectList = [];
 
-let projectName
-let projectHost
-let projectCreator
-let projectDescr
-let projectCreationDate
-let projectEndDate
+// let projectName
+// let projectHost
+// let projectCreator
+// let projectDescr
+// let projectCreationDate
+// let projectEndDate
 let projectRepos = [];
 let projectRoles = [];
 let projectMembers
+
+
+let {
+    projectID : id,
+    projectName : title,
+    projectHost : host,
+    projectCreator : creator,
+    projectDescr: descr,
+    projectCreationDate: creationDate,
+    projectEndDate: endDate,
+    // projectRepos : repos,
+    // projectRoles: roles,
+    // projectMembers : members,
+} = PROJECT;
 
 
 
