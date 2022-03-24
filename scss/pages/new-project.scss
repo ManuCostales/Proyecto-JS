@@ -90,7 +90,9 @@
         }
         .newProject__form--rowThree {
             display: flex;
+            flex-flow: column nowrap;
             justify-content: flex-start;
+            width: 100%;
             .newProject__repos {
                 width: 100%;
                 display: flex;
@@ -112,6 +114,13 @@
                         outline: none;
                         text-align: center;
                     }
+                }
+            }
+            .newProject__createdRepos {
+                h6 {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #A5A5A5;
                 }
             }
         }

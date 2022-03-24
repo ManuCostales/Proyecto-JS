@@ -42,6 +42,8 @@ function crearUsuario () {
 
         }
 
+        
+
         if (userName == "" || userLastName == "" || userNickName == "" || userEmail == ""  || userPhone == ""){
 
             alert("Some fields are empty. Please complete them.")

@@ -1053,7 +1053,9 @@ html {
         gap: 5vh; }
     .newProject__board .newProject__form .newProject__form--rowThree {
       display: flex;
-      justify-content: flex-start; }
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      width: 100%; }
       .newProject__board .newProject__form .newProject__form--rowThree .newProject__repos {
         width: 100%;
         display: flex;
@@ -1074,6 +1076,10 @@ html {
             color: #4D4D4D;
             outline: none;
             text-align: center; }
+      .newProject__board .newProject__form .newProject__form--rowThree .newProject__createdRepos h6 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #A5A5A5; }
     .newProject__board .newProject__form .newProject__form--rowFour {
       display: flex;
       flex-flow: column nowrap;

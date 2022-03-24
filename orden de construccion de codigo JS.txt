@@ -1,0 +1,13 @@
+Load data 
+
+1.Constructores de clase-Declaracion de clases/objetos.
+
+2.Declaracion/Inicializacion de Variables. (Tratar de usar
+la menor cantidad de variables GLOBALES posible).
+Manejar variables desde las funciones.
+
+3.Construccion de funciones.
+
+4.Creacion de eventos.
+
+5.Ejecucion del codigo/invocacion de funciones.

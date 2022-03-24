@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/data.js" defer></script>
     <script src="./js/users.js" defer></script>
     <script src="./js/projects.js" defer></script>
     <script src="./js/expense.js" defer></script>
@@ -34,7 +35,7 @@
                     <img src="./img/notifications.svg" alt="Notifications">
                 </li>
                 <li class="upperNav__ul--user">
-                    <p>USER</p>
+                    <p id="nav-current-user" >USER</p>
                     <img src="./img/user_nav.svg" alt="User">
                 </li>
                 <li class="upperNav__ul--colors">
@@ -177,11 +178,16 @@
                             <div>
                                 <p>Github links to repository or repositories of the project. (Can be added later!)</p>
                                 <div class="newProject__repos--input">
-                                    <input type="url" id="projectRepos">
+                                    <input type="url" id="projectRepos" placeholder="Enter Repository URL">
                                     <button type="submit" class="login__form--submit" id="addRepo">Add</button>
                                 </div>
                             </div>
                         </label>
+
+                        <div class="newProject__createdRepos">
+                            <h6>ADDED REPOS:</h6>
+                            <ul id="createdRepos-list"></ul>
+                        </div>
 
                     </div>
 
@@ -249,7 +255,7 @@
                                 <div class="currentMembers__title"><p class="addMembers__title--p" >CURRENT MEMBERS</p></div>
 
                                 <div class="currentMembers__body">
-                                    <div class="currentMembers__table">
+                                    <div class="currentMembers__table" id="currentMembers-table">
 
                                         <div class="currentMembers__table--header">
             
@@ -259,14 +265,6 @@
                                             <div class="cell">Role</div>
                                             <div class="cell"></div>
                             
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="cell">123</div>
-                                            <div class="cell">Nick273</div>
-                                            <div class="cell">Nick Menza</div>
-                                            <div class="cell"><select name="" id=""></select></div>
-                                            <div class="cell"><img src="./img/addMember_delete.svg" alt=""></div>
                                         </div>
     
                                     </div>
@@ -317,7 +315,6 @@
 
     </footer>
 
-<script src="./js/particles.js"></script>
-<script src="./js/app.js"></script>
+
 </body>
 </html>

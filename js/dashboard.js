@@ -59,6 +59,32 @@ function mostrarProyectos() {
 
     projectsDashboard = document.querySelector("#projectsDashboard");
 
-    console.log(projectsDashboard);
+    projectsDashboard.innerHTML = `<div class="table__header">
+        
+                <div class="cell">TEAM</div>
+                <div class="cell team__project--title">PROJECT</div>
+                <div class="cell team__members--title">MEMBERS</div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+            </div>`;
+
+    projectList.forEach(project =>{
+
+        projectsDashboard.innerHTML += `
+                    <div class="row">
+        
+                        <div class="cell project__title" data-title="project">${project.title}</div>
+                        <div class="cell project__host" data-title="host">${project.host}</div>
+                        <div class="cell project__creator" data-title="creator">${project.creator}</div>
+                        <div class="cell project__date" data-title="date">.</div>
+                        <div class="cell" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="cell" data-title="view"><button class="btnView">View</button></div>
+        
+                    </div>`
+
+    })
 
 }
+
+mostrarProyectos();
