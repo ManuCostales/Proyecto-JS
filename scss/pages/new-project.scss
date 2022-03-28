@@ -217,10 +217,11 @@
                             }
                         }
                         .addMembers__search--table {
-                            padding: 1rem;
+                            // padding: 1rem;
                             font-size: 0.9rem;
                             color: #8E8E8E;
                             font-weight: 600;
+                            // max-height: 40%;
                         }
                         .addMembers__search--search {
                             label {
@@ -266,5 +267,25 @@
     }
     
 
+}
+
+
+.search__nick {
+    width: 100px;
+    text-overflow: ellipsis;
+    // overflow: hidden;
+}
+
+.search__name {
+    width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+.search__email {
+    width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 

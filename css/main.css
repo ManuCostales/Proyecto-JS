@@ -283,8 +283,8 @@ footer {
 
 .add__member--btn {
   background-color: #7B4DFF;
-  width: 3.5vw;
-  padding: 0.5rem 2rem;
+  height: 30px;
+  width: 70px;
   border-radius: 25px;
   font-weight: 800;
   color: white; }
@@ -530,11 +530,13 @@ footer {
 
 .table {
   width: 100%;
-  display: table;
-  min-height: 40%; }
+  height: 20vh;
+  overflow: auto;
+  display: block;
+  margin: 0 auto; }
   .table .cell {
     display: table-cell;
-    padding: 0.5rem; }
+    padding: 1rem; }
   .table .table__header {
     display: table-row;
     background-color: #EAECFF;
@@ -542,7 +544,12 @@ footer {
     font-weight: 600;
     color: #7C7C7C; }
   .table .row {
-    display: table-row; }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 0;
+    gap: 10px; }
     .table .row .project__title {
       color: #5539FF;
       font-weight: 600; }
@@ -1159,7 +1166,6 @@ html {
                 .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__body--header .addMembers__search--title h4 {
                   font-weight: 600; }
             .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__search--table {
-              padding: 1rem;
               font-size: 0.9rem;
               color: #8E8E8E;
               font-weight: 600; }
@@ -1192,3 +1198,17 @@ html {
         color: #A5A5A5;
         font-weight: 600;
         font-size: 0.7rem; }
+
+.search__nick {
+  width: 100px;
+  text-overflow: ellipsis; }
+
+.search__name {
+  width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.search__email {
+  width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden; }
