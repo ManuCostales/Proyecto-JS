@@ -39,6 +39,7 @@ function guardarProyecto(projectNew){
 
 function cargarDatosUsuarios(){
 
+    let userList = [];
     USER_CURRENT = JSON.parse(localStorage.getItem("Usuario activo"));
     console.log(USER_CURRENT);
 
@@ -51,6 +52,7 @@ function cargarDatosUsuarios(){
 
 function cargarDatosProyectos(){
 
+    let projectList = [];
     projectList = JSON.parse(localStorage.getItem("Lista de Proyectos"));
     console.log(projectList);
 

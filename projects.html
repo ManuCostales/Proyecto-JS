@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script src="./js/data.js" defer></script>
     <script src="./js/users.js" defer></script>
     <script src="./js/projects.js" defer></script>
@@ -35,8 +36,10 @@
                     <img src="./img/notifications.svg" alt="Notifications">
                 </li>
                 <li class="upperNav__ul--user">
-                    <p id="nav-current-user" >USER</p>
-                    <img src="./img/user_nav.svg" alt="User">
+                    <p id="nav-current-user">USER</p>
+                    <button id="log-off" class="log__off">
+                        <img src="./img/user_nav.svg" alt="User">
+                    </button>
                 </li>
                 <li class="upperNav__ul--colors">
                     <div class="upperNav__ul--buttons">
@@ -124,14 +127,14 @@
                         <label for="" class="newProject__title">Project Name:
                             <div>
                                 <p>Name of the project for identification.</p>
-                                <input class="input-text" type="text" id="projectName">
+                                <input class="input-text" type="text" id="projectName" required>
                             </div>
                         </label>
 
                         <label for="" class="newProject__host">Project Host:
                             <div>
                                 <p>Name of the company or group responsible for the project.</p>
-                                <input class="input-text" type="text" id="projectHost">
+                                <input class="input-text" type="text" id="projectHost" required>
                             </div>
                         </label>
 
@@ -149,7 +152,7 @@
                         <label for="" class="newProject__description">Project Description:
                             <div>
                                 <p>Description of the project goals and situation:</p>
-                                <textarea name="" cols="30" rows="10" id="projectDescr"></textarea>
+                                <textarea name="" cols="30" rows="10" id="projectDescr" required></textarea>
                             </div>
                         </label>
 

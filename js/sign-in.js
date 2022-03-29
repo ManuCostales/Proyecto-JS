@@ -35,18 +35,24 @@ function crearUsuario () {
         userSecondPassword = document.querySelector("#userConfirmPassword").value;
         // console.log(userSecondPassword)
 
-        if (userSecondPassword !== userFirstPassword || (userFirstPassword == "" && userSecondPassword == "")) {
+        if (userName == "" || userLastName == "" || userNickName == "" || userEmail == ""  || userPhone == ""){
 
-            alert("Passwords don´t match. Plase enter a new password.")
+            Swal.fire({
+                title: "Error!",
+                text: "Some fields are empty. Please complete them.",
+                icon: "error",
+            })
             return;
 
         }
 
-        
+        if (userSecondPassword !== userFirstPassword || (userFirstPassword == "" && userSecondPassword == "")) {
 
-        if (userName == "" || userLastName == "" || userNickName == "" || userEmail == ""  || userPhone == ""){
-
-            alert("Some fields are empty. Please complete them.")
+            Swal.fire({
+                title: "Error!",
+                text: "Passwords don´t match. Plase enter a new password.",
+                icon: "error",
+            })
             return;
 
         }
@@ -61,7 +67,14 @@ function crearUsuario () {
 
         userList.push(userNew);
 
-        alert("User Created!")
+        Swal.fire({
+            title: "Good!",
+            text: "Correct Login",
+            imageUrl: "./img/signIn_success.svg",
+            imageWidth: "250px",
+            showConfirmButton: false,
+            icon: "success",
+        })
 
         console.log(userList);
 
@@ -76,7 +89,11 @@ function crearUsuario () {
         localStorage.setItem("Usuario activo", saveUser);
 
 
-        location.href= "./index.html";
+        setTimeout(function(){
+
+            location.href= "./index.html"; 
+
+        }, 2000)
 
     });
 

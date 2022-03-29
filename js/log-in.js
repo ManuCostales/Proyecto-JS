@@ -59,11 +59,28 @@ const userLogin = document.querySelector("#user-login").addEventListener("click"
             let saveUser = JSON.stringify(USER_CURRENT);
             localStorage.setItem("Usuario activo", saveUser);
 
-            location.href= "./index.html";
+            Swal.fire({
+                title: "Good!",
+                text: "Correct Login",
+                imageUrl: "./img/login_good.svg",
+                imageWidth: "250px",
+                showConfirmButton: false,
+                icon: "success",
+            })
+
+            setTimeout(function(){
+
+                location.href= "./index.html"; 
+    
+            }, 2000)
 
         }
         else {
-            alert("Wrong password. Please try again.")
+            Swal.fire({
+                title: "Error!",
+                text: "Wrong password. Please try again or register",
+                icon: "error",
+            })
         }
         
 
@@ -88,16 +105,40 @@ const userLogin = document.querySelector("#user-login").addEventListener("click"
             let saveUser = JSON.stringify(USER_CURRENT);
             localStorage.setItem("Usuario activo", saveUser);
 
-            location.href= "./index.html";
+            Swal.fire({
+                title: "Good!",
+                text: "Correct Login",
+                imageUrl: "./img/login_good.svg",
+                imageWidth: "250px",
+                showConfirmButton: false,
+                icon: "success",
+            })
+            
+            alert("nice")
+
+            setTimeout(function(){
+
+                location.href= "./index.html"; 
+    
+            }, 2000)
 
         }
         else {
-            alert("Wrong password. Please try again.")
+            Swal.fire({
+                title: "Error!",
+                text: "Wrong password. Please try again",
+                icon: "error",
+            })
+            
         }
 
     }
     else {
-        alert("User not found. Please try again or sign up");
+        Swal.fire({
+            title: "Error!",
+            text: "User not found. Plase try again or sign up",
+            icon: "error",
+        })
     }
 
 
