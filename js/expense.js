@@ -89,12 +89,33 @@ function init(){};
 
 // register();
 
+// CLOCK:
 
+async function APIrequest() {
+    fetch("http://worldtimeapi.org/api/ip")
+    .then((response) => response.json())
+    .then((json) => {
 
+        let userCustomZone = json.timezone
+        let userCustomDate = json.datetime
 
-// // USO DE OBJETO .Date PARA FECHAS:
+        userCustomDate.toString()
 
-            let today = new Date();
+        let userCustomLocation = userCustomZone.split('/')
+
+        userCountry = userCustomLocation[1]
+        userCity = userCustomLocation[2]
+
+        let countrySplit = userCountry.split("_")
+        userCustomCountry = countrySplit.join(" ")
+
+        let citySplit = userCity.split("_")
+        userCustomCity = citySplit.join(" ")
+        
+        let today = new Date(json.datetime);
+        
+        function currentTime(){
+
             let year = today.getFullYear();
             let month = today.getMonth();
             let monthList = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -102,43 +123,25 @@ function init(){};
             let day = today.getDay();
             let daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             let trueDay = daylist[day];
-            let dayDate = today.getDate();
             let hour = today.getHours();
             let minutes = today.getMinutes();
             let seconds = today.getSeconds();
 
-            let clock = document.querySelector("#showDate__text");
-        clock.innerHTML= `${trueDay}, ${trueMonth}, ${year}<br>
-        ${hour}:${minutes}:${seconds}`;
+            hour = (hour < 10) ? "0" + hour : hour;
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
 
+            clock = document.querySelector("#showDate__text");
+            clock.innerHTML= `${trueDay}, ${trueMonth}, ${year}<br>
+            ${hour}:${minutes}:${seconds}<br>
+            <span class="location">${userCustomCity}, ${userCustomCountry}</span>`
+            
+        }
+        currentTime()
+    })
+}
 
-// CLOCK:
-
-    function currentTime(){
-
-        today = new Date();
-        year = today.getFullYear();
-        month = today.getMonth();
-        monthList = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        trueMonth = monthList[month];
-        day = today.getDay();
-        daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        trueDay = daylist[day];
-        dayDate = today.getDate();
-        hour = today.getHours();
-        minutes = today.getMinutes();
-        seconds = today.getSeconds();
-
-        hour = (hour < 10) ? "0" + hour : hour;
-        minutes = (minutes < 10) ? "0" + minutes : minutes;
-        seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-        clock = document.querySelector("#showDate__text");
-        clock.innerHTML= `${trueDay}, ${trueMonth}, ${year}<br>
-        ${hour}:${minutes}:${seconds}`;    
-    }
-
-   setInterval(currentTime, 1000)
+setInterval(APIrequest, 100)
 
    
 

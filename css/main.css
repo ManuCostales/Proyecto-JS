@@ -323,6 +323,9 @@ footer {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: right; }
+    .section__info .section__info--div .location {
+      font-size: 1.2rem;
+      font-weight: 400; }
 
 .upperNav__h2 {
   font-size: 2rem; }
