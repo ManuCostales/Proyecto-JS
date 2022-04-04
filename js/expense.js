@@ -92,13 +92,7 @@ function init(){};
 // CLOCK:
 
 async function APIrequest() {
-    fetch("http://worldtimeapi.org/api/ip", {
-        method: 'GET',
-        headers: {
-        accept: 'application/json',
-        "Access-Control-Allow-Origin": "*",
-      },
-    })
+    fetch("http://worldtimeapi.org/api/ip")
     .then((response) => response.json())
     .then((json) => {
 
