@@ -1,0 +1,14 @@
+.project__cards {
+
+    width: 100%;
+    min-height: 60vh;
+
+    .project__cards--div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+}

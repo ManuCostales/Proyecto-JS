@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="./js/data.js" defer></script>
+    <script src="./js/users.js" defer></script>
+    <script src="./js/projects.js" defer></script>
+    <script src="./js/expense.js" defer></script>
+    <script src="js/sign-in.js" ></script>
+    <script src="./js/dashboard.js" defer></script>
+    <script src="./js/log-in.js" defer></script>
+    <script src="./js/new-project.js" defer></script>
+    <title>Proyecto JS</title>
+</head>
+<body onload= "init()">
+
+    <div class="modalMembers">
+
+        <div class="modalMembers__div">
+
+            <div class="modal__div--header">
+                <div class="modal__title">
+                    <img src="./img/board_project_title.svg" alt="Project Icon">
+                    <h2>Project</h2>
+                </div>
+                <img src="./img/close.svg" alt="Close Window">
+            </div>
+
+            <div class="separator__extraBig--orangeYellow"></div>
+
+            <div class="modal__body">
+
+                <div class="modal__body--admins">
+                    <h3>PROJECT ADMINS</h3>
+                    <div class="modal__body--admins--div">
+                        <div class="modal__body--admins--table">
+                            <div class="admin">
+                                <p>1</p>
+                                <p>Nick Menza</p>
+                                <img src="./img/addMember_delete.svg" alt="De-Rank Admins"/>
+                                <button>View</button>
+                            </div>
+                            <div class="admin">
+                                <p>1</p>
+                                <p>Nick Menza</p>
+                                <img src="./img/addMember_delete.svg" alt="De-Rank Admins"/>
+                                <button>View</button>
+                            </div>
+                            <div class="admin">
+                                <p>1</p>
+                                <p>Nick Menza</p>
+                                <img src="./img/addMember_delete.svg" alt="De-Rank Admins"/>
+                                <button>View</button>
+                            </div>
+                            <div class="admin">
+                                <p>1</p>
+                                <p>Nick Menza</p>
+                                <img src="./img/addMember_delete.svg" alt="De-Rank Admins"/>
+                                <button>View</button>
+                            </div>
+                            <div class="admin">
+                                <p>1</p>
+                                <p>Nick Menza</p>
+                                <img src="./img/addMember_delete.svg" alt="De-Rank Admins"/>
+                                <button>View</button>
+                            </div>
+                            <div class="admin">
+                                <p>1</p>
+                                <p>Nick Menza</p>
+                                <img src="./img/addMember_delete.svg" alt="De-Rank Admins"/>
+                                <button>View</button>
+                            </div>
+                            <div class="admin">
+                                <p>1</p>
+                                <p>Nick Menza</p>
+                                <img src="./img/addMember_delete.svg" alt="De-Rank Admins"/>
+                                <button>View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal__body--main">
+                    <div class="modal__body--current">
+                        <h3>CURRENT MEMBERS</h3>
+                        <div class="modal__body--div">
+                            <div class="modal__body--head">
+                                <div class="modal__body--header">
+                                    <div class="user__id">ID</div>
+                                    <div class="user__img"></div>
+                                    <div class="user__nick">NICKNAME</div>
+                                    <div class="user__name">FULL NAME</div>
+                                    <div class="user__email">EMAIL</div>
+                                    <div class="user__role">ROLE</div>
+                                    <div class="user__delete"></div>
+                                    <div class="user__view"></div>
+                                </div>
+                                <div class="separator__big--purple"></div>
+                            </div>
+                            <div class="modal__body--table">
+                                <div class="modal__body--row">
+                                    <p class="user__id user__id--vis">123</p>
+                                    <div class="user__img user__img--vis"><img src="./img/meme-10-guy-chico-drogado_400x400.jpg" alt=""></div>
+                                    <p class="user__nick user__nick--vis">Nick7568</p>
+                                    <p class="user__name user__name--vis">Nick Mensa</p>
+                                    <p class="user__email user__email--vis">nickmensa@hotmail.com</p>
+                                    <select class="user__role user__role--vis" name="" id="">Assign
+                                        <option value="value1">Value 1</option>
+                                        <option value="value1">Value 1</option>
+                                        <option value="value1">Value 1</option>
+                                    </select>
+                                    <img class="user__delete" src="./img/addMember_delete.svg" alt="Delete Member">
+                                    <button class="user__view">View</button>
+                                </div>
+                                <div class="modal__body--row">
+                                    <p class="user__id user__id--vis">123</p>
+                                    <div class="user__img user__img--vis"><img src="./img/meme-10-guy-chico-drogado_400x400.jpg" alt=""></div>
+                                    <p class="user__nick user__nick--vis">Nick7568</p>
+                                    <p class="user__name user__name--vis">Nick Mensa</p>
+                                    <p class="user__email user__email--vis">nickmensa@hotmail.com</p>
+                                    <select class="user__role user__role--vis" name="" id="">Assign
+                                        <option value="value1">Value 1</option>
+                                        <option value="value1">Value 1</option>
+                                        <option value="value1">Value 1</option>
+                                    </select>
+                                    <img class="user__delete" src="./img/addMember_delete.svg" alt="Delete Member">
+                                    <button class="user__view">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__body--add">
+                        <h3>ADD MEMBERS</h3>
+                        <div class="modal__body--div">
+                            <div class="modal__body--mainData">
+                                <div class="modal__body--head">
+                                    <div class="modal__body--header">
+                                        <div class="user__id">ID</div>
+                                        <div class="user__img"></div>
+                                        <div class="user__nick">NICKNAME</div>
+                                        <div class="user__email">EMAIL</div>
+                                        <div class="user__add"></div>
+                                    </div>
+                                    <div class="separator__big--purple-2"></div>
+                                </div>
+                                    <div class="modal__body--table">
+                                        <div class="modal__body--row">
+                                            <p class="user__id user__id--vis">123</p>
+                                            <div class="user__img user__img--vis"><img src="./img/meme-10-guy-chico-drogado_400x400.jpg" alt=""></div>
+                                            <p class="user__nick user__nick--vis">Nick7568</p>
+                                            <p class="user__email user__email--vis">nickmensa@hotmail.com</p>
+                                            <button class="user__add">Add</button>
+                                        </div>
+                                        <div class="modal__body--row">
+                                            <p class="user__id user__id--vis">123</p>
+                                            <div class="user__img user__img--vis"><img src="./img/meme-10-guy-chico-drogado_400x400.jpg" alt=""></div>
+                                            <p class="user__nick user__nick--vis">Nick7568</p>
+                                            <p class="user__email user__email--vis">nickmensa@hotmail.com</p>
+                                            <button class="user__add">Add</button>
+                                        </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal__body--add--footer">
+                                <p>Search <span>User</span></p>
+                                <input type="text">
+                                <button>Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            
+            </div>
+
+            <div class="separator__big--orangeYellow-2"></div>
+
+            <div class="modal__footer">
+                <button class="delete">Delete<img src="./img/delete_white.svg" alt=""> </button>
+                <p>ACTIVE TEAMS: 3</p>
+                <button class="close">Close <img src="./img/close_white.svg" alt="Close Window"></button>
+            </div>
+
+        </div>
+
+    </div>    
+
+
+</body>
+</html>

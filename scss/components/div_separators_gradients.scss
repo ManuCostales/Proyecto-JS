@@ -45,10 +45,20 @@
 .separator__extraBig--purpleOrange {
     background: $GRADIENT_PURPLEORANGE_1;
     height: 3rem;
+    z-index: 99999;
 }
 .separator__extraBig--purpleOrange-2 {
     background: $GRADIENT_PURPLEORANGE_2;
     height: 3rem;
+}
+
+.separator__big--bluePurple {
+    background: $GRADIENT_BLUEPURPLE_1;
+    height: 2rem;
+}
+.separator__big--bluePurple-2 {
+    background: $GRADIENT_BLUEPURPLE_2;
+    height: 2rem;
 }
 
 .separator__extraBig--bluePurple {
@@ -101,9 +111,73 @@
     height: 2rem;
 }
 
+.separator__small--orangeYellow {
+    background: $GRADIENT_ORANGEYELLOW_1;
+    height: 0.5rem;
+}
+
+.separator__small--orangeYellow-2 {
+    background: $GRADIENT_ORANGEYELLOW_2;
+    height: 0.5rem;
+}
+
+// PINK SALMON SEPARATORS
+
+.separator__extraBig--pinkSalmon {
+    background: $GRADIENT_PINKSALMON_1;
+    height: 3rem;
+}
+.separator__extraBig--pinkSalmon-2 {
+    background: $GRADIENT_PINKSALMON_2;
+    height: 3rem;
+}
+
+.separator__big--pinkSalmon {
+    background: $GRADIENT_PINKSALMON_1;
+    height: 2rem;
+}
+.separator__big--pinkSalmon-2 {
+    background: $GRADIENT_PINKSALMON_2;
+    height: 2rem;
+}
+
+.separator__small--pinkSalmon {
+    background: $GRADIENT_PINKSALMON_1;
+    height: 0.5rem;
+}
+
+.separator__small--pinkSalmon-2 {
+    background: $GRADIENT_PINKSALMON_2;
+    height: 0.5rem;
+}
+
 // SEPARATOR FOOTER
 
 .separator__footer {
     background: $GRADIENT_LBGREEN_FOOTER;
     height: 5rem;
 }
+
+// PURPLE
+
+.separator__big--purple {
+    height: 2rem;
+    background: linear-gradient(90deg,rgba(154, 118, 255, 1), rgba(58, 0, 223, 1));
+}
+
+.separator__big--purple-2 {
+    height: 2rem;
+    background: linear-gradient(90deg,rgba(58, 0, 223, 1),rgba(154, 118, 255, 1));
+}
+
+.separator__extraBig--purple {
+    height: 3rem;
+    background: linear-gradient(90deg,rgba(154, 118, 255, 1), rgba(58, 0, 223, 1));
+}
+
+.separator__extraBig--purple-2 {
+    height: 3rem;
+    background: linear-gradient(90deg,rgba(58, 0, 223, 1),rgba(154, 118, 255, 1));
+}
+
+

@@ -9,14 +9,239 @@
     <script src="./js/data.js" defer></script>
     <script src="./js/users.js" defer></script>
     <script src="./js/projects.js" defer></script>
-    <script src="./js/expense.js" defer></script>
-    <script src="js/sign-in.js" defer></script>
-    <script src="./js/dashboard.js" defer></script>
-    <script src="./js/log-in.js" defer></script>
-    <script src="./js/new-project.js" defer></script>
+    <script src="./js/time.js" defer></script>
+    <script src="./js/projects-page.js" defer></script>
     <title>Proyecto JS</title>
 </head>
 <body onload= "init()">
+
+    <!-- PROJECT MODAL -->
+
+    <!-- <div class="newModal">
+        <div></div>
+    </div> -->
+
+    <!-- <div class="modal">
+
+        <div class="modal__div">
+
+            <div class="modal__div--header">
+                <div class="modal__title">
+                    <img src="./img/board_project_title.svg" alt="Project Icon">
+                    <h2>Project</h2>
+                </div>
+                <img src="./img/close.svg" alt="Close Window">
+            </div>
+
+            <div class="separator__extraBig--orangeYellow"></div>
+
+            <div class="modal__body">
+
+                <div class="modal__body--one">
+                    <div class="project__modal--img">
+                        <img src="./img/Spotify.jpg" alt="Project Image">
+                    </div>
+                    <div class="project__modal--name">
+                        <div class="project__modal--info">
+                            <p>Project Name</p>
+                            <img src="./img/edit.svg" alt="Edit Name">
+                        </div>
+                        <h1>Spotify Web App</h1>
+                    </div>
+                    <div class="project__modal--host">
+                        <div class="project__modal--info">
+                            <p>Project Host</p>
+                            <img src="./img/edit.svg" alt="Edit Host">
+                        </div>
+                        <h4>Apple</h4>
+                    </div>
+                    <div class="project__modal--creator">
+                        <div class="project__modal--info">
+                            <p>Project Creator:</p>
+                        </div>
+                        <p>Manuel Costales</p>
+                    </div>
+                    <div class="project__modal--startDate">
+                        <div class="project__modal--info">
+                            <p>Projec Starting Date:</p>
+                        </div>
+                        <p>23/04/21</p>
+                    </div>
+                    <div class="project__modal--endDate">
+                        <div class="project__modal--info">
+                            <p>Projec End Date</p>
+                            <img src="./img/edit.svg" alt="Edit End Date">
+                        </div>
+                        <p>23/04/21</p>
+                    </div>
+
+                </div>
+
+                <div class="modal__body--two">
+                    <div class="modal__body--two--repos">
+                        <p class="repo__title">Project Repository/s:</p>
+                        <div class="repo__list">
+                            <div class="repo__list--table">
+                                <div class="repo__list--row">
+                                    <p>1</p>
+                                    <p> https://github.com/ManuCostales/Proyecto-JS---WIP</p>
+                                    <a href=" https://github.com/ManuCostales/Proyecto-JS---WIP "><img src="./img/github.svg" alt="Github Repo Link"></a>
+                                    <img src="./img/addMember_delete.svg" alt="Delete Repo">
+                                </div>
+                                <div class="repo__list--row">
+                                    <p>1</p>
+                                    <p> https://github.com/ManuCostales/Proyecto-JS---WIP</p>
+                                    <a href=" https://github.com/ManuCostales/Proyecto-JS---WIP "><img src="./img/github.svg" alt="Github Repo Link"></a>
+                                    <img src="./img/addMember_delete.svg" alt="Delete Repo">
+                                </div>
+                            </div>
+                            <div class="repo__list--footer">
+                                <button>View Full List - Add New Repo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__body--two--roles">
+                        <p class="role__title">Project Member Roles:</p>
+                        <div class="role__list">
+                            <ul>
+                                <li><p>DEVELOPER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DEVELOPER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DESIGNER</p></li>
+                            </ul>
+                            <div class="role__list--footer">
+                                <p>Add New <span>Role</span></p>
+                                <input type="text">
+                                <button>Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__body--two--descr">
+                        <div class="project__descr--title">
+                            <p>Project Description</p>
+                            <img src="./img/edit.svg" alt="Edit Description">
+                        </div>
+                        <div class="project__descr--text">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae animi minima rerum iusto quibusdam velit, suscipit voluptas eveniet debitis dolore ratione molestias. Libero pariatur natus exercitationem eius nihil, praesentium deserunt atque quas tempora perspiciatis voluptatem, sapiente quam eligendi quis excepturi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal__body--three">
+
+                    <div class="modal__body--three--issues">
+                        <div class="project__issues--title">
+                            <p>Active Issues:</p>
+                            <p>23</p>
+                        </div>
+                        <div class="project__issues">
+                            <div class="project__issues--table">
+                                <div class="project__issues--row">
+                                    <p class="issue__id">323</p>
+                                    <p class="issue__name">E-Commerce</p>
+                                    <p class="issue__type">FEATURE</p>
+                                    <p class="issue__priority">HIGH</p>
+                                    <p>Yesterday</p>
+                                    <div></div>
+                                    <button>View</button>
+                                </div>
+                                <div class="project__issues--row">
+                                    <p class="issue__id">323</p>
+                                    <p class="issue__name">E-Commerce</p>
+                                    <p class="issue__type">FEATURE</p>
+                                    <p class="issue__priority">HIGH</p>
+                                    <p>Yesterday</p>
+                                    <div></div>
+                                    <button>View</button>
+                                </div>
+                            </div>
+                            <div class="project__issues--footer">
+                                <button>Manage Issues</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__body--three--teams">
+                        <div class="project__teams--title">
+                            <p>Active Teams:</p>
+                            <p>23</p>
+                        </div>
+                        <div class="project__teams">
+                            <div class="project__teams--table">
+                                <div class="project__teams--row">
+                                    <p class="team__id">323</p>
+                                    <p class="team__name">Developers</p>
+                                    <p class="team__members">4 Members</p>
+                                    <p class="team__lead">Frank Castle</p>
+                                    <p>Yesterday</p>
+                                    <div></div>
+                                    <button>View</button>
+                                </div>
+                                <div class="project__teams--row">
+                                    <p class="team__id">323</p>
+                                    <p class="team__name">Developers</p>
+                                    <p class="team__members">5 Members</p>
+                                    <p class="team__lead">Manuel Costales</p>
+                                    <p>Yesterday</p>
+                                    <div></div>
+                                    <button>View</button>
+                                </div>
+                            </div>
+                            <div class="project__teams--footer">
+                                <button>Manage Teams</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__body--three--members">
+                        <div class="project__members--title">
+                            <p>Active Members:</p>
+                            <p>23</p>
+                        </div>
+                        <div class="project__members">
+                            <div class="project__members--table">
+                                <div class="project__members--row">
+                                    <p class="member__id">323</p>
+                                    <p class="member__nick">manukpo99</p>
+                                    <p class="member__name">Manuel Costales</p>
+                                    <p>Developer</p>
+                                    <div><img src="./img/addMember_delete.svg" alt=""></div>
+                                    <button>View</button>
+                                </div>
+                                <div class="project__members--row">
+                                    <p class="member__id">323</p>
+                                    <p class="member__nick">manukpo99</p>
+                                    <p class="member__name">Manuel Costales</p>
+                                    <p>Developer</p>
+                                    <div><img src="./img/addMember_delete.svg" alt=""></div>
+                                    <button>View</button>
+                                </div>
+                            </div>
+                            <div class="project__members--footer">
+                                <button>Manage Members</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="separator__big--orangeYellow-2"></div>
+
+            <div class="modal__footer">
+                <button class="delete">Delete Project <img src="./img/delete_white.svg" alt="Delete Project"></button>
+                <button class="close">Close <img src="./img/close_white.svg" alt="Close Window"></button>
+            </div>
+
+        </div>
+
+    </div> -->
 
     <!-- HEADER -->
 
@@ -59,11 +284,11 @@
                 </li>
                 <li class="sideNav__ul--li sideNav__ul--projects current">
                     <img src="./img/sidenav_projects.svg" alt="Projects">
-                    <a href="">Projects</a>
+                    <a href="./projects.html">Projects</a>
                 </li>
                 <li class="sideNav__ul--li sideNav__ul--teams">
                     <img src="./img/sidenav_teams.svg" alt="Teams">
-                    <a href="">Teams</a>
+                    <a href="./teams.html">Teams</a>
                 </li>
                 <li class="sideNav__ul--li sideNav__ul--tickets">
                     <img src="./img/sidenav_tickets.svg" alt="Tickets">
@@ -96,7 +321,14 @@
 
         <section id="section__info" class="section__info">
 
-            <h1 id="sectionTitle" class="sectionTitle">PROJECTS</h1>           
+            <div class="section__title">
+                <div class="title-info">
+                    <h1 id="sectionTitle" class="sectionTitle">PROJECTS</h1>
+                    <img src="./img/info_section.svg" alt="Section information">
+                </div>
+                <p class="sectionDescr">Shows the projects that you are part of</p>
+            </div>
+                       
 
             <div id="section__info--div" class="section__info--div">
                 <p id="showDate__text"></p>
@@ -104,195 +336,292 @@
 
         </section>
 
-        <!-- DASHBOARD BOARDS -->
+        <!-- PROJECT CARDS -->
 
-        <section class="newProject">
+        <section class="project__cards">
 
-            <div class="newProject__board">
+            <div class="project__cards--div" id="project-card-list">
 
-                <div class="newProject__header">
-                    <div class="newProject__header--title">
-                        <img src="./img/board_project_title.svg" alt="">
-                        <h1>Create New Project</h1>
+                <div class="project__card">
+
+                    <div class="project__card--header">
+                        <div class="project__card--header--info">
+                            <img src="./img/board_project_title.svg" alt="Project Icon">
+                            <p>1</p>
+                        </div>
+                        <h3 class="project__card--header--title">Steam Webpage</h3>
+                        <div class="project__card--header--notif">2</div>
                     </div>
-                    <p>CUSTOM PROJECT</p>
+
+                    <div class="separator__big--orangeYellow"></div>
+
+                    <div class="project__card--img">
+                        <img src="./img/Spotify.jpg" alt="Project image">
+                    </div>
+
+                    <div class="separator__small--purpleOrange"></div>
+
+                    <div class="project__card--description">
+                        <h5>Valve</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sed totam quasi distinctio fugit ipsum neque blanditiis ipsa ad similique.</p>
+                    </div>
+
+                    <button class="project__card--btn">Open</button>
+
+                    <div class="project__card--footer">
+                        <p>04/21</p>
+                        <p>8 Hours</p>
+                    </div>
+
                 </div>
-    
-                <div class="separator__extraBig--orangeYellow"></div>
-    
-                <div class="newProject__form">
-                    
-                    <div class="newProject__form--rowOne">
 
-                        <label for="" class="newProject__title">Project Name:
-                            <div>
-                                <p>Name of the project for identification.</p>
-                                <input class="input-text" type="text" id="projectName" required>
-                            </div>
-                        </label>
+                <div class="project__card">
 
-                        <label for="" class="newProject__host">Project Host:
-                            <div>
-                                <p>Name of the company or group responsible for the project.</p>
-                                <input class="input-text" type="text" id="projectHost" required>
-                            </div>
-                        </label>
-
-                        <label for="" class="newProject__creator">Project Creator:
-                            <div>
-                                <p>Name of the user creating the project.</p>
-                                <p class="newProject__creator--name" id="projectCreator"></p>
-                            </div>
-                        </label>
-
+                    <div class="project__card--header">
+                        <div class="project__card--header--info">
+                            <img src="./img/board_project_title.svg" alt="Project Icon">
+                            <p>1</p>
+                        </div>
+                        <h3 class="project__card--header--title">Steam Webpage</h3>
+                        <div class="project__card--header--notif">2</div>
                     </div>
 
-                    <div class="newProject__form--rowTwo">
+                    <div class="separator__big--orangeYellow"></div>
 
-                        <label for="" class="newProject__description">Project Description:
-                            <div>
-                                <p>Description of the project goals and situation:</p>
-                                <textarea name="" cols="30" rows="10" id="projectDescr" required></textarea>
-                            </div>
-                        </label>
-
-                        <div class="newProject__dates">
-                            <label for="">Project Creation Date:
-                                <div>
-                                    <p>Expected date  for when the project will be finished</p>
-                                    <p class="newProject__creator--name" id="projectCreationDate"></p>
-                                </div>
-                            </label>
-                            <label for="" class="newProject__finishDate">Project End Date (Optional):
-                                <div>
-                                    <p>Expected date  for when the project will be finished</p>
-                                    <input type="date" id="projectEndDate">
-                                </div>
-                            </label>
-                        </div>
-
-                        
-
+                    <div class="project__card--img">
+                        <img src="./img/microsoft.jpg" alt="Project image">
                     </div>
 
-                    <div class="newProject__form--rowThree">
+                    <div class="separator__small--purpleOrange"></div>
 
-                        <label for="" class="newProject__repos">Project Repository/s (Optional):
-                            <div>
-                                <p>Github links to repository or repositories of the project. (Can be added later!)</p>
-                                <div class="newProject__repos--input">
-                                    <input type="url" id="projectRepos" placeholder="Enter Repository URL">
-                                    <button type="submit" class="login__form--submit" id="addRepo">Add</button>
-                                </div>
-                            </div>
-                        </label>
-
-                        <div class="newProject__createdRepos">
-                            <h6>ADDED REPOS:</h6>
-                            <ul id="createdRepos-list"></ul>
-                        </div>
-
+                    <div class="project__card--description">
+                        <h5>Valve</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sed totam quasi distinctio fugit ipsum neque blanditiis ipsa ad similique.</p>
                     </div>
 
-                    <div class="newProject__form--rowFour">
+                    <button class="project__card--btn">Open</button>
 
-                        <label for="" class="newProject__roles">Project Member Roles (Optional):
-                            <div>
-                                <p>Create a role that will be assigned to members of this project. (Can be added later!)</p>
-                                <div class="newProject__roles--input">
-                                    <input class="input-text"type="text" id="projectRoles">
-                                    <button type="submit" class="login__form--submit" value="add role" id="addRole">Create Role</button>
-                                </div>
-                            </div>
-                        </label>
-
-                        <div class="newProject__createdRoles">
-                            <h6>CREATED ROLES:</h6>
-                            <ul id="createdRoles-list"></ul>
-                        </div>
-
+                    <div class="project__card--footer">
+                        <p>04/21</p>
+                        <p>8 Hours</p>
                     </div>
 
-                    <div class="addMembers__board">
-
-                        <div class="addMembers__header">
-                            <h3>ADD MEMBERS</h3>
-                        </div>
-
-                        <div class="separator__big--orangeYellow-2"></div>
-
-                        <div class="newMembers">
-
-                            <div class="addMembers">
-                                <div class="addMembers__title"><p class="addMembers__title--p">ADD</p></div>
-                                <div class="addMembers__body">
-
-                                    <div class="addMembers__body--header">
-                                        <div class="addMembers__friends--title"><h4>Friends List</h4></div>
-                                        <div class="addMembers__search--title"><h4>Search</h4></div>
-                                    </div>
-
-                                    <div class="addMembers__search--table table" id="searchList">
-
-                                        <div class="row">
-                                            <div class="cell">Nick7823</div>
-                                            <div class="cell">Nick Menza</div>
-                                            <div class="cell">nickmenza@hotmail.com</div>
-                                            <button class="cell add__member--btn" type="submit" value="add member">Add</button>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="addMembers__search--search">
-                                        <label for="">Search User:
-                                            <input type="text">
-                                            <button type="submit" value="" class="addMembers__search--btn">Search</button>
-                                        </label>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="currentMembers">
-
-                                <div class="currentMembers__title"><p class="addMembers__title--p" >CURRENT MEMBERS</p></div>
-
-                                <div class="currentMembers__body">
-                                    <div class="currentMembers__table" id="currentMembers-table">
-
-                                        <div class="currentMembers__table--header">
-            
-                                            <div class="cell">ID</div>
-                                            <div class="cell">Username</div>
-                                            <div class="cell">Full name</div>
-                                            <div class="cell">Role</div>
-                                            <div class="cell"></div>
-                            
-                                        </div>
-    
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="separator__small--purpleOrange"></div>
-
-                        <div class="addMembers__footer">
-                            <p>CURRENT MEMBERS: 3</p>
-                        </div>
-
-                    </div>
-
-                    <button type="submit" class="create__project--btn" id="submitProject">Create Project</button>
-    
                 </div>
+
+                <div class="project__card">
+
+                    <div class="project__card--header">
+                        <div class="project__card--header--info">
+                            <img src="./img/board_project_title.svg" alt="Project Icon">
+                            <p>1</p>
+                        </div>
+                        <h3 class="project__card--header--title">Steam Webpage</h3>
+                        <div class="project__card--header--notif">2</div>
+                    </div>
+
+                    <div class="separator__big--orangeYellow"></div>
+
+                    <div class="project__card--img">
+                        <img src="./img/steam.jpg" alt="Project image">
+                    </div>
+
+                    <div class="separator__small--purpleOrange"></div>
+
+                    <div class="project__card--description">
+                        <h5>Valve</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sed totam quasi distinctio fugit ipsum neque blanditiis ipsa ad similique.</p>
+                    </div>
+
+                    <button class="project__card--btn">Open</button>
+
+                    <div class="project__card--footer">
+                        <p>04/21</p>
+                        <p>8 Hours</p>
+                    </div>
+
+                </div>
+
+                <div class="project__card--new">
+
+                    <div class="project__card--new--div">
+
+                        <h5>ADD</h5>
+                        <img src="./img/plus.svg" alt="Add Project">
+                        <img src="./img/project_big.svg" alt="Project Icon Big">
+                        <h6>New Project</h6>
+
+                    </div>
+
+                </div>
+                
+
             </div>
+
 
         </section>
 
+        <!-- PROJECT LIST BOARD: -->
+
+        <section id="projectListBoard" class="list_board">
+
+            <div class="list__board--div">
+
+                <div class="list__board--header">
+                    <div class="list__board--header--title">
+                        <img src="./img/board_project_title.svg" alt="Project Icon">
+                        <h3>Projects</h3>
+                    </div>
+                    <p>FULL LIST</p>
+                </div>
+
+                <div class="separator__extraBig--orangeYellow"></div>
+
+                <div id="showProjects" class="list__board--order dropdown">
+                    <p>Order By:</p>
+                    <button class="dropbtn">▼</button>
+                    <ul id="issuesDropdown" class="projectGraphic__show--dropdown dropdown-content">
+                        <li>All</li>
+                        <li>By Type</li>
+                        <li>By Date</li>
+                        <li>By Priority</li>
+                    </ul>
+                </div>
         
+                <div class="list__board--table" id="projects-table">
+        
+                    <div class="list__board--table--header">
+        
+                        <div class="project__id">ID</div>
+                        <div class="project__title">TITLE</div>
+                        <div class="project__host">HOST</div>
+                        <div class="project__creator">CREATOR</div>
+                        <div class="project__description">DESCRIPTION</div>
+                        <div class="project__date">CREATION</div>
+                        <div class="project__lastEntry">LAST ENTRY</div>
+                        <div class="project__notif"></div>
+                        <div class="project__view"></div>
+        
+                    </div>
+        
+                    <div class="list__board--row">
+        
+                        <div class="project__id project__id--vis" data-title="project-id">324</div>
+                        <div class="project__title project__title--vis" data-title="issue-title">E-Commerce</div>
+                        <div class="project__host project__host--vis" data-title="project-host">Steam</div>
+                        <div class="project__creator project__creator--vis" data-title="project-creator">David Leis</div>
+                        <div class="project__description project__description--vis" data-title="project-description">E-Commerce Page for Steam</div>
+                        <div class="project__date" data-title="project-project">23/22</div>
+                        <div class="project__lastEntry" data-title="project-lastEntry">Yesterday</div>
+                        <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="project__view" data-title="view"><button class="btnView">Open</button></div>
+        
+                    </div>
+
+                    <div class="list__board--row">
+        
+                        <div class="project__id project__id--vis" data-title="project-id">324</div>
+                        <div class="project__title project__title--vis" data-title="issue-title">E-Commerce</div>
+                        <div class="project__host project__host--vis" data-title="project-host">Steam</div>
+                        <div class="project__creator project__creator--vis" data-title="project-creator">David Leis</div>
+                        <div class="project__description project__description--vis" data-title="project-description">E-Commerce Page for Steam</div>
+                        <div class="project__date" data-title="project-project">23/22</div>
+                        <div class="project__lastEntry" data-title="project-lastEntry">Yesterday</div>
+                        <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="project__view" data-title="view"><button class="btnView">Open</button></div>
+        
+                    </div>
+
+                    <div class="list__board--row">
+        
+                        <div class="project__id project__id--vis" data-title="project-id">324</div>
+                        <div class="project__title project__title--vis" data-title="issue-title">E-Commerce</div>
+                        <div class="project__host project__host--vis" data-title="project-host">Steam</div>
+                        <div class="project__creator project__creator--vis" data-title="project-creator">David Leis</div>
+                        <div class="project__description project__description--vis" data-title="project-description">E-Commerce Page for Steam</div>
+                        <div class="project__date" data-title="project-project">23/22</div>
+                        <div class="project__lastEntry" data-title="project-lastEntry">Yesterday</div>
+                        <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="project__view" data-title="view"><button class="btnView">Open</button></div>
+        
+                    </div>
+
+                    <div class="list__board--row">
+        
+                        <div class="project__id project__id--vis" data-title="project-id">324</div>
+                        <div class="project__title project__title--vis" data-title="issue-title">E-Commerce</div>
+                        <div class="project__host project__host--vis" data-title="project-host">Steam</div>
+                        <div class="project__creator project__creator--vis" data-title="project-creator">David Leis</div>
+                        <div class="project__description project__description--vis" data-title="project-description">E-Commerce Page for Steam</div>
+                        <div class="project__date" data-title="project-project">23/22</div>
+                        <div class="project__lastEntry" data-title="project-lastEntry">Yesterday</div>
+                        <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="project__view" data-title="view"><button class="btnView">Open</button></div>
+        
+                    </div>
+
+                
+                </div>
+
+                <div class="list__board--addDelete">
+                    <button class="list__board--delete--btn">Delete</button>
+                    <button class="list__board--add-btn">New</button>
+                </div>
+
+                <div class="list__board--preview">
+                    <div class="list__board--preview--header">
+                        <h5>PREVIEW</h5>
+                    </div>
+                    <div class="separator__big--purpleOrange-2"></div>
+                    <div class="list__board--preview--info">
+                        <div class="list__board--preview--one">
+                            <div class="list__preview--one--title">
+                                <p class="list__preview--one--title--id">323</p>
+                                <h4>E-Commerce</h4>
+                                <p class="list__preview--one--title--host">Steam</p>
+                            </div>
+                            <div class="list__preview--one--descr">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi in officia exercitationem, quo culpa quibusdam necessitatibus laudantium quae amet quod enim voluptatem mollitia veniam, voluptatibus illum recusandae voluptate earum quas.</p>
+                            </div>
+                        </div>
+                        <div class="list__board--preview--two">
+                            <p>CREATOR:</p>
+                            <p>ASSIGNED MEMBERS:</p>
+                            <p>ACTIVE TEAMS:</p>
+                            <p>ACTIVE ISSUES:</p>
+                            <p>SOLVED ISSUES:</p>
+                            <p>REPOSITORIES:</p>
+                        </div>
+                        <div class="list__board--preview--three">
+                            <div class="list__preview--three--data">
+                                <p>CREATION DATE: 21/03/2022</p>
+                                <p>FINISH DATE</p>
+                                <p>ROLES CREATED</p>
+                            </div>
+                            <div class="list__preview--three--more">
+                                <div class="list__preview--three--notif">
+                                    <p>Notifications:</p>
+                                    <div>2</div>
+                                </div>
+                                <button>See Full Info</button>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="separator__small--purpleOrange-2"></div>
+
+                    <div class="list__board--footer">
+                        <p>ACTIVE ISSUES: 6</p>
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+
+            
+
+        </section>
 
     </main>
 

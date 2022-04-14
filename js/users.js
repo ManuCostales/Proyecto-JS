@@ -1,7 +1,7 @@
 // FUNCION CONSTRUCTORA DE CLASE DE OBJETO "USER" /USUARIOS:
 
-class USER {
-  constructor(id, firstName, lastName, nickname, email, phone, password) {
+class User {
+  constructor(id, firstName, lastName, nickname, email, phone, password, projects) {
     this.id = id
     this.firstName = firstName
     this.lastName = lastName
@@ -9,6 +9,7 @@ class USER {
     this.email = email
     this.phone = phone
     this.password = password
+    this.projects = projects
   }
   info() {
     //
@@ -23,7 +24,6 @@ class USER {
 
 function oldestUser() {
   //
-
   let userIdList = userList.map((a) => a.id)
   let minId = Math.min(...userIdList)
   console.log(...userIdList)
@@ -58,3 +58,5 @@ let userPassword
 let USER_CURRENT
 
 console.log(userList)
+
+

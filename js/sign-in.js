@@ -63,7 +63,7 @@ function crearUsuario () {
         userDate = `${trueDay} ${dayDate} de ${trueMonth} de ${year}, a las ${hour}hs.`;
         console.log(userDate)
 
-        userNew = new USER(userId, userName, userLastName, userNickName, userEmail, userPhone, userPassword)
+        userNew = new User(userId, userName, userLastName, userNickName, userEmail, userPhone, userPassword)
 
         userList.push(userNew);
 

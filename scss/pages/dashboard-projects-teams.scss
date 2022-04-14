@@ -53,19 +53,27 @@
         width: 100%;
         display: table;
         min-height: 40%;
-        .cell {
-            display: table-cell;
-            padding: 0.5rem;
-        }
         .table__header {
-            display: table-row;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
             background-color:#EAECFF;
             font-size: 0.9rem;
             font-weight: 600;
             color: #7C7C7C;
+            height: 5vh;
+            vertical-align: bottom;
+            line-height: 170%;
+            padding: 0 0.5vw;
         }
         .row {
-            display: table-row;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            height: 5vh;
+            padding: 0 0.5vw;
             .project__title {
                 color: $PURPLE_BTN_VIEW;
                 font-weight: 600;
@@ -77,23 +85,49 @@
         }
     }
 
-    // PROJECT SPECIFICS:
+    // PROJECT SPECIFIC CELLS:
 
+    .project__title {
+        width: 30%;
+    }
     .project__host {
-        margin: 0 2vw;
-        padding-right:1vw;
+        width: 20%;
+    }
+    .project__host--vis {
         font-weight: 600;
-        color: $BLACK_NAV_UPPER;
+        color: #3E3E3E;
+    }
+    .project__creator {
+        width: 20%;
+    }
+    .project__date {
+        width: 10%;
+    }
+    .project__notif {
+        width: 5%;
+    }
+    .project__view {
+        width: 10%;
     }
 
-    // TEAM SPECIFICS:
+    // TEAM SPECIFICS CELLS:
 
+    .team__title {
+        width: 25%;
+    }
     .team__project {
-        font-weight: 600;
-        color: $BLACK_NAV_UPPER;
+        width: 25%;
     }
-    .team__members--title, .team__members {
+    .team__members {
+        width: 15%;
         text-align: center;
+    }
+    .team__notif {
+        width: 10%;
+        text-align: center;
+    }
+    .team__view {
+        width: 10%;
     }
 
     .more{

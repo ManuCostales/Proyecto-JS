@@ -9,16 +9,15 @@
     <script src="./js/data.js" defer></script>
     <script src="./js/users.js" defer></script>
     <script src="./js/projects.js" defer></script>
-    <script src="./js/expense.js" defer></script>
-    <script src="js/sign-in.js" ></script>
+    <script src="./js/time.js" defer></script>
     <script src="./js/dashboard.js" defer></script>
-    <script src="./js/log-in.js" defer></script>
-    <script src="./js/new-project.js" defer></script>
     <title>Proyecto JS</title>
 </head>
 <body onload= "init()">
 
     <!-- HEADER -->
+
+    <!-- WHASD NIGGAAAA -->
 
     <header id="header" class="header">
 
@@ -63,7 +62,7 @@
                 </li>
                 <li class="sideNav__ul--li sideNav__ul--teams">
                     <img src="./img/sidenav_teams.svg" alt="Teams">
-                    <a href="">Teams</a>
+                    <a href="./teams.html">Teams</a>
                 </li>
                 <li class="sideNav__ul--li sideNav__ul--tickets">
                     <img src="./img/sidenav_tickets.svg" alt="Tickets">
@@ -96,7 +95,14 @@
 
         <section id="section__info" class="section__info">
 
-            <h1 id="sectionTitle" class="sectionTitle">DASHBOARD</h1>           
+            <div class="section__title">
+                <div class="title-info">
+                    <h1 id="sectionTitle" class="sectionTitle">DASHBOARD</h1>
+                    <img src="" alt="">
+                </div>
+                <p class="sectionDescr">See your entire workspace</p>
+            </div>
+                       
 
             <div id="section__info--div" class="section__info--div">
                 <p id="showDate__text"></p>
@@ -120,42 +126,44 @@
                     <a href="">Go to</a>
                 </div>
         
-                <div class="gradient--purple separator__big--purpleOrange"></div>
+                <div class="gradient--purple separator__big--orangeYellow-2"></div>
         
                 <div class="table" id="projectsDashboard">
         
                     <div class="table__header">
         
-                        <div class="cell">PROJECT</div>
-                        <div class="cell project__host--title">HOST</div>
-                        <div class="cell project__creator--title">CREATOR</div>
-                        <div class="cell project__date--title">DATE</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
+                        <div class="project__title">PROJECT</div>
+                        <div class="project__host">HOST</div>
+                        <div class="project__creator">CREATOR</div>
+                        <div class="project__date">DATE</div>
+                        <div class="project__notif"></div>
+                        <div class="project__view"></div>
         
                     </div>
         
                     <div class="row">
         
-                        <div class="cell project__title" data-title="project">E-Commerce</div>
-                        <div class="cell project__host" data-title="host">Apple</div>
-                        <div class="cell project__creator" data-title="creator">David Leif</div>
-                        <div class="cell project__date" data-title="date">03/21</div>
-                        <div class="cell" data-title="notifications"><button class="btnNoti">2</button></div>
-                        <div class="cell" data-title="view"><button class="btnView">View</button></div>
+                        <div class="project__title project__title--vis" data-title="project">E-Commerce</div>
+                        <div class="project__host project__host--vis" data-title="host">Apple</div>
+                        <div class="project__creator project__creator--vis" data-title="creator">David Leif</div>
+                        <div class="project__date" data-title="date">03/21</div>
+                        <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="project__view" data-title="view"><button class="btnView">View</button></div>
         
                     </div>
-        
+
                     <div class="row">
         
-                        <div class="cell project__title" data-title="project">DW-Page Burlock Strine Systems</div>
-                        <div class="cell project__host" data-title="host">Microsoft Experience</div>
-                        <div class="cell project__creator" data-title="creator">Adrian Last</div>
-                        <div class="cell project__date" data-title="date">06/20</div>
-                        <div class="cell" data-title="notifications"><button class="btnNoti">2</button></div>
-                        <div class="cell" data-title="view"><button class="btnView">View</button></div>
+                        <div class="project__title project__title--vis" data-title="project">E-Commerce</div>
+                        <div class="project__host project__host--vis" data-title="host">Apple</div>
+                        <div class="project__creator project__creator--vis" data-title="creator">David Leif</div>
+                        <div class="project__date" data-title="date">03/21</div>
+                        <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="project__view" data-title="view"><button class="btnView">View</button></div>
         
                     </div>
+        
+                    
         
                 </div>
         
@@ -165,10 +173,10 @@
         
         
                 <div class="footer">
-                    <div class="gradient--purple separator__small--purpleOrange"></div>
+                    <div class="gradient--purple separator__small--orangeYellow"></div>
                     <div class="trueFooter">
                         <div class="active">
-                            <p>ACTIVE PROJECTS: 6</p>
+                            <p id="dashboard-projects-active">ACTIVE PROJECTS: 6</p>
                         </div>
             
                         <button class="btnNewProject" id="btnNewProject"><a href="./projects.html">New Project</a></button>
@@ -195,31 +203,31 @@
         
                     <div class="table__header">
         
-                        <div class="cell">TEAM</div>
-                        <div class="cell team__project--title">PROJECT</div>
-                        <div class="cell team__members--title">MEMBERS</div>
-                        <div class="cell"></div>
-                        <div class="cell"></div>
+                        <div class="team__title">TEAM</div>
+                        <div class="team__project">PROJECT</div>
+                        <div class="team__members">MEMBERS</div>
+                        <div class="team__notif"></div>
+                        <div class="team__view"></div>
         
                     </div>
         
                     <div class="row">
         
-                        <div class="cell team__title" data-title="team">Developers</div>
-                        <div class="cell team__project" data-title="team_project">E-Commerce</div>
-                        <div class="cell team__members" data-title="members">6</div>
-                        <div class="cell" data-title="notifications"><button class="btnNoti">2</button></div>
-                        <div class="cell" data-title="view"><button class="btnView">View</button></div>
+                        <div class="team__title" data-title="team">Developers</div>
+                        <div class="team__project team__project--vis" data-title="team_project">E-Commerce</div>
+                        <div class="team__members" data-title="members">6</div>
+                        <div class="team__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="team__view" data-title="view"><button class="btnView">View</button></div>
         
                     </div>
         
                     <div class="row">
         
-                        <div class="cell team__title" data-title="team">UI Designers</div>
-                        <div class="cell team__project" data-title="team_project">DW-Page Burlock Strine Systems</div>
-                        <div class="cell team__members" data-title="members">5</div>
-                        <div class="cell" data-title="notifications"><button class="btnNoti">2</button></div>
-                        <div class="cell" data-title="view"><button class="btnView">View</button></div>
+                        <div class="team__title" data-title="team">Developers</div>
+                        <div class="team__project team__project--vis" data-title="team_project">E-Commerce</div>
+                        <div class="team__members" data-title="members">6</div>
+                        <div class="team__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="team__view" data-title="view"><button class="btnView">View</button></div>
         
                     </div>
         
@@ -260,7 +268,7 @@
                     <a href="">Go to</a>
                 </div>
         
-                <div class="gradient--purple separator__big--lbYellow"></div>
+                <div class="gradient--purple separator__big--pinkSalmon"></div>
 
                 <!-- ISSUES GRAPHIC BOARD -->
                 

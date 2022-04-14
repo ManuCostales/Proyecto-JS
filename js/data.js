@@ -39,12 +39,37 @@ function guardarProyecto(projectNew){
 
 function cargarDatosUsuarios(){
 
-    let userList = [];
+    userList = JSON.parse(localStorage.getItem("Lista de Usuarios"));
+    console.log(userList);
+
+    userList.forEach(user => {
+        if(projectList == null){
+            console.log("%cNO PROJECT STORED", "color: white; background-color: red; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
+            projectList = []
+        }
+        else {
+        user.projects = projectList.filter(project => project.members.find(member => member.id == user.id))
+        }
+        user.teams = []
+        user.issues = []
+    })
+
     USER_CURRENT = JSON.parse(localStorage.getItem("Usuario activo"));
     console.log(USER_CURRENT);
 
-    userList = JSON.parse(localStorage.getItem("Lista de Usuarios"));
-    console.log(userList);
+    USER_CURRENT.projects = projectList.filter(project => project.members.find(member => member.id == USER_CURRENT.id))
+    USER_CURRENT.teams = []
+    USER_CURRENT.issues = []
+
+    function mostrarDatosUsuario(){
+        navCurrentUser = document.querySelector("#nav-current-user");
+        usernick = USER_CURRENT.nickname;
+        navCurrentUser.innerHTML = usernick;
+    }
+
+    mostrarDatosUsuario();
+
+    console.log("%cUSER DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")    
 
 }
 
@@ -52,9 +77,10 @@ function cargarDatosUsuarios(){
 
 function cargarDatosProyectos(){
 
-    let projectList = [];
     projectList = JSON.parse(localStorage.getItem("Lista de Proyectos"));
     console.log(projectList);
+
+    console.log("%cPROJECT DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
 
 }
 

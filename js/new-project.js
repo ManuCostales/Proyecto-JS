@@ -1,8 +1,9 @@
 // CARGA DE DATOS 📚
+cargarDatosProyectos();
 
 cargarDatosUsuarios();
 
-cargarDatosProyectos();
+
 
 
 // FUNCION CONSTRUCTORA DE CLASE DE OBJETO "PROJECT" /PROYECTOS:
@@ -11,14 +12,74 @@ function createProject(){
 
     // PROJECT DATES: 
 
-    projectCreationDate = `${dayDate} ${trueMonth} ${year}`
+    let trueProjectTime = ""
 
-    let showProjectDate = document.querySelector("#projectCreationDate");
-    showProjectDate.innerHTML= projectCreationDate;
+    function showProjectDate(time){
 
-    showProjectCreator = document.querySelector("#projectCreator");
-    showProjectCreator.innerHTML= `${USER_CURRENT.firstName} ${USER_CURRENT.lastName}`;
-    console.log(USER_CURRENT)
+        let projectTime = currentTime(time)
+        let projectCreationDate = `${projectTime.dayNumber} ${projectTime.month} ${projectTime.year}`
+        let showProjectDate = document.querySelector("#projectCreationDate");
+        showProjectDate.innerHTML= projectCreationDate;
+    }
+
+    const projectDate = () => {
+        date.then((a) => {
+            showProjectDate(a)
+            trueProjectTime = a
+        })
+    }
+
+    projectDate()
+
+    // PROJECT CREATOR:
+
+    function showProjectCreator(){
+        showProjectCreator = document.querySelector("#projectCreator");
+        showProjectCreator.innerHTML= `${USER_CURRENT.firstName} ${USER_CURRENT.lastName}`;
+    }
+
+    showProjectCreator()
+
+    // PROJECT IMAGE:
+
+    function setProjectImage(){
+        let dropArea = document.querySelector("#droparea")
+        console.log(dropArea)
+        const active = () => dropArea.classList.add("active")
+        const inactive = () => dropArea.classList.remove("active")
+        const prevent = (e) => e.preventDefault()
+        let dropText = document.querySelector("#dropText")
+        let uploadedImage = ""
+
+        const eventsActive = ["dragenter", "dragover"]
+        const eventsInactive = ["dragleave", "drop"]
+
+        eventsActive.forEach(eName => {
+            dropArea.addEventListener(eName, prevent)
+            dropArea.addEventListener(eName, active)
+        })
+
+        eventsInactive.forEach(eName => {
+            dropArea.addEventListener(eName, prevent)
+            dropArea.addEventListener(eName, inactive)
+        })
+
+        dropArea.addEventListener("drop", (e)=>{
+            const dt = e.dataTransfer
+            const files = dt.files
+            const reader = new FileReader()
+            reader.addEventListener("loadend", ()=>{
+                uploadedImage = reader.result
+                projectImage = uploadedImage
+                dropArea.innerHTML = `<img src="${uploadedImage}" alt="shit">`
+            })
+            reader.readAsDataURL(files[0])
+        })
+    }
+
+    setProjectImage()
+
+    // PROJECT REPOS
 
     function addNewRepo(e){
 
@@ -46,37 +107,46 @@ function createProject(){
         projectRepos.forEach(repo => {
 
             // Suma del Contador:
-            counter++;
-            
-            createdReposList.innerHTML += `<li>Repo ${counter}: <a href="${repo}" target="_blank">${repo}</a></li>`;
+            counter++;            
+            createdReposList.innerHTML += `<li>Repo ${counter}: <a href="${repo}" target="_blank">${repo}</a><img class="deleteRepo" id="deleteRepo-${counter}" src="./img/addMember_delete.svg" alt="Delete Repo"></li>`;
 
         });
 
         // Limpiar el input de Repo luego de agregar:
         document.getElementById("projectRepos").value = "";
 
-
     }
 
     let addRepo = document.querySelector("#addRepo").addEventListener("click", (e)=> addNewRepo(e));
+
+    function eraseRepo(button){
+        button.parentNode.remove()
+        repoId = button.id
+        let numberId = repoId.match(/\d+/g);
+        projectRepos.splice((numberId-1), 1)
+    }
+
+    let removeRepo = document.querySelector("#createdRepos-list")
+    removeRepo.addEventListener("click", function(e){
+        if(e.target.classList.contains("deleteRepo")|| e.target.closest('.deleteRepo') !== null){
+            let button = e.target
+            eraseRepo(button)
+        }
+    })
+
+    // PROJECT ROLES:
 
     function createRole (e){
 
         e.preventDefault();
 
-        projectRoles.length == 10 && alert("You have added 10 Roles");
-        const maxRoles = (projectRoles.length > 20) ? true : false;
-
-        maxRoles ? alert("You have reached the limit of roles") : alert(`You can still add ${19 - projectRoles.length} Roles`)
-
         // Se busca value del input de Role:
-        let newRole = document.querySelector("#projectRoles").value;
+        let newRole = (document.querySelector("#projectRoles").value).toUpperCase();
 
         // Si el input esta vacio, no ejecutar la función.
         if (newRole == "") {
             return;
         }
-
 
         // Si el input tiene un valor, pushear ese valor a la lista de Roles:
         projectRoles.push(newRole);
@@ -88,7 +158,10 @@ function createProject(){
         // Por cada rol en la lista de Roles, agregar un elemento <li> al HTML.
         projectRoles.forEach(role => {
             
-            createdRolesList.innerHTML += `<li>${role}</li>`;
+            if(role == "ADMIN"){
+                return
+            }
+            createdRolesList.innerHTML += `<li><p>${role}</p><img class="deleteRole" src="./img/addMember_delete.svg" alt="Delete Role"></li>`;
 
         });
 
@@ -97,13 +170,24 @@ function createProject(){
 
     }
 
-    
-
-    
-
     let addRole = document.querySelector("#addRole").addEventListener("click", (e)=>createRole(e))
 
-    let searchList = document.querySelector("#searchList");
+    function eraseRole(button){
+        button.parentNode.remove()
+        roleId = button.id
+        let numberId = roleId.match(/\d+/g);
+        projectRoles.splice((numberId-1), 1)
+    }
+
+    let removeRole = document.querySelector("#createdRoles-list")
+    removeRole.addEventListener("click", function(e){
+        if(e.target.classList.contains("deleteRole")|| e.target.closest('.deleteRole') !== null){
+            let button = e.target
+            eraseRole(button)
+        }
+    })
+
+    // PROJECT SEARCH USERS:
 
     function searchUsers(){
 
@@ -111,10 +195,15 @@ function createProject(){
         let searchList = document.querySelector("#searchList");
 
         // Limpiar lista de busqueda:
-        searchList.innerHTML = ``;
+        searchList.innerHTML = ``
 
         // Por cada usuario en lista de usuarios, agregar una fila con datos del usuario:
         userList.forEach(user => {
+
+            console.log(USER_CURRENT)
+            if(user.id == USER_CURRENT.id){
+                return
+            }
 
             searchList.innerHTML += `<div class="row" id="searchUserRow-${user.id}">
                                         <div class="cell search__nick">${user.nickname}</div>
@@ -124,96 +213,33 @@ function createProject(){
                                     </div>`
                 
         console.log(user.id)
-
         })
     }
 
     searchUsers();
 
-    
+    // PROJECT SEARCH USERS BY SEARCH INPUT:
 
-    function addUsers(){
+    function showSearchUsers(){
 
-        // Seleccionar a todos los botones de Add creados con la funcion searchUsers()
-        let addButton = document.querySelectorAll(".add__member--btn");
+        let searchList = document.querySelector("#searchList");
+        const searchInput = document.querySelector("#search-input")
+        let searchTerm = ""
+        searchInput.addEventListener("input", e => {
+            searchTerm = e.target.value
+            showUsers()
+        })
 
-        console.log(addButton);
-
-        // Transformar el conjunto de nodos a un array:
-        let buttonsArray = Array.from(addButton);
-    
-        console.log(buttonsArray);
-
-        console.log(addButton);
-
-        
-        
-
-        /* Por cada boton, establecer un id con el valor del contador, el cual usa el valor posicional de dicho
-        boton dentro del array sumado a 1, para que los id´s comiencen en 1 y no en 0*/
-        addButton.forEach(button => addNewMember(button))
-
-
-        // addNewMember()
-        // eraseCurrentMember()
-            
-        function addNewMember(button){
-
-            let contador =  buttonsArray.indexOf(button) + 1;
-        
-            button.id = `addUser${contador}-btn`;
-
-
-            // A cada boton agregar un evento cuya funcion sera agregar al usuario como miembro del proyecto.
-            button.addEventListener("click", (e) =>{
-
-            e.preventDefault();
-
-            // Seleccionar la lista de current members.
-            let currentMembersTable = document.querySelector("#currentMembers-table");
-
-            console.log(buttonsArray.indexOf(button));
-
-            console.log("CONTADOR ES IGUAL A:" + contador);
-            
-            /* Se busca al usuario dentro de la lista de usuarios, comparando el valor del contador con
-            el del id del propio usuario*/
-            let userFound = userList.find(user => user.id == contador);
-            console.log(userFound?.id|| "el usuario no existe");
-
-            // Con los datos del usuario encontrado se establece una nueva row en la tabla de current members.
-            currentMembersTable.innerHTML += `
-                                    <div class="row currentMembersRow" id="currentMember-${userFound.id}">
-                                        <div class="cell">${userFound.id}</div>
-                                        <div class="cell">${userFound.nickname}</div>
-                                        <div class="cell">${userFound.firstName} ${userFound.lastName}</div>
-                                        <div class="cell"><select name="" id=""></select></div>
-                                        <button class="cell eraseCurrentMember" id="eraseCurrentMember-${userFound.id}"><img src="./img/addMember_delete.svg" alt=""></button>
-                                    </div>
-            `
-
-            // Se borra al usuario de la lista de search para no confundir al (usuario de la app).
-            let eraseRow = document.querySelector(`#searchUserRow-${userFound.id}`);
-            eraseRow.remove();
-
-            })
-        }
-
-        function eraseCurrentMember() {
-
-            let currentMembersTable = document.querySelector("#currentMembers-table");
-            currentMembersTable.addEventListener('click',function(e){
-                if(e.target.classList.contains("eraseCurrentMember")|| e.target.closest('.eraseCurrentMember') !== null){
-
-                let buttonId = e.target.parentNode.id;
-
-                let numberId = buttonId.match(/\d+/g);
-
-                console.log(numberId)
-
-                let user = userList[numberId - 1];
+        function showUsers(){
+            searchList.innerHTML = ``
+            let filteredUserList = userList.filter(user => !projectMembers.includes(user))
+            filteredUserList
+                .filter(user => user.nickname.includes(searchTerm))
+                .forEach(user=>{
                 
-                console.log(user)
+                if(user.id == USER_CURRENT.id){
+                    return
+                }
 
                 searchList.innerHTML += `<div class="row" id="searchUserRow-${user.id}">
                                         <div class="cell search__nick">${user.nickname}</div>
@@ -221,182 +247,192 @@ function createProject(){
                                         <div class="cell search__email">${user.email}</div>
                                         <button class="add__member--btn" id="addUser${user.id}-btn" type="submit" value="add member">Add</button>
                                     </div>`
-                
-                e.target.parentNode.parentNode.remove()
-
-                
-                searchList.addEventListener('click', function(e) {
-                    if(e.target.classList.contains("add__member--btn")|| e.target.closest('.add__member--btn') !== null){
-                        let buttonId = e.target.id;
-
-                        let numberId = buttonId.match(/\d+/g);
-
-                        let user = userList[numberId - 1]
-
-                        currentMembersTable.innerHTML += `
-                                    <div class="row currentMembersRow" id="currentMember-${user.id}">
-                                        <div class="cell">${user.id}</div>
-                                        <div class="cell">${user.nickname}</div>
-                                        <div class="cell">${user.firstName} ${user.lastName}</div>
-                                        <div class="cell"><select name="" id=""></select></div>
-                                        <button class="cell eraseCurrentMember" id="eraseCurrentMember-${user.id}"><img src="./img/addMember_delete.svg" alt=""></button>
-                                    </div>
-                                    `
-                            let eraseRow = document.querySelector(`#searchUserRow-${user.id}`);
-                            eraseRow.remove();
-                    }
-                })
-                
-
-                // let searchList = document.querySelector("#searchList");
-                }
             })
-            eraseButtons = document.querySelectorAll(".currentMembersRow");
-
-
-
-            // console.log(eraseButtons)
-
-            // eraseButtons.forEach(btn=>{
-
-            //     btn.addEventListener("click", ()=>{
-
-            //         console.log("hey")
-
-            //     })
-
-            // })
         }
-
-        eraseCurrentMember();
-
     }
 
-    
+    showSearchUsers()
+
+    // ----
+
+    let addButton = document.querySelectorAll(".add__member--btn")
+
+    let currentList = document.querySelector("#searchList")
+
+    currentList.addEventListener("click", function (e) {
+
+        if(e.target.classList.contains("add__member--btn")|| e.target.closest('.add__member--btn') !== null) {
+
+            let myButton = e.target
+
+            addNewMember(myButton)
+        }
+
+    })
+
+    // PROJECT ADD MEMBERS
+
+    let currentMembersTable = document.querySelector("#currentMembers-table")
+
+    function addNewMember(button){
+
+        // Se borra al usuario de la lista de search para no confundir al (usuario de la app).
+        let buttonId = button.id;
+        let numberId = buttonId.match(/\d+/g);
+        let userFound = userList.find(user => user.id == numberId)
+
+        let eraseRow = document.querySelector(`#searchUserRow-${numberId}`);
+        eraseRow.remove();
+
+        projectMembers.push(userFound)
+
+        currentList = document.querySelector("#currentMembers-table")
+
+        currentList.innerHTML = ``
+
+        projectMembers.forEach(member => {
+
+            if(member.id == USER_CURRENT.id){
+                return
+            }
+
+            currentList.innerHTML += 
+            `<div class="row currentMembersRow" id="currentMember-${member.id}">
+                <div class="member__id">${member.id}</div>
+                <div class="member__nick">${member.nickname}</div>
+                <div class="member__name">${member.firstName} ${member.lastName}</div>
+                <div class="member__role"><select name="" class="memberRole"><option value=""></option></select></div>
+                <img class="member__delete eraseCurrentMember" id="eraseCurrentMember-${member.id}" src="./img/addMember_delete.svg" alt="">
+            </div>`
+        })
+
+        console.log(projectMembers)
+
+        // FOOTER CURRENT MEMBERS
+        let footerCurrent = document.querySelector("#footerCurrent")
+        footerCurrent.innerText = `CURRENT MEMBERS: ${projectMembers.length}` 
+    }
+
+    function addMemberRole(select){
+        select.innerHTML = `<option value="" default></option>`
+        projectRoles.forEach(role => {
+            let option = document.createElement("option")
+            option.value = role
+            option.text = role
+            select.append(option)
+        })
+    }
+
+    // ADD ROLE TO USER
+    let chooseRole = document.querySelector("#currentMembers-table")
+    chooseRole.addEventListener("mousedown", function (e){
+        if (e.target.classList.contains("memberRole")|| e.target.closest('.memberRole') !== null){
+            let select = e.target
+            let selectId = select.parentNode.parentNode.id.match(/\d+/g)
+            select.id = `select-${selectId}`
+            addMemberRole(select)
+        }
+    })
+
+    // BIND ROLE TO USER 
+    chooseRole.addEventListener("change", function (e){
+        if (e.target.classList.contains("memberRole")|| e.target.closest('.memberRole') !== null){
+            let select = e.target
+        }
+    })
+
+    // PROJECT ERASE MEMBER
+
+    function eraseCurrentMember(button) {
+
+            let parent = button.parentNode.id
+
+            let numberId = parent.match(/\d+/g);
+
+            let removedUser = userList.find(user => user.id == numberId)
+
+            button.parentNode.remove();
             
+            searchList.innerHTML += `<div class="row" id="searchUserRow-${removedUser.id}">
+                                        <div class="cell search__nick">${removedUser.nickname}</div>
+                                        <div class="cell search__name">${removedUser.firstName} ${removedUser.lastName}</div>
+                                        <div class="cell search__email">${removedUser.email}</div>
+                                        <button class="add__member--btn" id="addUser${removedUser.id}-btn" type="submit" value="add member">Add</button>
+                                    </div>`
 
-                // boton = document.querySelectorAll(`.eraseCurrentMember`);
+            projectMembers.splice(removedUser, 1)
 
-                // console.log(boton);
+            // FOOTER CURRENT MEMBERS
+            let footerCurrent = document.querySelector("#footerCurrent")
+            footerCurrent.innerText = `CURRENT MEMBERS: ${projectMembers.length}` 
+    }
 
-                // boton.forEach(btn=>{
+    currentMembersTable.addEventListener("click", function(e) {
 
-                //     btn.addEventListener("click", (e)=>{
+        if(e.target.classList.contains("eraseCurrentMember")|| e.target.closest('.eraseCurrentMember') !== null){
 
-                //         e.preventDefault();
+            let button = e.target
+            eraseCurrentMember(button)     
+        }
+    })
 
-                //         console.log("HI");
-                //         btn.parentNode.parentNode.remove()
-
-                //         let newRow = document.createElement("div")
-
-                //         newRow.id = `searchUserRow-${userFound.id}`
-
-                //         newRow.className = `row`
-
-                //         newRow.innerHTML = `<div class="cell search__nick">${userFound.nickname}</div>
-                //         <div class="cell search__name">${userFound.firstName} ${userFound.lastName}</div>
-                //         <div class="cell search__email">${userFound.email}</div>
-                //         <button class="add__member--btn" id="addUser${userFound.id}-btn" type="submit" value="add member">Add</button>`
-
-                //         document.querySelector("#searchList").appendChild(newRow)
-
-                //         newButtons = document.querySelectorAll(".add__member--btn")
-                //         newButtonsArray = Array.from(newButtons);
-
-                //         newButtonsArray.forEach(button => {
-
-
-
-                //         })
-                        
-
-
-
-                        // searchList.innerHTML += `<div class="row" id="searchUserRow-${userFound.id}">
-                        //                 <div class="cell search__nick">${userFound.nickname}</div>
-                        //                 <div class="cell search__name">${userFound.firstName} ${userFound.lastName}</div>
-                        //                 <div class="cell search__email">${userFound.email}</div>
-                        //                 <button class="add__member--btn" id="addUser${userFound.id}-btn" type="submit" value="add member">Add</button>
-                        //             </div>`
-
-                //     })
-
-                // })
-
-                // boton.addEventListener("click", (e)=>{
-
-                //     e.preventDefault();
-
-                //     console.log("HI");
-                //     boton.parentNode.parentNode.remove()
-                //     // row = document.querySelector(`#currentMember-${userFound.id}`);
-                //     // console.log(row);
-                //     // row.remove()
-
-                // })
-
-                // function eraseCurrentMember(button){
-
-                //     button = d.parentNode.parentNode;
-                //     console.log(parent);
-            
-                //     }
-
-
-            
-
-
-
-    
-    
-
-
-    addUsers();
-
-    // BORRAR CURRENT MEMBER:
-
-    
-
-    
-
-    
-    // .addEventListener("click", ()=>{
-
-    //     
-
-    // })
-
-    // let showProject = document.querySelector("#showProjects");
 
     let submitProject = document.querySelector("#submitProject").addEventListener("click", (e)=>{
 
         e.preventDefault();
 
-        console.log(projectList)
-        console.log(projectList.length)
-
         projectId = projectList.length + 1;
-        console.log(projectId)
     
         projectName = document.querySelector("#projectName").value;
-        console.log(projectName)
-    
+
         projectHost = document.querySelector("#projectHost").value;
-        console.log(projectHost)
-
-        projectDescr = document.querySelector("#projectDescr").value;
-        console.log(projectDescr);
-
-        projectEndDate = document.querySelector("#projectEndDate").value;
-        console.log(projectEndDate);
-        
-        projectRoles = document.querySelector("#projectRoles").value;
-        console.log(projectRoles);
 
         projectCreator = USER_CURRENT.firstName + " " + USER_CURRENT.lastName;
-    
-        projectNew = new PROJECT(projectId, projectName, projectHost, projectCreator, projectDescr, projectCreationDate, projectEndDate, projectRepos, projectRoles, projectMembers);
+
+        projectDescr = document.querySelector("#projectDescr").value;
+        console.log(projectDescr)
+
+        projectStartDate = new Date(trueProjectTime)
+        
+        let endDate = document.querySelector("#projectEndDate").value 
+        projectEndDate = new Date(endDate)
+
+        function submitMembersAndRoles(){
+            projectUserRoles = projectMembers.forEach(member => {
+                let selectNode = document.querySelector(`#select-${member.id}`)
+                if (selectNode == null){
+                    member.role = "NONE"
+                    member.admin = false
+                }
+                else {
+                    let selectValue = selectNode.value
+                    if (selectValue == ""||selectValue == null){
+                    member.role = "NONE"
+                    member.admin = false
+                    }
+                    else if (selectValue == "ADMIN") {
+                        member.role = selectValue
+                        member.admin = true
+                    }
+                    else {
+                    member.role = selectValue
+                    member.admin = false
+                    }
+                }
+            })
+        }
+        submitMembersAndRoles()
+
+        function addCreatorAsMember(){
+            projectMembers.unshift(USER_CURRENT)
+            const foundCreator = projectMembers.find(user => user.id == USER_CURRENT.id)
+            foundCreator.role = "ADMIN"
+            foundCreator.admin = true
+            console.log(projectMembers)
+        }
+        addCreatorAsMember()
+
+        projectNew = new Project(projectId, projectName, projectHost, projectCreator, projectDescr, projectStartDate, projectEndDate, projectRepos, projectRoles, projectMembers, projectImage);
 
         if (projectName == "" || projectHost == "" || projectDescr == ""){
 
@@ -409,11 +445,7 @@ function createProject(){
             
         }
 
-        console.log(projectNew);
-
         projectList.push(projectNew);
-
-        
 
         Swal.fire({
             title: "Done!",
@@ -422,10 +454,6 @@ function createProject(){
             imageWidth: "250px",
             showConfirmButton: false,
         })
-
-        
-
-    
 
         console.log(projectList);
 
@@ -438,10 +466,7 @@ function createProject(){
             location.href= "./index.html"; 
 
         }, 2000)
-
         
-
-    
     });
 
 }

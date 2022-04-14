@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="./js/data.js" defer></script>
+    <script src="./js/users.js" defer></script>
+    <script src="./js/projects.js" defer></script>
+    <script src="./js/expense.js" defer></script>
+    <script src="js/sign-in.js" ></script>
+    <script src="./js/dashboard.js" defer></script>
+    <script src="./js/log-in.js" defer></script>
+    <script src="./js/new-project.js" defer></script>
+    <title>Proyecto JS</title>
+</head>
+<body onload= "init()">
+
+    <!-- HEADER -->
+
+    <header id="header" class="header">
+
+        <!-- UPPER NAV -->
+
+        <nav id="upperNav" class="upperNav">
+            <h2 id ="pageTitle" class="upperNav__h2"><span class="s">S</span><span class="pace">pace</span><span class="t">T</span><span class="rack">rack</span><span class="it">IT</span></h2>
+            <ul id="upperNav__ul" class="upperNav__ul">
+                <li class="upperNav__ul--search">
+                    <p>SEARCH</p>
+                    <input type="text">
+                </li>
+                <li class="upperNav__ul--notifications">
+                    <p>NOTIFICATIONS</p>
+                    <img src="./img/notifications.svg" alt="Notifications">
+                </li>
+                <li class="upperNav__ul--user">
+                    <p id="nav-current-user">USER</p>
+                    <button id="log-off" class="log__off">
+                        <img src="./img/user_nav.svg" alt="User">
+                    </button>
+                </li>
+                <li class="upperNav__ul--colors">
+                    <div class="upperNav__ul--buttons">
+                        <div class="lp"></div><div class="bl"></div><div class="lg"></div><div class="dp"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- SIDE NAV -->
+
+        <nav id="sideNav" class="sideNav">
+            <ul id="sideNav__ul" class="sideNav__ul">
+                <li class="sideNav__ul--li sideNav__ul--dashboard">
+                    <img src="./img/sidenav_dashboard.svg" alt="Dashboard">
+                    <a href="./index.html">Dashboard</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--projects ">
+                    <img src="./img/sidenav_projects.svg" alt="Projects">
+                    <a href="./projects.html">Projects</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--teams current">
+                    <img src="./img/sidenav_teams.svg" alt="Teams">
+                    <a href="">Teams</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--tickets">
+                    <img src="./img/sidenav_tickets.svg" alt="Tickets">
+                    <a href="">Tickets</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--history">
+                    <img src="./img/sidenav_history.svg" alt="History">
+                    <a href="">History</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--calendar">
+                    <img src="./img/sidenav_calendar.svg" alt="Calendar">
+                    <a href="">Calendar</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--user">
+                    <img src="./img/sidenav_user.svg" alt="User">
+                    <a href="">User</a>
+                </li>
+            </ul>
+
+            <img src="./img/logo_sidenav.svg" alt="SpaceTrackIT" id="sideNav__footer" class="sideNav__footer">
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main id="main" class="main">
+        
+        <!-- SECTION INFO -->
+
+        <section id="section__info" class="section__info">
+
+            <div class="section__title">
+                <div class="title-info">
+                    <h1 id="sectionTitle" class="sectionTitle">TEAMS</h1>
+                    <img src="./img/info_section.svg" alt="Section information">
+                </div>
+                <p class="sectionDescr">Shows the teams that you are part of</p>
+            </div>
+                       
+
+            <div id="section__info--div" class="section__info--div">
+                <p id="showDate__text"></p>
+            </div>
+
+        </section>
+
+        <!-- PROJECT CARDS -->
+
+        <section class="team__cards">
+
+            <div class="team__cards--div">
+
+                <div class="team__card">
+
+                    <div class="team__card--header">
+                        <div class="team__card--header--info">
+                            <img src="./img/board_team_title.svg" alt="team Icon">
+                            <p>1</p>
+                        </div>
+                        <h3 class="team__card--header--title">Developers</h3>
+                        <div class="team__card--header--notif">2</div>
+                    </div>
+
+                    <div class="separator__big--bluePurple-2"></div>
+
+                    <div class="team__card--body">
+                        <div class="card--body--header">
+                            <p>PROJECT</p>
+                            <h6>Spotify Web App</h4>
+                        </div>
+                        <div class="card--body--desc">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae similique, quae tempore excepturi cupiditate quod accusamus hic cum qui voluptatibus.</p>
+                        </div>
+                        <div class="card--body--footer">
+                            <p>04/21</p>
+                            <p>8 Hours</p>
+                        </div>
+                    </div>
+
+                    <div class="separator__small--bluePurple"></div>
+
+                    <div class="team__card--footer">
+                        <button class="team__card--btn">Open</button>
+                    </div>
+                    
+
+                </div>
+
+                <div class="team__card">
+
+                    <div class="team__card--header">
+                        <div class="team__card--header--info">
+                            <img src="./img/board_team_title.svg" alt="team Icon">
+                            <p>1</p>
+                        </div>
+                        <h3 class="team__card--header--title">Developers</h3>
+                        <div class="team__card--header--notif">2</div>
+                    </div>
+
+                    <div class="separator__big--bluePurple-2"></div>
+
+                    <div class="team__card--body">
+                        <div class="card--body--header">
+                            <p>PROJECT</p>
+                            <h6>Spotify Web App</h4>
+                        </div>
+                        <div class="card--body--desc">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae similique, quae tempore excepturi cupiditate quod accusamus hic cum qui voluptatibus.</p>
+                        </div>
+                        <div class="card--body--footer">
+                            <p>04/21</p>
+                            <p>8 Hours</p>
+                        </div>
+                    </div>
+
+                    <div class="separator__small--bluePurple"></div>
+
+                    <div class="team__card--footer">
+                        <button class="team__card--btn">Open</button>
+                    </div>
+                    
+
+                </div>
+
+                <div class="team__card">
+
+                    <div class="team__card--header">
+                        <div class="team__card--header--info">
+                            <img src="./img/board_team_title.svg" alt="team Icon">
+                            <p>1</p>
+                        </div>
+                        <h3 class="team__card--header--title">Developers</h3>
+                        <div class="team__card--header--notif">2</div>
+                    </div>
+
+                    <div class="separator__big--bluePurple-2"></div>
+
+                    <div class="team__card--body">
+                        <div class="card--body--header">
+                            <p>PROJECT</p>
+                            <h6>Spotify Web App</h4>
+                        </div>
+                        <div class="card--body--desc">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae similique, quae tempore excepturi cupiditate quod accusamus hic cum qui voluptatibus.</p>
+                        </div>
+                        <div class="card--body--footer">
+                            <p>04/21</p>
+                            <p>8 Hours</p>
+                        </div>
+                    </div>
+
+                    <div class="separator__small--bluePurple"></div>
+
+                    <div class="team__card--footer">
+                        <button class="team__card--btn">Open</button>
+                    </div>
+                    
+
+                </div>
+
+                <div class="team__card">
+
+                    <div class="team__card--header">
+                        <div class="team__card--header--info">
+                            <img src="./img/board_team_title.svg" alt="team Icon">
+                            <p>1</p>
+                        </div>
+                        <h3 class="team__card--header--title">Developers</h3>
+                        <div class="team__card--header--notif">2</div>
+                    </div>
+
+                    <div class="separator__big--bluePurple-2"></div>
+
+                    <div class="team__card--body">
+                        <div class="card--body--header">
+                            <p>PROJECT</p>
+                            <h6>Spotify Web App</h4>
+                        </div>
+                        <div class="card--body--desc">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae similique, quae tempore excepturi cupiditate quod accusamus hic cum qui voluptatibus.</p>
+                        </div>
+                        <div class="card--body--footer">
+                            <p>04/21</p>
+                            <p>8 Hours</p>
+                        </div>
+                    </div>
+
+                    <div class="separator__small--bluePurple"></div>
+
+                    <div class="team__card--footer">
+                        <button class="team__card--btn">Open</button>
+                    </div>
+                    
+
+                </div>
+
+                <div class="team__card--new">
+
+                    <div class="team__card--new--div">
+
+                        <h5>ADD</h5>
+                        <img src="./img/plus.svg" alt="Add Project">
+                        <img src="./img/project_big.svg" alt="Project Icon Big">
+                        <h6>New Team</h6>
+
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+
+        </section>
+
+        <!-- PROJECT LIST BOARD: -->
+
+        <section id="projectListBoard" class="list_board">
+
+            <div class="list__board--div">
+
+                <div class="list__board--header">
+                    <div class="list__board--header--title">
+                        <img src="./img/board_team_title.svg" alt="Project Icon">
+                        <h3>Teams</h3>
+                    </div>
+                    <p>FULL LIST</p>
+                </div>
+
+                <div class="separator__extraBig--bluePurple"></div>
+
+                <div id="showProjects" class="list__board--order dropdown">
+                    <p>Order By:</p>
+                    <button class="dropbtn">▼</button>
+                    <ul id="issuesDropdown" class="projectGraphic__show--dropdown dropdown-content">
+                        <li>All</li>
+                        <li>By Type</li>
+                        <li>By Date</li>
+                        <li>By Priority</li>
+                    </ul>
+                </div>
+        
+                <div class="list__board--table">
+        
+                    <div class="list__board--table--header">
+        
+                        <div class="project__id">ID</div>
+                        <div class="team__name">NAME</div>
+                        <div class="team__project">PROJECT</div>
+                        <div class="team__lead">LEAD</div>
+                        <div class="project__description">DESCRIPTION</div>
+                        <div class="project__date">CREATION</div>
+                        <div class="project__lastEntry">LAST ENTRY</div>
+                        <div class="project__notif"></div>
+                        <div class="project__view"></div>
+        
+                    </div>
+        
+                    <div class="list__board--row">
+        
+                        <div class="project__id project__id--vis" data-title="project-id">324</div>
+                        <div class="team__name team__name--vis" data-title="issue-title">Developers</div>
+                        <div class="team__project team__project--vis" data-title="project-host">Steam Web App</div>
+                        <div class="team__lead team__lead--vis" data-title="project-creator">David Leis</div>
+                        <div class="project__description project__description--vis" data-title="project-description">E-Commerce Page for Steam</div>
+                        <div class="project__date" data-title="project-project">23/22</div>
+                        <div class="project__lastEntry" data-title="project-lastEntry">Yesterday</div>
+                        <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="project__view" data-title="view"><button class="btnView">Open</button></div>
+        
+                    </div>
+
+                    <div class="list__board--row">
+        
+                        <div class="project__id project__id--vis" data-title="project-id">324</div>
+                        <div class="team__name team__name--vis" data-title="issue-title">Developers</div>
+                        <div class="team__project team__project--vis" data-title="project-host">Steam Web App</div>
+                        <div class="team__lead team__lead--vis" data-title="project-creator">David Leis</div>
+                        <div class="project__description project__description--vis" data-title="project-description">E-Commerce Page for Steam</div>
+                        <div class="project__date" data-title="project-project">23/22</div>
+                        <div class="project__lastEntry" data-title="project-lastEntry">Yesterday</div>
+                        <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="project__view" data-title="view"><button class="btnView">Open</button></div>
+        
+                    </div>
+
+                    <div class="list__board--row">
+        
+                        <div class="project__id project__id--vis" data-title="project-id">324</div>
+                        <div class="team__name team__name--vis" data-title="issue-title">Developers</div>
+                        <div class="team__project team__project--vis" data-title="project-host">Steam Web App</div>
+                        <div class="team__lead team__lead--vis" data-title="project-creator">David Leis</div>
+                        <div class="project__description project__description--vis" data-title="project-description">E-Commerce Page for Steam</div>
+                        <div class="project__date" data-title="project-project">23/22</div>
+                        <div class="project__lastEntry" data-title="project-lastEntry">Yesterday</div>
+                        <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="project__view" data-title="view"><button class="btnView">Open</button></div>
+        
+                    </div>
+
+                    <div class="list__board--row">
+        
+                        <div class="project__id project__id--vis" data-title="project-id">324</div>
+                        <div class="team__name team__name--vis" data-title="issue-title">Developers</div>
+                        <div class="team__project team__project--vis" data-title="project-host">Steam Web App</div>
+                        <div class="team__lead team__lead--vis" data-title="project-creator">David Leis</div>
+                        <div class="project__description project__description--vis" data-title="project-description">E-Commerce Page for Steam</div>
+                        <div class="project__date" data-title="project-project">23/22</div>
+                        <div class="project__lastEntry" data-title="project-lastEntry">Yesterday</div>
+                        <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                        <div class="project__view" data-title="view"><button class="btnView">Open</button></div>
+        
+                    </div>
+
+                
+                </div>
+
+                <div class="list__board--addDelete">
+                    <button class="list__board--delete--btn">Delete</button>
+                    <button class="list__board--add-btn">New</button>
+                </div>
+
+                <div class="list__board--preview">
+                    <div class="list__board--preview--header">
+                        <h5>PREVIEW</h5>
+                    </div>
+                    <div class="separator__big--purpleOrange-2"></div>
+                    <div class="list__board--preview--info">
+                        <div class="list__board--preview--one">
+                            <div class="list__preview--one--title">
+                                <p class="list__preview--one--title--id">323</p>
+                                <h4>E-Commerce</h4>
+                                <p class="list__preview--one--title--host">Steam</p>
+                            </div>
+                            <div class="list__preview--one--descr">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi in officia exercitationem, quo culpa quibusdam necessitatibus laudantium quae amet quod enim voluptatem mollitia veniam, voluptatibus illum recusandae voluptate earum quas.</p>
+                            </div>
+                        </div>
+                        <div class="list__board--preview--two">
+                            <p>LEAD:</p>
+                            <p>ASSIGNED MEMBERS:</p>
+                            <p>ACTIVE ISSUES:</p>
+                            <p>SOLVED ISSUES:</p>
+                            <p>REPOSITORIES:</p>
+                        </div>
+                        <div class="list__board--preview--three">
+                            <div class="list__preview--three--data">
+                                <p>CREATION DATE: 21/03/2022</p>
+                            </div>
+                            <div class="list__preview--three--more">
+                                <div class="list__preview--three--notif">
+                                    <p>Notifications:</p>
+                                    <div>2</div>
+                                </div>
+                                <button>See Full Info</button>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="separator__small--purpleOrange-2"></div>
+
+                    <div class="list__board--footer">
+                        <p>ACTIVE ISSUES: 6</p>
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+
+            
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    
+    <footer id="footer" class="footer">
+
+        <div class="footer__white"></div>
+        <div class="footer__gradient separator__footer"></div>
+
+        <div class="footer__body">
+            <h2 id ="pageTitle" class="upperNav__h2"><span class="s">S</span><span class="pace">pace</span><span class="t">T</span><span class="rack">rack</span><span class="it">IT</span></h2>
+            <img src="./img/footer_logo.svg" alt="SpaceTrackIT Logo" class="footer__logo">
+            <p class="footer__author"><span class="footer__madeBy">Made By</span><br><span class="footer__myName">Manuel Costales</span></p>
+            <ul class="footer__media">
+                <li class="footer__media--li"><a href="" class="footer__media--a"><img src="./img/footer_outlook.svg" alt="" class="footer__media--img"></a></li>
+                <li class="footer__media--li"><a href="" class="footer__media--a"><img src="./img/footer_github.svg" alt="" class="footer__media--img"></a></li>
+                <li class="footer__media--li"><a href="" class="footer__media--a"><img src="./img/footer_linkedin.svg" alt="" class="footer__media--img"></a></li>
+            </ul>
+        </div>
+
+        <p class="footer__disclaimer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nulla voluptate consectetur sed ducimus quaerat adipisci dolorum incidunt suscipit nesciunt!</p>
+
+    </footer>
+
+
+</body>
+</html>

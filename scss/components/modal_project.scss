@@ -1,0 +1,568 @@
+
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // display: none;
+    // overflow: hidden;
+    .modal__div {
+        height: 95vh;
+        width: 97vw;
+        margin-right: 2vw;
+        background-color: #FAFAFA;
+        border-radius: 20px; 
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        .modal__div--header {
+            height: 50px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1vw;
+            .modal__title {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                gap: 10px;
+                h2 {
+                    font-size: 1.4rem;
+                    font-family: arial;
+                    font-weight: 700;
+                    color: #4D4D4D;
+                }
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        .modal__body {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            height: 75%;
+            padding: 2vh 1vw;
+            gap: 3vw;
+            .modal__body--one {
+                width: 20%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                margin-bottom: 3vh;
+                .project__modal--img {
+                    height: 35%;
+                    width: 85%;
+                    border-radius: 20px;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 20px;
+                    }
+                }
+                .project__modal--name {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    h1 {
+                        color: #2c2c2c;
+                    }
+                }
+                .project__modal--host {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    h4 {
+                        color: #393939;
+                        font-size: 1.8rem;
+                        font-weight:600;
+                    }
+                }
+                .project__modal--creator {
+                   display: flex;
+                   flex-flow: column nowrap;
+                   p {
+                       color: #393939;
+                       font-weight: 400;
+                       font-size: 1.7rem;
+                   }
+                }
+                .project__modal--startDate, .project__modal--endDate{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 5px;
+                    p {
+                        color: #393939;
+                        font-weight: 300;
+                        font-size: 1.5rem;
+                    }
+                }
+                .project__modal--info {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    gap: 10px;
+                    p {
+                        font-size: 0.9rem;
+                        color: #757575;
+                        font-weight: 700;
+                    }
+                    img {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+            .modal__body--two {
+                display: flex;
+                flex-flow: column nowrap;
+                width: 45%;
+                gap: 20px;
+                .modal__body--two--repos {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 10px;
+                    .repo__title{
+                        font-size: 1.1rem;
+                        color: #757575;
+                        font-weight: 700;
+                    }
+                    .repo__list {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        background-color:#f4f4f4;
+                        border-radius: 20px;
+                        height: 15vh;
+                        width: 100%;
+                        .repo__list--table {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            padding: 2vh 1vw;
+                            gap: 10px;
+                            color: #6F6F6F;
+                            font-weight: 300;
+                            font-size: 1rem;
+                            .repo__list--row {
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: space-between;
+                                align-items: center;
+                            }
+                        }
+                        .repo__list--footer {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            height: 25%;
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            background-color:#d5d5d5;
+                            button {
+                                width: 60%;
+                                height: 80%;
+                                border-radius: 50px;
+                                background-color: #5A5A5A;
+                                color: white;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                .modal__body--two--roles {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 10px;
+                    .role__title {
+                        font-size: 1.1rem;
+                        color: #757575;
+                        font-weight: 700;
+                    }
+                    .role__list {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        background-color:#f4f4f4;
+                        border-radius: 20px;
+                        height: 18vh;
+                        width: 100%;
+                        ul {
+                            width: 100%;
+                            display: flex;
+                            flex-flow: row wrap;
+                            justify-content: space-evenly;
+                            color: #8F8F8F;
+                            font-weight: 600;
+                            font-size: 0.8rem;
+                            padding: 2vh 0;
+                            gap: 20px;
+                            li {
+                                padding: 0 30px;
+                            }
+                        }
+                        .role__list--footer {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            width: 100%;
+                            height: 25%;
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            background-color:#d1c3c2;
+                            p {
+                                color: #5C5C5C;
+                                font-weight: 400;
+                                span {
+                                    font-weight: 700;
+                                }
+                            }
+                            input {
+                                border-radius: 50px;
+                                background-color: #F1E7E7;
+                                height: 80%;
+                                width: 50%;
+                                text-align: center;
+                                color:#6F6F6F;
+                                font-weight: 500;
+                                text-transform:uppercase;
+                            }
+                            button {
+                                height: 80%;
+                                width: 15%;
+                                color: white;
+                                font-weight: 600;
+                                background-color: #834A4A;
+                                border-radius: 50px;
+                            }
+                        }
+                    }
+                }
+                .modal__body--two--descr {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 10px;
+                    .project__descr--title {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        font-size: 1.1rem;
+                        color: #757575;
+                        font-weight: 700;
+                        gap: 6px;
+                    }
+                    .project__descr--text {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        padding: 2vh 1vw;
+                        background-color: #f4f4f4;
+                        border-radius: 20px;
+                        height: 20vh;
+                        width: 100%;
+                        color: #6e6e6e;
+                        font-size: 0.9rem;
+                        font-weight: 300;
+                    }
+                }
+            }
+            .modal__body--three {
+                display: flex;
+                flex-flow: column nowrap;
+                width: 50%;
+                gap: 20px;
+                .modal__body--three--issues {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 10px;
+                    .project__issues--title {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        font-size: 1.1rem;
+                        color: #757575;
+                        font-weight: 700;
+                    }
+                    .project__issues {
+                        width: 100%;
+                        height: 15vh;
+                        background: linear-gradient(90deg, rgba(205, 99, 255, 0.1), rgba(255, 133, 81, 0.1));
+                        border-radius: 20px;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        .project__issues--table {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            padding: 2vh 1.5vw;
+                            gap: 10px;
+                            .project__issues--row {
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-size: 0.8rem;
+                                .issue__id {
+                                    color: #4E4E4E;
+                                    font-weight: 700;
+                                }
+                                .issue__name {
+                                    color: #5539FF;
+                                    font-weight: 600;
+                                }
+                                .issue__type {
+                                    font-weight: 500;
+                                    color: #636363;
+                                }
+                                .issue__priority {
+                                    font-weight: 700;
+                                }
+                                button {
+                                   color: white;
+                                   font-size: 0.7rem;
+                                   font-weight: 600;
+                                   height: 25px;
+                                   width: 70px;
+                                   border-radius: 50px;
+                                   background-color: #7939FF;
+                                }
+                            }
+                        }
+                        .project__issues--footer {
+                            width: 100%;
+                            height: 25%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            background:linear-gradient(90deg, rgba(205, 99, 255, 0.2), rgba(255, 133, 81, 0.2));
+                            button {
+                                width: 50%;
+                                height: 80%;
+                                color: white;
+                                font-size: 0.9rem;
+                                font-weight: 600;
+                                border-radius: 50px;
+                                background: linear-gradient(90deg, rgba(205, 99, 255, 1), rgba(255, 133, 81, 1));
+                            }
+                        }
+                    }
+                }
+                .modal__body--three--teams {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 10px;
+                    .project__teams--title {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        font-size: 1.1rem;
+                        color: #757575;
+                        font-weight: 700;
+                    }
+                    .project__teams {
+                        width: 100%;
+                        height: 18vh;
+                        background: linear-gradient(90deg, rgba(28, 214, 255, 0.1), rgba(141, 131, 255, 0.1));
+                        border-radius: 20px;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        .project__teams--table {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            padding: 2vh 1.5vw;
+                            gap: 10px;
+                            .project__teams--row {
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-size: 0.8rem;
+                                .team__id {
+                                    color: #4E4E4E;
+                                    font-weight: 700;
+                                }
+                                .team__name {
+                                    color: #5539FF;
+                                    font-weight: 600;
+                                }
+                                .team__members {
+                                    font-weight: 500;
+                                    color: #636363;
+                                }
+                                .team__lead {
+                                    font-weight: 700;
+                                }
+                                button {
+                                   color: white;
+                                   font-size: 0.7rem;
+                                   font-weight: 600;
+                                   height: 25px;
+                                   width: 70px;
+                                   border-radius: 50px;
+                                   background-color: #7939FF;
+                                }
+                            }
+                        }
+                        .project__teams--footer {
+                            width: 100%;
+                            height: 25%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            background:linear-gradient(90deg, rgba(28, 214, 255, 0.2), rgba(141, 131, 255, 0.2));
+                            button {
+                                width: 50%;
+                                height: 80%;
+                                color: white;
+                                font-size: 0.9rem;
+                                font-weight: 600;
+                                border-radius: 50px;
+                                background: linear-gradient(90deg, rgba(28, 214, 255, 1), rgba(141, 131, 255, 1));
+                            }
+                        }
+                    }
+                }
+                .modal__body--three--members {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 10px;
+                    .project__members--title {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        font-size: 1.1rem;
+                        color: #757575;
+                        font-weight: 700;
+                    }
+                    .project__members {
+                        width: 100%;
+                        height: 24vh;
+                        background: linear-gradient(90deg, rgba(154, 118, 255, 0.1), rgba(58, 0, 223, 0.1));
+                        border-radius: 20px;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        .project__members--table {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            padding: 2vh 1.5vw;
+                            gap: 10px;
+                            .project__members--row {
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-size: 0.8rem;
+                                .member__id {
+                                    color: #4E4E4E;
+                                    font-weight: 700;
+                                }
+                                .member__nick {
+                                    color: #5539FF;
+                                    font-weight: 600;
+                                }
+                                .member__name {
+                                    font-weight: 500;
+                                    color: #636363;
+                                }
+                                .team__lead {
+                                    font-weight: 700;
+                                }
+                                button {
+                                   color: white;
+                                   font-size: 0.7rem;
+                                   font-weight: 600;
+                                   height: 25px;
+                                   width: 70px;
+                                   border-radius: 50px;
+                                   background-color: #7939FF;
+                                }
+                            }
+                        }
+                        .project__members--footer {
+                            width: 100%;
+                            height: 25%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            background:linear-gradient(90deg, rgba(154, 118, 255, 0.2), rgba(58, 0, 223, 0.2));
+                            button {
+                                width: 50%;
+                                height: 80%;
+                                color: white;
+                                font-size: 0.9rem;
+                                font-weight: 600;
+                                border-radius: 50px;
+                                background: linear-gradient(90deg, rgba(154, 118, 255, 1), rgba(58, 0, 223, 1));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .modal__footer {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0vh 1vw;
+            padding-top: 1vh;
+            .delete {
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                background-color: #FF5B45;
+                height: 30px;
+                width: 10%;
+                color: white;
+                font-weight: 600;
+                border-radius: 50px;
+                gap: 10px;
+                img {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+            .close {
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                background-color: #7B4DFF;
+                height: 30px;
+                width: 10%;
+                color: white;
+                font-weight: 600;
+                border-radius: 50px;
+                gap: 10px;
+                img {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+.newModal {
+    height: 100vh;
+    width: 100vw;
+    z-index: 999999;
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+}

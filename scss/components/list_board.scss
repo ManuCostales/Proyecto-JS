@@ -1,0 +1,328 @@
+
+
+
+.list__board--div {
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    .list__board--header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0 1vw;
+        align-items: center;
+        .list__board--header--title {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 10px;
+            h3 {
+                font-size: 1.3rem;
+                font-family: arial;
+                font-weight: 700;
+                color: #4D4D4D;
+            }
+        }
+        p {
+            font-weight: 600;
+            color: #7C7C7C; 
+        }
+    }
+    .list__board--order {
+        width: 10%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: 1vh 1vw;
+        color: #7C7C7C;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .list__board--table {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        min-height: 20vh;
+        .list__board--table--header {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            padding: 0 1vw;
+            background-color:#EAECFF;
+            height: 5vh;
+            color: #7C7C7C;
+            font-size: 0.9rem;
+            font-weight: 600;
+            gap: 0px;
+        }
+        .list__board--row {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            padding: 0 1vw;
+            gap: 0px;
+            height: 5vh;
+            border-bottom: 1px solid rgb(236, 236, 236);
+        }
+        .active {
+            background-color:#b7b9c9;
+        }
+        // PROJECT SPECIFIC CELLS:
+
+        .project__id {
+            width: 3%;
+        }
+        .project__id--vis {
+            color: #4E4E4E;
+            font-weight: 600;
+        }
+        .project__title {
+            width: 10%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .project__title--vis {
+            font-weight: 600;
+            color: #5539FF;
+        }
+        .project__host {
+            width: 8%;
+        }
+        .project__host--vis {
+            color: #4E4E4E;
+            font-weight: 600;
+        }
+        .project__creator {
+            width: 10%;
+        }
+        .project__creator--vis {
+            color: #4E4E4E;
+            font-weight: 600;
+        }
+        .project__description {
+            width: 20%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .project__description--vis{
+            color: #848484;
+        }
+        .project__date {
+            width: 5%;
+            text-align: center;
+        }
+        .project__lastEntry {
+            width: 10%;
+            text-align: center;
+        }
+        .project__notif {
+            width: 3%;
+        }
+        .project__view {
+            width: 5%;
+        }
+
+        // TEAM SPECIFIC CELLS:
+
+        .team__name {
+            width: 10%;
+        }
+        .team__name--vis {
+            font-weight: 600;
+            color: #5539FF;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .team__project {
+            width: 15%;
+        }
+        .team__project--vis {
+            color: #4E4E4E;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .team__lead {
+            width: 10%;
+        }
+        .team__lead--vis {
+            color: #4E4E4E;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    .list__board--addDelete {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 0 1vw;
+        margin: 5vh 0;
+        .list__board--delete--btn {
+            height: 35px;
+            width: 110px;
+            background-color: #F66767;
+            color: white;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .list__board--add-btn {
+            height: 35px;
+            width: 110px;
+            background-color: #1eb99f;
+            color: white;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+    .list__board--preview {
+        box-shadow: 0px 3px 9px 3px rgba(0,0,0,0.16);
+        border-radius: 10px;
+        margin: 0 1vw;
+        display: flex;
+        flex-flow: column nowrap;
+        margin-bottom: 4vh;
+        .list__board--preview--header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 1vw;
+            height: 40px;
+            h5 {
+                font-size: 0.9rem;
+                color: #7C7C7C;
+                font-weight: 600;
+            }
+        }
+        .list__board--preview--info {
+            min-height: 25vh;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            padding: 3vh 1.5vw;
+            .list__board--preview--one {
+                display: flex;
+                flex-flow: column nowrap;
+                width: 35%;
+                gap: 3vh;
+                .list__preview--one--title {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    .list__preview--one--title--id {
+                        color: #5F5F5F;
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                    }
+                    h4 {
+                        color: #3E3E3E;
+                        font-size: 2rem;
+                        font-weight: 700;
+                    }
+                    .list__preview--one--title--host {
+                        color: #565656;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                    }
+                }
+                .list__preview--one--descr {
+                    color: #838383;
+                    font-weight: 300;
+                    font-size: 0.9rem;
+                }
+            }
+            .list__board--preview--two {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 3vh;
+                p {
+                    color: #7C7C7C;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+            }
+            .list__board--preview--three {
+                display: flex;
+                flex-flow:column nowrap;
+                justify-content:space-between;
+                align-items: flex-end;
+                .list__preview--three--data {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 3vh;
+                    p {
+                        color: #7C7C7C;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                    }
+                }
+                .list__preview--three--more {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    gap: 1vh;
+                    .list__preview--three--notif {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        gap: 1vw;
+                        p {
+                            color: #5F5F5F;
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                        }
+                        div {
+                            display: flex;
+                            justify-content:center;
+                            align-items:center;
+                            color: white;
+                            font-weight: 600;
+                            height: 40px;
+                            width: 40px;
+                            background-color: #FFA572;
+                            border-radius: 50%;
+                        }
+                    }
+                    button {
+                        height: 50px;
+                        width: 200px;
+                        background-color: #5539FF;
+                        border-radius: 30px;
+                        color: white;
+                        font-weight: 600;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+        .list__board--footer{
+            height: 4vh;
+            display: flex;
+            align-items: center;
+            padding: 0 1vw;
+            p{
+                font-size: 0.8rem;
+                color: #A5A5A5;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+
+
+
+

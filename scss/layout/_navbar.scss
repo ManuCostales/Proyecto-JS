@@ -2,7 +2,7 @@
 // NAVBAR
 
 .upperNav {
-    z-index: 9999;
+    z-index: 999;
     position:fixed;
     background-color: white;
     display: flex;
@@ -60,7 +60,7 @@
     bottom: 0;
     position: fixed;
     height: 91.8vh;
-    width: 215px;
+    width: 230px;
     background: #f5f5f5;
     display: flex;
     flex-flow: column nowrap;

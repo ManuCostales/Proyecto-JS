@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="./js/data.js" defer></script>
+    <script src="./js/users.js" defer></script>
+    <script src="./js/projects.js" defer></script>
+    <script src="./js/expense.js" defer></script>
+    <script src="js/sign-in.js" ></script>
+    <script src="./js/dashboard.js" defer></script>
+    <script src="./js/log-in.js" defer></script>
+    <script src="./js/new-project.js" defer></script>
+    <title>Proyecto JS</title>
+</head>
+<body onload= "init()">
+
+    <div class="modalIssues">
+
+        <div class="modalIssues__div">
+
+            <div class="modal__div--header">
+                <div class="modal__title">
+                    <img src="./img/board_project_title.svg" alt="Project Icon">
+                    <h2>Project</h2>
+                </div>
+                <img src="./img/close.svg" alt="Close Window">
+            </div>
+
+            <div class="separator__extraBig--orangeYellow"></div>
+
+            <div class="modal__body">
+
+                <div class="modal__body--title">
+                    <h1>Project Issues</h1>
+                    <h2>Spotify Web App</h2>
+                </div>
+
+                <div class="project__issues">
+                    <div class="project__issues--table">
+                        <div class="project__issues--table--head">
+                            <div class="project__issues--table--header">
+                                <p class="issue__id">ID</p>
+                                <p class="issue__name">TITLE</p>
+                                <p class="issue__type">TYPE</p>
+                                <p class="issue__priority">PRIORITY</p>
+                                <p class="issue__author">AUTHOR</p>
+                                <p class="issue__team">TEAM</p>
+                                <p class="issue__lastEntry">LAST ENTRY</p>
+                                <div class="issue__notif"></div>
+                                <div class="issue__delete"></div>
+                                <div class="issue__button"></div>
+                            </div>
+                            <div class="separator__big--pinkSalmon"></div>
+                        </div>
+                        <div class="project__issues--row">
+                            <p class="issue__id issue__id--vis">323</p>
+                            <p class="issue__name issue__name--vis">E-Commerce</p>
+                            <p class="issue__type issue__type--vis">FEATURE</p>
+                            <p class="issue__priority issue__priority--vis">HIGH</p>
+                            <p class="issue__author issue__author--vis">Manuel Costales</p>
+                            <p class="issue__team issue__team--vis">Developers</p>
+                            <p class="issue__lastEntry">Yesterday</p>
+                            <div class="issue__notif"></div>
+                            <img class="issue__delete" src="./img/addMember_delete.svg" alt="Delete Issue">
+                            <button class="issue__button">View</button>
+                        </div>
+                        <div class="project__issues--row">
+                            <p class="issue__id issue__id--vis">323</p>
+                            <p class="issue__name issue__name--vis">E-Commerce</p>
+                            <p class="issue__type issue__type--vis">FEATURE</p>
+                            <p class="issue__priority issue__priority--vis">HIGH</p>
+                            <p class="issue__author issue__author--vis">Manuel Costales</p>
+                            <p class="issue__team issue__team--vis">Developers</p>
+                            <p class="issue__lastEntry">Yesterday</p>
+                            <div class="issue__notif"></div>
+                            <img  class="issue__delete" src="./img/addMember_delete.svg" alt="Delete Issue">
+                            <button class="issue__button">View</button>
+                        </div>
+                    </div>
+                    <div class="project__issues--footer">
+                        <button>New Issue</button>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="separator__big--orangeYellow-2"></div>
+
+            <div class="modal__footer">
+                <button class="delete">Delete<img src="./img/delete_white.svg" alt=""> </button>
+                <p>ACTIVE ISSUES: 4</p>
+                <button class="close">Close <img src="./img/close_white.svg" alt="Close Window"></button>
+            </div>
+
+        </div>
+
+    </div>    
+
+
+</body>
+</html>

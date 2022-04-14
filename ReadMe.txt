@@ -80,7 +80,7 @@ Nombre de equipo.
 Proyecto asignado.
 Cantidad de miembros.
 Miembros (nombre, email, telefono).
-Chat del equipo.
+Chat del equipo. 
 Añadir miembro (si sos admin).
 
 

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="./js/data.js" defer></script>
+    <script src="./js/users.js" defer></script>
+    <script src="./js/projects.js" defer></script>
+    <script src="./js/expense.js" defer></script>
+    <script src="js/sign-in.js" ></script>
+    <script src="./js/dashboard.js" defer></script>
+    <script src="./js/log-in.js" defer></script>
+    <script src="./js/new-project.js" defer></script>
+    <title>Proyecto JS</title>
+</head>
+<body onload= "init()">
+
+    <div class="modal">
+
+        <div class="modal__div">
+
+            <div class="modal__div--header">
+                <div class="modal__title">
+                    <img src="./img/board_project_title.svg" alt="Project Icon">
+                    <h2>Project</h2>
+                </div>
+                <img src="./img/close.svg" alt="Close Window">
+            </div>
+
+            <div class="separator__extraBig--orangeYellow"></div>
+
+            <div class="modal__body">
+
+                <div class="modal__body--one">
+                    <div class="project__modal--img">
+                        <img src="./img/Spotify.jpg" alt="Project Image">
+                    </div>
+                    <div class="project__modal--name">
+                        <div class="project__modal--info">
+                            <p>Project Name</p>
+                            <img src="./img/edit.svg" alt="Edit Name">
+                        </div>
+                        <h1>Spotify Web App</h1>
+                    </div>
+                    <div class="project__modal--host">
+                        <div class="project__modal--info">
+                            <p>Project Host</p>
+                            <img src="./img/edit.svg" alt="Edit Host">
+                        </div>
+                        <h4>Apple</h4>
+                    </div>
+                    <div class="project__modal--creator">
+                        <div class="project__modal--info">
+                            <p>Project Creator:</p>
+                        </div>
+                        <p>Manuel Costales</p>
+                    </div>
+                    <div class="project__modal--startDate">
+                        <div class="project__modal--info">
+                            <p>Projec Starting Date:</p>
+                        </div>
+                        <p>23/04/21</p>
+                    </div>
+                    <div class="project__modal--endDate">
+                        <div class="project__modal--info">
+                            <p>Projec End Date</p>
+                            <img src="./img/edit.svg" alt="Edit End Date">
+                        </div>
+                        <p>23/04/21</p>
+                    </div>
+
+                </div>
+
+                <div class="modal__body--two">
+                    <div class="modal__body--two--repos">
+                        <p class="repo__title">Project Repository/s:</p>
+                        <div class="repo__list">
+                            <div class="repo__list--table">
+                                <div class="repo__list--row">
+                                    <p>1</p>
+                                    <p> https://github.com/ManuCostales/Proyecto-JS---WIP</p>
+                                    <a href=" https://github.com/ManuCostales/Proyecto-JS---WIP "><img src="./img/github.svg" alt="Github Repo Link"></a>
+                                    <img src="./img/addMember_delete.svg" alt="Delete Repo">
+                                </div>
+                                <div class="repo__list--row">
+                                    <p>1</p>
+                                    <p> https://github.com/ManuCostales/Proyecto-JS---WIP</p>
+                                    <a href=" https://github.com/ManuCostales/Proyecto-JS---WIP "><img src="./img/github.svg" alt="Github Repo Link"></a>
+                                    <img src="./img/addMember_delete.svg" alt="Delete Repo">
+                                </div>
+                            </div>
+                            <div class="repo__list--footer">
+                                <button>View Full List - Add New Repo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__body--two--roles">
+                        <p class="role__title">Project Member Roles:</p>
+                        <div class="role__list">
+                            <ul>
+                                <li><p>DEVELOPER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DEVELOPER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DESIGNER</p></li>
+                                <li><p>DESIGNER</p></li>
+                            </ul>
+                            <div class="role__list--footer">
+                                <p>Add New <span>Role</span></p>
+                                <input type="text">
+                                <button>Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__body--two--descr">
+                        <div class="project__descr--title">
+                            <p>Project Description</p>
+                            <img src="./img/edit.svg" alt="Edit Description">
+                        </div>
+                        <div class="project__descr--text">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae animi minima rerum iusto quibusdam velit, suscipit voluptas eveniet debitis dolore ratione molestias. Libero pariatur natus exercitationem eius nihil, praesentium deserunt atque quas tempora perspiciatis voluptatem, sapiente quam eligendi quis excepturi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal__body--three">
+
+                    <div class="modal__body--three--issues">
+                        <div class="project__issues--title">
+                            <p>Active Issues:</p>
+                            <p>23</p>
+                        </div>
+                        <div class="project__issues">
+                            <div class="project__issues--table">
+                                <div class="project__issues--row">
+                                    <p class="issue__id">323</p>
+                                    <p class="issue__name">E-Commerce</p>
+                                    <p class="issue__type">FEATURE</p>
+                                    <p class="issue__priority">HIGH</p>
+                                    <p>Yesterday</p>
+                                    <div></div>
+                                    <button>View</button>
+                                </div>
+                                <div class="project__issues--row">
+                                    <p class="issue__id">323</p>
+                                    <p class="issue__name">E-Commerce</p>
+                                    <p class="issue__type">FEATURE</p>
+                                    <p class="issue__priority">HIGH</p>
+                                    <p>Yesterday</p>
+                                    <div></div>
+                                    <button>View</button>
+                                </div>
+                            </div>
+                            <div class="project__issues--footer">
+                                <button>Manage Issues</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__body--three--teams">
+                        <div class="project__teams--title">
+                            <p>Active Teams:</p>
+                            <p>23</p>
+                        </div>
+                        <div class="project__teams">
+                            <div class="project__teams--table">
+                                <div class="project__teams--row">
+                                    <p class="team__id">323</p>
+                                    <p class="team__name">Developers</p>
+                                    <p class="team__members">4 Members</p>
+                                    <p class="team__lead">Frank Castle</p>
+                                    <p>Yesterday</p>
+                                    <div></div>
+                                    <button>View</button>
+                                </div>
+                                <div class="project__teams--row">
+                                    <p class="team__id">323</p>
+                                    <p class="team__name">Developers</p>
+                                    <p class="team__members">5 Members</p>
+                                    <p class="team__lead">Manuel Costales</p>
+                                    <p>Yesterday</p>
+                                    <div></div>
+                                    <button>View</button>
+                                </div>
+                            </div>
+                            <div class="project__teams--footer">
+                                <button>Manage Teams</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__body--three--members">
+                        <div class="project__members--title">
+                            <p>Active Members:</p>
+                            <p>23</p>
+                        </div>
+                        <div class="project__members">
+                            <div class="project__members--table">
+                                <div class="project__members--row">
+                                    <p class="member__id">323</p>
+                                    <p class="member__nick">manukpo99</p>
+                                    <p class="member__name">Manuel Costales</p>
+                                    <p>Developer</p>
+                                    <div><img src="./img/addMember_delete.svg" alt=""></div>
+                                    <button>View</button>
+                                </div>
+                                <div class="project__members--row">
+                                    <p class="member__id">323</p>
+                                    <p class="member__nick">manukpo99</p>
+                                    <p class="member__name">Manuel Costales</p>
+                                    <p>Developer</p>
+                                    <div><img src="./img/addMember_delete.svg" alt=""></div>
+                                    <button>View</button>
+                                </div>
+                            </div>
+                            <div class="project__members--footer">
+                                <button>Manage Members</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="separator__big--orangeYellow-2"></div>
+
+            <div class="modal__footer">
+                <button class="delete">Delete Project <img src="./img/delete_white.svg" alt="Delete Project"></button>
+                <button class="close">Close <img src="./img/close_white.svg" alt="Close Window"></button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

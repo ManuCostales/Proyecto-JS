@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="./js/data.js" defer></script>
+    <script src="./js/users.js" defer></script>
+    <script src="./js/projects.js" defer></script>
+    <script src="./js/expense.js" defer></script>
+    <!-- <script src="js/sign-in.js" defer></script> -->
+    <!-- <script src="./js/dashboard.js" defer></script> -->
+    <!-- <script src="./js/log-in.js" defer></script> -->
+    <script src="./js/new-project.js" defer></script>
+    <title>Proyecto JS</title>
+</head>
+<body onload= "init()">
+
+    <!-- HEADER -->
+
+    <header id="header" class="header">
+
+        <!-- UPPER NAV -->
+
+        <nav id="upperNav" class="upperNav">
+            <h2 id ="pageTitle" class="upperNav__h2"><span class="s">S</span><span class="pace">pace</span><span class="t">T</span><span class="rack">rack</span><span class="it">IT</span></h2>
+            <ul id="upperNav__ul" class="upperNav__ul">
+                <li class="upperNav__ul--search">
+                    <p>SEARCH</p>
+                    <input type="text">
+                </li>
+                <li class="upperNav__ul--notifications">
+                    <p>NOTIFICATIONS</p>
+                    <img src="./img/notifications.svg" alt="Notifications">
+                </li>
+                <li class="upperNav__ul--user">
+                    <p id="nav-current-user">USER</p>
+                    <button id="log-off" class="log__off">
+                        <img src="./img/user_nav.svg" alt="User">
+                    </button>
+                </li>
+                <li class="upperNav__ul--colors">
+                    <div class="upperNav__ul--buttons">
+                        <div class="lp"></div><div class="bl"></div><div class="lg"></div><div class="dp"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- SIDE NAV -->
+
+        <nav id="sideNav" class="sideNav">
+            <ul id="sideNav__ul" class="sideNav__ul">
+                <li class="sideNav__ul--li sideNav__ul--dashboard">
+                    <img src="./img/sidenav_dashboard.svg" alt="Dashboard">
+                    <a href="./index.html">Dashboard</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--projects current">
+                    <img src="./img/sidenav_projects.svg" alt="Projects">
+                    <a href="">Projects</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--teams">
+                    <img src="./img/sidenav_teams.svg" alt="Teams">
+                    <a href="">Teams</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--tickets">
+                    <img src="./img/sidenav_tickets.svg" alt="Tickets">
+                    <a href="">Tickets</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--history">
+                    <img src="./img/sidenav_history.svg" alt="History">
+                    <a href="">History</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--calendar">
+                    <img src="./img/sidenav_calendar.svg" alt="Calendar">
+                    <a href="">Calendar</a>
+                </li>
+                <li class="sideNav__ul--li sideNav__ul--user">
+                    <img src="./img/sidenav_user.svg" alt="User">
+                    <a href="">User</a>
+                </li>
+            </ul>
+
+            <img src="./img/logo_sidenav.svg" alt="SpaceTrackIT" id="sideNav__footer" class="sideNav__footer">
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main id="main" class="main">
+        
+        <!-- SECTION INFO -->
+
+        <section id="section__info" class="section__info">
+
+            <div class="section__title">
+                <div class="title-info">
+                    <h1 id="sectionTitle" class="sectionTitle">PROJECTS</h1>
+                    <img src="./img/info_section.svg" alt="Section information">
+                </div>
+                <p class="sectionDescr">Create a new project</p>
+            </div>
+
+                       
+
+            <div id="section__info--div" class="section__info--div">
+                <p id="showDate__text"></p>
+            </div>
+
+        </section>
+
+        <!-- DASHBOARD BOARDS -->
+
+        <section class="newProject">
+
+            <div class="newProject__board">
+
+                <div class="newProject__header">
+                    <div class="newProject__header--title">
+                        <img src="./img/board_project_title.svg" alt="">
+                        <h1>Create New Project</h1>
+                    </div>
+                    <p>CUSTOM PROJECT</p>
+                </div>
+    
+                <div class="separator__extraBig--orangeYellow"></div>
+    
+                <div class="newProject__form">
+                    
+                    <div class="newProject__form--rowOne">
+
+                        <label for="" class="newProject__title">Project Name:
+                            <div>
+                                <p>Name of the project for identification.</p>
+                                <input class="input-text" type="text" id="projectName" required>
+                            </div>
+                        </label>
+
+                        <label for="" class="newProject__host">Project Host:
+                            <div>
+                                <p>Name of the company or group responsible for the project.</p>
+                                <input class="input-text" type="text" id="projectHost" required>
+                            </div>
+                        </label>
+
+                        <label for="" class="newProject__creator">Project Creator:
+                            <div>
+                                <p>Name of the user creating the project.</p>
+                                <p class="newProject__creator--name" id="projectCreator"></p>
+                            </div>
+                        </label>
+
+                    </div>
+
+                    <div class="newProject__form--rowTwo">
+
+                        <label for="" class="newProject__description">Project Description:
+                            <div>
+                                <p>Description of the project goals and situation:</p>
+                                <textarea name="" cols="30" rows="10" id="projectDescr" required></textarea>
+                            </div>
+                        </label>
+
+                        <div class="newProject__image">
+                            <label for="">Project Image (Optional):
+                                <p>An image to identify the project</p>
+                                <div id="droparea" class="droparea">
+                                    <p id="dropText">Drag and drop an image here<img src="./img/image.svg" alt=""></p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="newProject__dates">
+                            <label for="">Project Creation Date:
+                                <div>
+                                    <p>Expected date  for when the project will be finished</p>
+                                    <p class="newProject__creator--name" id="projectCreationDate"></p>
+                                </div>
+                            </label>
+                            <label for="" class="newProject__finishDate">Project End Date (Optional):
+                                <div>
+                                    <p>Expected date  for when the project will be finished</p>
+                                    <input type="datetime-local" id="projectEndDate">
+                                </div>
+                            </label>
+                        </div>
+
+                        
+
+                    </div>
+
+                    <div class="newProject__form--rowThree">
+
+                        <label for="" class="newProject__repos">Project Repository/s (Optional):
+                            <div>
+                                <p>Github links to repository or repositories of the project. (Can be added later!)</p>
+                                <div class="newProject__repos--input">
+                                    <input type="url" id="projectRepos" placeholder="Enter Repository URL">
+                                    <button type="submit" class="login__form--submit" id="addRepo">Add</button>
+                                </div>
+                            </div>
+                        </label>
+
+                        <div class="newProject__createdRepos">
+                            <h6>ADDED REPOS:</h6>
+                            <ul id="createdRepos-list"></ul>
+                        </div>
+
+                    </div>
+
+                    <div class="newProject__form--rowFour">
+
+                        <label for="" class="newProject__roles">Project Custom Member Roles (Optional):
+                            <div>
+                                <p>Create a role that will be assigned to members of this project. (Can be added later!)</p>
+                                <div class="newProject__roles--input">
+                                    <input class="input-text roles--input"type="text" id="projectRoles">
+                                    <button type="submit" class="login__form--submit" value="add role" id="addRole">Create Role</button>
+                                </div>
+                            </div>
+                        </label>
+
+                        <div class="newProject__createdRoles">
+                            <h6>CREATED ROLES:</h6>
+                            <ul id="createdRoles-list"></ul>
+                        </div>
+
+                    </div>
+
+                    <div class="addMembers__board">
+
+                        <div class="addMembers__header">
+                            <h3>ADD MEMBERS</h3>
+                        </div>
+
+                        <div class="separator__big--orangeYellow-2"></div>
+
+                        <div class="newMembers">
+
+                            <div class="addMembers">
+                                <div class="addMembers__title"><p class="addMembers__title--p">ADD</p></div>
+                                <div class="addMembers__body">
+
+                                    <div class="addMembers__body--header">
+                                        <div class="addMembers__friends--title"><h4>Friends List</h4></div>
+                                        <div class="addMembers__search--title"><h4>Search</h4></div>
+                                    </div>
+
+                                    <div class="addMembers__search--table table" id="searchList">
+
+                                        <div class="row">
+                                            <div class="cell">Nick7823</div>
+                                            <div class="cell">Nick Menza</div>
+                                            <div class="cell">nickmenza@hotmail.com</div>
+                                            <button class="add__member--btn" type="submit" value="add member"><p>Add</p></button>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="addMembers__search--search">
+                                        <label for="">Search User:
+                                            <input type="text" id="search-input">
+                                            <button type="submit" value="" class="addMembers__search--btn">Search</button>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="currentMembers">
+
+                                <div class="currentMembers__title"><p class="addMembers__title--p" >CURRENT MEMBERS</p></div>
+
+                                <div class="currentMembers__body">
+                                    <div class="currentMembers__table">
+
+                                        <div class="currentMembers__table--header">
+            
+                                            <div class="member__id">ID</div>
+                                            <div class="member__nick">Username</div>
+                                            <div class="member__name">Full name</div>
+                                            <div class="member__role">Role</div>
+                                            <div class="member__delete"></div>
+                            
+                                        </div>
+
+                                        <div class="currentMembers__table--body" id="currentMembers-table">
+                                            
+                                        </div>
+    
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="separator__small--purpleOrange"></div>
+
+                        <div class="addMembers__footer">
+                            <p id="footerCurrent">CURRENT MEMBERS: 0</p>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="create__project--btn" id="submitProject">Create Project</button>
+    
+                </div>
+            </div>
+
+        </section>
+
+        
+
+    </main>
+
+    <!-- FOOTER -->
+    
+    <footer id="footer" class="footer">
+
+        <div class="footer__white"></div>
+        <div class="footer__gradient separator__footer"></div>
+
+        <div class="footer__body">
+            <h2 id ="pageTitle" class="upperNav__h2"><span class="s">S</span><span class="pace">pace</span><span class="t">T</span><span class="rack">rack</span><span class="it">IT</span></h2>
+            <img src="./img/footer_logo.svg" alt="SpaceTrackIT Logo" class="footer__logo">
+            <p class="footer__author"><span class="footer__madeBy">Made By</span><br><span class="footer__myName">Manuel Costales</span></p>
+            <ul class="footer__media">
+                <li class="footer__media--li"><a href="" class="footer__media--a"><img src="./img/footer_outlook.svg" alt="" class="footer__media--img"></a></li>
+                <li class="footer__media--li"><a href="" class="footer__media--a"><img src="./img/footer_github.svg" alt="" class="footer__media--img"></a></li>
+                <li class="footer__media--li"><a href="" class="footer__media--a"><img src="./img/footer_linkedin.svg" alt="" class="footer__media--img"></a></li>
+            </ul>
+        </div>
+
+        <p class="footer__disclaimer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nulla voluptate consectetur sed ducimus quaerat adipisci dolorum incidunt suscipit nesciunt!</p>
+
+    </footer>
+
+
+</body>
+</html>

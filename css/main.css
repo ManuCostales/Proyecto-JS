@@ -12,7 +12,7 @@ body {
   min-height: 100%; }
 
 main {
-  margin-left: 215px;
+  margin-left: 230px;
   padding: 0rem 2rem;
   padding-top: 8vh; }
 
@@ -55,7 +55,7 @@ footer {
   font-size: 5rem; }
 
 .upperNav {
-  z-index: 9999;
+  z-index: 999;
   position: fixed;
   background-color: white;
   display: flex;
@@ -105,7 +105,7 @@ footer {
   bottom: 0;
   position: fixed;
   height: 91.8vh;
-  width: 215px;
+  width: 230px;
   background: #f5f5f5;
   display: flex;
   flex-flow: column nowrap;
@@ -283,11 +283,16 @@ footer {
 
 .add__member--btn {
   background-color: #7B4DFF;
+  padding: 1rem;
   height: 30px;
   width: 70px;
   border-radius: 25px;
   font-weight: 800;
-  color: white; }
+  color: white;
+  margin-right: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .addMembers__search--btn {
   padding: 0.5rem 1rem;
@@ -316,9 +321,22 @@ footer {
   color: white;
   width: 100%;
   justify-content: space-between; }
-  .section__info .sectionTitle {
-    font-size: 2.5rem;
-    font-weight: 300; }
+  .section__info .section__title {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start; }
+    .section__info .section__title .title-info {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 10px; }
+      .section__info .section__title .title-info .sectionTitle {
+        font-size: 2.5rem;
+        font-weight: 400; }
+    .section__info .section__title .sectionDescr {
+      font-size: 1rem;
+      font-weight: 200;
+      margin-left: 5px; }
   .section__info .section__info--div {
     font-size: 1.5rem;
     font-weight: bold;
@@ -328,7 +346,7 @@ footer {
       font-weight: 400; }
 
 .upperNav__h2 {
-  font-size: 2rem; }
+  font-size: 1.9rem; }
   .upperNav__h2 .s {
     font-weight: bold;
     color: #525252; }
@@ -352,23 +370,19 @@ footer {
 
 .pace {
   font-weight: normal;
-  color: #525252;
-  font-size: 2rem; }
+  color: #525252; }
 
 .t {
   font-weight: bold;
-  color: #DBFF00;
-  font-size: 2rem; }
+  color: #DBFF00; }
 
 .rack {
   font-weight: normal;
-  color: #DBFF00;
-  font-size: 2rem; }
+  color: #DBFF00; }
 
 .it {
   font-weight: bold;
-  color: #6133E4;
-  font-size: 2rem; }
+  color: #6133E4; }
 
 .upperNav__ul--buttons {
   display: flex;
@@ -481,11 +495,20 @@ footer {
 
 .separator__extraBig--purpleOrange {
   background: linear-gradient(90deg, #4200FF, #FFBE83);
-  height: 3rem; }
+  height: 3rem;
+  z-index: 99999; }
 
 .separator__extraBig--purpleOrange-2 {
   background: linear-gradient(90deg, #FFBE83, #4200FF);
   height: 3rem; }
+
+.separator__big--bluePurple {
+  background: linear-gradient(90deg, #1CD6FF, #8D83FF);
+  height: 2rem; }
+
+.separator__big--bluePurple-2 {
+  background: linear-gradient(90deg, #8D83FF, #1CD6FF);
+  height: 2rem; }
 
 .separator__extraBig--bluePurple {
   background: linear-gradient(90deg, #1CD6FF, #8D83FF);
@@ -527,9 +550,57 @@ footer {
   background: linear-gradient(90deg, #FF8551, #FFE600);
   height: 2rem; }
 
+.separator__small--orangeYellow {
+  background: linear-gradient(90deg, #FFE600, #FF8551);
+  height: 0.5rem; }
+
+.separator__small--orangeYellow-2 {
+  background: linear-gradient(90deg, #FF8551, #FFE600);
+  height: 0.5rem; }
+
+.separator__extraBig--pinkSalmon {
+  background: linear-gradient(90deg, #CD63FF, #FF8551);
+  height: 3rem; }
+
+.separator__extraBig--pinkSalmon-2 {
+  background: linear-gradient(90deg, #FF8551, #CD63FF);
+  height: 3rem; }
+
+.separator__big--pinkSalmon {
+  background: linear-gradient(90deg, #CD63FF, #FF8551);
+  height: 2rem; }
+
+.separator__big--pinkSalmon-2 {
+  background: linear-gradient(90deg, #FF8551, #CD63FF);
+  height: 2rem; }
+
+.separator__small--pinkSalmon {
+  background: linear-gradient(90deg, #CD63FF, #FF8551);
+  height: 0.5rem; }
+
+.separator__small--pinkSalmon-2 {
+  background: linear-gradient(90deg, #FF8551, #CD63FF);
+  height: 0.5rem; }
+
 .separator__footer {
   background: linear-gradient(90deg, #DBFF00, #00FFF0);
   height: 5rem; }
+
+.separator__big--purple {
+  height: 2rem;
+  background: linear-gradient(90deg, #9a76ff, #3a00df); }
+
+.separator__big--purple-2 {
+  height: 2rem;
+  background: linear-gradient(90deg, #3a00df, #9a76ff); }
+
+.separator__extraBig--purple {
+  height: 3rem;
+  background: linear-gradient(90deg, #9a76ff, #3a00df); }
+
+.separator__extraBig--purple-2 {
+  height: 3rem;
+  background: linear-gradient(90deg, #3a00df, #9a76ff); }
 
 .table {
   width: 100%;
@@ -566,10 +637,6 @@ footer {
   min-height: 40%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px; }
-  .currentMembers__table .cell {
-    display: table-cell;
-    padding: 0.5rem;
-    vertical-align: middle; }
   .currentMembers__table .currentMembers__table--header {
     display: table-row;
     background-color: #9372D9;
@@ -585,6 +652,2455 @@ footer {
     font-size: 0.9rem;
     color: #8E8E8E;
     font-weight: 600; }
+
+.project__card {
+  background-color: #FAFAFA;
+  height: 500px;
+  width: 370px;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column nowrap; }
+  .project__card .project__card--header {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; }
+    .project__card .project__card--header .project__card--header--info {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 5px;
+      align-items: center; }
+      .project__card .project__card--header .project__card--header--info img {
+        width: 20px;
+        height: 20px; }
+    .project__card .project__card--header .project__card--header--title {
+      font-family: arial,sans-serif;
+      color: #4D4D4D;
+      font-size: 1.3rem;
+      font-weight: 700; }
+    .project__card .project__card--header .project__card--header--notif {
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      vertical-align: middle;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFA572;
+      border-radius: 50%;
+      color: white; }
+  .project__card .project__card--img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover; }
+    .project__card .project__card--img img {
+      height: 100%;
+      width: 100%;
+      object-fit: fill; }
+  .project__card .project__card--description {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    color: #3E3E3E;
+    padding: 10px 3vw;
+    gap: 5px; }
+    .project__card .project__card--description h5 {
+      font-size: 0.9rem; }
+    .project__card .project__card--description p {
+      font-size: 0.8rem;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      /* number of lines to show */
+      -webkit-box-orient: vertical; }
+  .project__card .project__card--btn {
+    height: 30px;
+    width: 70px;
+    color: white;
+    background-color: #C85CBB;
+    margin: 0 auto;
+    font-weight: 600;
+    border-radius: 20px; }
+  .project__card .project__card--footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    justify-self: flex-end;
+    padding: 0 2vw;
+    height: 20px; }
+    .project__card .project__card--footer p {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #A9A9A9; }
+
+.project__card--new {
+  backdrop-filter: blur(14px);
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 500px;
+  width: 370px;
+  border-radius: 20px;
+  border: solid 1px white;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .project__card--new .project__card--new--div {
+    color: white;
+    background-color: #ececec;
+    border-radius: 20px;
+    border: solid 3px white;
+    height: 90%;
+    width: 90%;
+    box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly; }
+    .project__card--new .project__card--new--div h5 {
+      font-size: 2rem; }
+    .project__card--new .project__card--new--div h6 {
+      font-size: 1.5rem; }
+
+.team__card {
+  background-color: #FAFAFA;
+  height: 400px;
+  width: 300px;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column nowrap; }
+  .team__card .team__card--header {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; }
+    .team__card .team__card--header .team__card--header--info {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 5px;
+      align-items: center; }
+      .team__card .team__card--header .team__card--header--info img {
+        width: 20px;
+        height: 20px; }
+    .team__card .team__card--header .team__card--header--title {
+      font-family: arial,sans-serif;
+      color: #4D4D4D;
+      font-size: 1.3rem;
+      font-weight: 700; }
+    .team__card .team__card--header .team__card--header--notif {
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      vertical-align: middle;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFA572;
+      border-radius: 50%;
+      color: white; }
+  .team__card .team__card--body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 60%; }
+    .team__card .team__card--body .card--body--header {
+      background-color: #EAECFF;
+      padding: 0vh 0.5vw;
+      height: 4vh;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center; }
+      .team__card .team__card--body .card--body--header p {
+        color: #7C7C7C;
+        font-size: 1rem;
+        font-weight: 600; }
+      .team__card .team__card--body .card--body--header h6 {
+        color: #3E3E3E;
+        font-size: 0.9rem;
+        font-weight: 600; }
+    .team__card .team__card--body .card--body--desc {
+      display: flex;
+      align-items: center;
+      padding: 2vh 1vw; }
+      .team__card .team__card--body .card--body--desc p {
+        color: #686868;
+        font-size: 0.9rem;
+        text-align: center; }
+    .team__card .team__card--body .card--body--footer {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 0.5vh 1vw; }
+      .team__card .team__card--body .card--body--footer p {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #A9A9A9; }
+  .team__card .team__card--footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 2vw;
+    height: 30px; }
+    .team__card .team__card--footer button {
+      height: 30px;
+      width: 70px;
+      color: white;
+      background-color: #C85CBB;
+      margin: 0 auto;
+      font-weight: 600;
+      border-radius: 20px; }
+
+.team__card--new {
+  backdrop-filter: blur(14px);
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 400px;
+  width: 300px;
+  border-radius: 20px;
+  border: solid 1px white;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .team__card--new .team__card--new--div {
+    color: white;
+    background-color: #ececec;
+    border-radius: 20px;
+    border: solid 3px white;
+    height: 90%;
+    width: 90%;
+    box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly; }
+    .team__card--new .team__card--new--div h5 {
+      font-size: 2rem; }
+    .team__card--new .team__card--new--div h6 {
+      font-size: 1.5rem; }
+
+.list__board--div {
+  background-color: #FAFAFA;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap; }
+  .list__board--div .list__board--header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 1vw;
+    align-items: center; }
+    .list__board--div .list__board--header .list__board--header--title {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 10px; }
+      .list__board--div .list__board--header .list__board--header--title h3 {
+        font-size: 1.3rem;
+        font-family: arial;
+        font-weight: 700;
+        color: #4D4D4D; }
+    .list__board--div .list__board--header p {
+      font-weight: 600;
+      color: #7C7C7C; }
+  .list__board--div .list__board--order {
+    width: 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 1vh 1vw;
+    color: #7C7C7C;
+    font-size: 1.2rem;
+    font-weight: 600; }
+  .list__board--div .list__board--table {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 20vh; }
+    .list__board--div .list__board--table .list__board--table--header {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      padding: 0 1vw;
+      background-color: #EAECFF;
+      height: 5vh;
+      color: #7C7C7C;
+      font-size: 0.9rem;
+      font-weight: 600;
+      gap: 0px; }
+    .list__board--div .list__board--table .list__board--row {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      padding: 0 1vw;
+      gap: 0px;
+      height: 5vh;
+      border-bottom: 1px solid #ececec; }
+    .list__board--div .list__board--table .active {
+      background-color: #b7b9c9; }
+    .list__board--div .list__board--table .project__id {
+      width: 3%; }
+    .list__board--div .list__board--table .project__id--vis {
+      color: #4E4E4E;
+      font-weight: 600; }
+    .list__board--div .list__board--table .project__title {
+      width: 10%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
+    .list__board--div .list__board--table .project__title--vis {
+      font-weight: 600;
+      color: #5539FF; }
+    .list__board--div .list__board--table .project__host {
+      width: 8%; }
+    .list__board--div .list__board--table .project__host--vis {
+      color: #4E4E4E;
+      font-weight: 600; }
+    .list__board--div .list__board--table .project__creator {
+      width: 10%; }
+    .list__board--div .list__board--table .project__creator--vis {
+      color: #4E4E4E;
+      font-weight: 600; }
+    .list__board--div .list__board--table .project__description {
+      width: 20%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
+    .list__board--div .list__board--table .project__description--vis {
+      color: #848484; }
+    .list__board--div .list__board--table .project__date {
+      width: 5%;
+      text-align: center; }
+    .list__board--div .list__board--table .project__lastEntry {
+      width: 10%;
+      text-align: center; }
+    .list__board--div .list__board--table .project__notif {
+      width: 3%; }
+    .list__board--div .list__board--table .project__view {
+      width: 5%; }
+    .list__board--div .list__board--table .team__name {
+      width: 10%; }
+    .list__board--div .list__board--table .team__name--vis {
+      font-weight: 600;
+      color: #5539FF;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
+    .list__board--div .list__board--table .team__project {
+      width: 15%; }
+    .list__board--div .list__board--table .team__project--vis {
+      color: #4E4E4E;
+      font-weight: 600;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
+    .list__board--div .list__board--table .team__lead {
+      width: 10%; }
+    .list__board--div .list__board--table .team__lead--vis {
+      color: #4E4E4E;
+      font-weight: 600;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
+  .list__board--div .list__board--addDelete {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 1vw;
+    margin: 5vh 0; }
+    .list__board--div .list__board--addDelete .list__board--delete--btn {
+      height: 35px;
+      width: 110px;
+      background-color: #F66767;
+      color: white;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: 600; }
+    .list__board--div .list__board--addDelete .list__board--add-btn {
+      height: 35px;
+      width: 110px;
+      background-color: #1eb99f;
+      color: white;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: 600; }
+  .list__board--div .list__board--preview {
+    box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    margin: 0 1vw;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 4vh; }
+    .list__board--div .list__board--preview .list__board--preview--header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 1vw;
+      height: 40px; }
+      .list__board--div .list__board--preview .list__board--preview--header h5 {
+        font-size: 0.9rem;
+        color: #7C7C7C;
+        font-weight: 600; }
+    .list__board--div .list__board--preview .list__board--preview--info {
+      min-height: 25vh;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 3vh 1.5vw; }
+      .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--one {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 35%;
+        gap: 3vh; }
+        .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--one .list__preview--one--title {
+          display: flex;
+          flex-flow: column nowrap; }
+          .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--one .list__preview--one--title .list__preview--one--title--id {
+            color: #5F5F5F;
+            font-size: 1.8rem;
+            font-weight: 500; }
+          .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--one .list__preview--one--title h4 {
+            color: #3E3E3E;
+            font-size: 2rem;
+            font-weight: 700; }
+          .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--one .list__preview--one--title .list__preview--one--title--host {
+            color: #565656;
+            font-size: 1.4rem;
+            font-weight: 700; }
+        .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--one .list__preview--one--descr {
+          color: #838383;
+          font-weight: 300;
+          font-size: 0.9rem; }
+      .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--two {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 3vh; }
+        .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--two p {
+          color: #7C7C7C;
+          font-size: 0.8rem;
+          font-weight: 600; }
+      .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--three {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-end; }
+        .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--three .list__preview--three--data {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 3vh; }
+          .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--three .list__preview--three--data p {
+            color: #7C7C7C;
+            font-size: 0.8rem;
+            font-weight: 600; }
+        .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--three .list__preview--three--more {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          gap: 1vh; }
+          .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--three .list__preview--three--more .list__preview--three--notif {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 1vw; }
+            .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--three .list__preview--three--more .list__preview--three--notif p {
+              color: #5F5F5F;
+              font-size: 1.1rem;
+              font-weight: 600; }
+            .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--three .list__preview--three--more .list__preview--three--notif div {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: white;
+              font-weight: 600;
+              height: 40px;
+              width: 40px;
+              background-color: #FFA572;
+              border-radius: 50%; }
+          .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--three .list__preview--three--more button {
+            height: 50px;
+            width: 200px;
+            background-color: #5539FF;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem; }
+    .list__board--div .list__board--preview .list__board--footer {
+      height: 4vh;
+      display: flex;
+      align-items: center;
+      padding: 0 1vw; }
+      .list__board--div .list__board--preview .list__board--footer p {
+        font-size: 0.8rem;
+        color: #A5A5A5;
+        font-weight: 600; }
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal .modal__div {
+    height: 95vh;
+    width: 97vw;
+    margin-right: 2vw;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap; }
+    .modal .modal__div .modal__div--header {
+      height: 50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1vw; }
+      .modal .modal__div .modal__div--header .modal__title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 10px; }
+        .modal .modal__div .modal__div--header .modal__title h2 {
+          font-size: 1.4rem;
+          font-family: arial;
+          font-weight: 700;
+          color: #4D4D4D; }
+        .modal .modal__div .modal__div--header .modal__title img {
+          width: 25px;
+          height: 25px; }
+      .modal .modal__div .modal__div--header img {
+        width: 45px;
+        height: 45px; }
+    .modal .modal__div .modal__body {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      height: 75%;
+      padding: 2vh 1vw;
+      gap: 3vw; }
+      .modal .modal__div .modal__body .modal__body--one {
+        width: 20%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        margin-bottom: 3vh; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--img {
+          height: 35%;
+          width: 85%;
+          border-radius: 20px; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--name {
+          display: flex;
+          flex-flow: column nowrap; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--name h1 {
+            color: #2c2c2c; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--host {
+          display: flex;
+          flex-flow: column nowrap; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--host h4 {
+            color: #393939;
+            font-size: 1.8rem;
+            font-weight: 600; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--creator {
+          display: flex;
+          flex-flow: column nowrap; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--creator p {
+            color: #393939;
+            font-weight: 400;
+            font-size: 1.7rem; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--startDate, .modal .modal__div .modal__body .modal__body--one .project__modal--endDate {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 5px; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--startDate p, .modal .modal__div .modal__body .modal__body--one .project__modal--endDate p {
+            color: #393939;
+            font-weight: 300;
+            font-size: 1.5rem; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--info {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--info p {
+            font-size: 0.9rem;
+            color: #757575;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--info img {
+            height: 20px;
+            width: 20px; }
+      .modal .modal__div .modal__body .modal__body--two {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 45%;
+        gap: 20px; }
+        .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__title {
+            font-size: 1.1rem;
+            color: #757575;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            height: 15vh;
+            width: 100%; }
+            .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list .repo__list--table {
+              display: flex;
+              flex-flow: column nowrap;
+              padding: 2vh 1vw;
+              gap: 10px;
+              color: #6F6F6F;
+              font-weight: 300;
+              font-size: 1rem; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list .repo__list--table .repo__list--row {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center; }
+            .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list .repo__list--footer {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 25%;
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              background-color: #d5d5d5; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list .repo__list--footer button {
+                width: 60%;
+                height: 80%;
+                border-radius: 50px;
+                background-color: #5A5A5A;
+                color: white;
+                font-weight: 600; }
+        .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__title {
+            font-size: 1.1rem;
+            color: #757575;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            height: 18vh;
+            width: 100%; }
+            .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list ul {
+              width: 100%;
+              display: flex;
+              flex-flow: row wrap;
+              justify-content: space-evenly;
+              color: #8F8F8F;
+              font-weight: 600;
+              font-size: 0.8rem;
+              padding: 2vh 0;
+              gap: 20px; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list ul li {
+                padding: 0 30px; }
+            .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-evenly;
+              align-items: center;
+              width: 100%;
+              height: 25%;
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              background-color: #d1c3c2; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer p {
+                color: #5C5C5C;
+                font-weight: 400; }
+                .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer p span {
+                  font-weight: 700; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer input {
+                border-radius: 50px;
+                background-color: #F1E7E7;
+                height: 80%;
+                width: 50%;
+                text-align: center;
+                color: #6F6F6F;
+                font-weight: 500;
+                text-transform: uppercase; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer button {
+                height: 80%;
+                width: 15%;
+                color: white;
+                font-weight: 600;
+                background-color: #834A4A;
+                border-radius: 50px; }
+        .modal .modal__div .modal__body .modal__body--two .modal__body--two--descr {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--descr .project__descr--title {
+            display: flex;
+            flex-flow: row nowrap;
+            font-size: 1.1rem;
+            color: #757575;
+            font-weight: 700;
+            gap: 6px; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--descr .project__descr--text {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 2vh 1vw;
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            height: 20vh;
+            width: 100%;
+            color: #6e6e6e;
+            font-size: 0.9rem;
+            font-weight: 300; }
+      .modal .modal__div .modal__body .modal__body--three {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 50%;
+        gap: 20px; }
+        .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues--title {
+            display: flex;
+            flex-flow: row nowrap;
+            font-size: 1.1rem;
+            color: #757575;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues {
+            width: 100%;
+            height: 15vh;
+            background: linear-gradient(90deg, rgba(205, 99, 255, 0.1), rgba(255, 133, 81, 0.1));
+            border-radius: 20px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between; }
+            .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--table {
+              display: flex;
+              flex-flow: column nowrap;
+              padding: 2vh 1.5vw;
+              gap: 10px; }
+              .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--table .project__issues--row {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.8rem; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--table .project__issues--row .issue__id {
+                  color: #4E4E4E;
+                  font-weight: 700; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--table .project__issues--row .issue__name {
+                  color: #5539FF;
+                  font-weight: 600; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--table .project__issues--row .issue__type {
+                  font-weight: 500;
+                  color: #636363; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--table .project__issues--row .issue__priority {
+                  font-weight: 700; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--table .project__issues--row button {
+                  color: white;
+                  font-size: 0.7rem;
+                  font-weight: 600;
+                  height: 25px;
+                  width: 70px;
+                  border-radius: 50px;
+                  background-color: #7939FF; }
+            .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--footer {
+              width: 100%;
+              height: 25%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              background: linear-gradient(90deg, rgba(205, 99, 255, 0.2), rgba(255, 133, 81, 0.2)); }
+              .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--footer button {
+                width: 50%;
+                height: 80%;
+                color: white;
+                font-size: 0.9rem;
+                font-weight: 600;
+                border-radius: 50px;
+                background: linear-gradient(90deg, #cd63ff, #ff8551); }
+        .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams--title {
+            display: flex;
+            flex-flow: row nowrap;
+            font-size: 1.1rem;
+            color: #757575;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams {
+            width: 100%;
+            height: 18vh;
+            background: linear-gradient(90deg, rgba(28, 214, 255, 0.1), rgba(141, 131, 255, 0.1));
+            border-radius: 20px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between; }
+            .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--table {
+              display: flex;
+              flex-flow: column nowrap;
+              padding: 2vh 1.5vw;
+              gap: 10px; }
+              .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--table .project__teams--row {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.8rem; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--table .project__teams--row .team__id {
+                  color: #4E4E4E;
+                  font-weight: 700; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--table .project__teams--row .team__name {
+                  color: #5539FF;
+                  font-weight: 600; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--table .project__teams--row .team__members {
+                  font-weight: 500;
+                  color: #636363; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--table .project__teams--row .team__lead {
+                  font-weight: 700; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--table .project__teams--row button {
+                  color: white;
+                  font-size: 0.7rem;
+                  font-weight: 600;
+                  height: 25px;
+                  width: 70px;
+                  border-radius: 50px;
+                  background-color: #7939FF; }
+            .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--footer {
+              width: 100%;
+              height: 25%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              background: linear-gradient(90deg, rgba(28, 214, 255, 0.2), rgba(141, 131, 255, 0.2)); }
+              .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--footer button {
+                width: 50%;
+                height: 80%;
+                color: white;
+                font-size: 0.9rem;
+                font-weight: 600;
+                border-radius: 50px;
+                background: linear-gradient(90deg, #1cd6ff, #8d83ff); }
+        .modal .modal__div .modal__body .modal__body--three .modal__body--three--members {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members--title {
+            display: flex;
+            flex-flow: row nowrap;
+            font-size: 1.1rem;
+            color: #757575;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members {
+            width: 100%;
+            height: 24vh;
+            background: linear-gradient(90deg, rgba(154, 118, 255, 0.1), rgba(58, 0, 223, 0.1));
+            border-radius: 20px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between; }
+            .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table {
+              display: flex;
+              flex-flow: column nowrap;
+              padding: 2vh 1.5vw;
+              gap: 10px; }
+              .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.8rem; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .member__id {
+                  color: #4E4E4E;
+                  font-weight: 700; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .member__nick {
+                  color: #5539FF;
+                  font-weight: 600; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .member__name {
+                  font-weight: 500;
+                  color: #636363; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .team__lead {
+                  font-weight: 700; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row button {
+                  color: white;
+                  font-size: 0.7rem;
+                  font-weight: 600;
+                  height: 25px;
+                  width: 70px;
+                  border-radius: 50px;
+                  background-color: #7939FF; }
+            .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--footer {
+              width: 100%;
+              height: 25%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              background: linear-gradient(90deg, rgba(154, 118, 255, 0.2), rgba(58, 0, 223, 0.2)); }
+              .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--footer button {
+                width: 50%;
+                height: 80%;
+                color: white;
+                font-size: 0.9rem;
+                font-weight: 600;
+                border-radius: 50px;
+                background: linear-gradient(90deg, #9a76ff, #3a00df); }
+    .modal .modal__div .modal__footer {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0vh 1vw;
+      padding-top: 1vh; }
+      .modal .modal__div .modal__footer .delete {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FF5B45;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modal .modal__div .modal__footer .delete img {
+          height: 20px;
+          width: 20px; }
+      .modal .modal__div .modal__footer .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #7B4DFF;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modal .modal__div .modal__footer .close img {
+          height: 20px;
+          width: 20px; }
+
+.newModal {
+  height: 100vh;
+  width: 100vw;
+  z-index: 999999;
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.modalRepos {
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modalRepos .modalRepos__div {
+    height: 95vh;
+    width: 60vw;
+    margin-right: 2vw;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap; }
+    .modalRepos .modalRepos__div .modal__div--header {
+      height: 50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1vw; }
+      .modalRepos .modalRepos__div .modal__div--header .modal__title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 10px; }
+        .modalRepos .modalRepos__div .modal__div--header .modal__title h2 {
+          font-size: 1.4rem;
+          font-family: arial;
+          font-weight: 700;
+          color: #4D4D4D; }
+        .modalRepos .modalRepos__div .modal__div--header .modal__title img {
+          width: 25px;
+          height: 25px; }
+      .modalRepos .modalRepos__div .modal__div--header img {
+        width: 45px;
+        height: 45px; }
+    .modalRepos .modalRepos__div .modal__body {
+      display: flex;
+      flex-flow: column nowrap;
+      height: 75%;
+      padding: 2vh 1vw;
+      gap: 20px; }
+      .modalRepos .modalRepos__div .modal__body .modal__body--title {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between; }
+        .modalRepos .modalRepos__div .modal__body .modal__body--title h1 {
+          color: #757575;
+          font-size: 1.3rem;
+          font-weight: 500; }
+        .modalRepos .modalRepos__div .modal__body .modal__body--title h2 {
+          color: #393939;
+          font-size: 1.3rem; }
+      .modalRepos .modalRepos__div .modal__body .modal__body--list {
+        box-shadow: 0px 5px 9px -1px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        background-color: #f4f4f4;
+        border-radius: 20px;
+        min-height: 90%; }
+        .modalRepos .modalRepos__div .modal__body .modal__body--list .modal__body--list--table {
+          display: flex;
+          flex-flow: column nowrap;
+          padding: 4vh 1vw;
+          gap: 30px; }
+          .modalRepos .modalRepos__div .modal__body .modal__body--list .modal__body--list--table .modal__body--table--row {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 50px;
+            padding: 0.5vh 2vw;
+            border: 1px solid #b1b1b1; }
+            .modalRepos .modalRepos__div .modal__body .modal__body--list .modal__body--list--table .modal__body--table--row img {
+              width: 30px;
+              height: 30px; }
+            .modalRepos .modalRepos__div .modal__body .modal__body--list .modal__body--list--table .modal__body--table--row .repo__number {
+              font-weight: 600;
+              font-size: 1.2rem;
+              color: #393939; }
+        .modalRepos .modalRepos__div .modal__body .modal__body--list .modal__body--list--footer {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #d5d5d5;
+          height: 8vh;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          padding: 0 2vw; }
+          .modalRepos .modalRepos__div .modal__body .modal__body--list .modal__body--list--footer p {
+            color: #4E4E4E;
+            font-weight: 400;
+            font-size: 1rem; }
+            .modalRepos .modalRepos__div .modal__body .modal__body--list .modal__body--list--footer p span {
+              font-weight: 700; }
+          .modalRepos .modalRepos__div .modal__body .modal__body--list .modal__body--list--footer input {
+            height: 50%;
+            background-color: #E9E9E9;
+            width: 60%;
+            border-radius: 50px;
+            outline: none;
+            text-align: center; }
+          .modalRepos .modalRepos__div .modal__body .modal__body--list .modal__body--list--footer button {
+            background-color: #5A5A5A;
+            border-radius: 50px;
+            height: 50%;
+            width: 15%;
+            font-weight: 600;
+            color: white; }
+    .modalRepos .modalRepos__div .modal__footer {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0vh 1vw;
+      padding-top: 1vh; }
+      .modalRepos .modalRepos__div .modal__footer p {
+        font-size: 0.9rem;
+        color: #A5A5A5;
+        font-weight: 500; }
+      .modalRepos .modalRepos__div .modal__footer .delete {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FF5B45;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modalRepos .modalRepos__div .modal__footer .delete img {
+          height: 20px;
+          width: 20px; }
+      .modalRepos .modalRepos__div .modal__footer .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #7B4DFF;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modalRepos .modalRepos__div .modal__footer .close img {
+          height: 20px;
+          width: 20px; }
+
+.modalIssues {
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modalIssues .modalIssues__div {
+    height: 95vh;
+    width: 97vw;
+    margin-right: 2vw;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap; }
+    .modalIssues .modalIssues__div .modal__div--header {
+      height: 50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1vw; }
+      .modalIssues .modalIssues__div .modal__div--header .modal__title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 10px; }
+        .modalIssues .modalIssues__div .modal__div--header .modal__title h2 {
+          font-size: 1.4rem;
+          font-family: arial;
+          font-weight: 700;
+          color: #4D4D4D; }
+        .modalIssues .modalIssues__div .modal__div--header .modal__title img {
+          width: 25px;
+          height: 25px; }
+      .modalIssues .modalIssues__div .modal__div--header img {
+        width: 45px;
+        height: 45px; }
+    .modalIssues .modalIssues__div .modal__body {
+      display: flex;
+      flex-flow: column nowrap;
+      height: 75%;
+      padding: 2vh 1vw;
+      gap: 20px; }
+      .modalIssues .modalIssues__div .modal__body .modal__body--title {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between; }
+        .modalIssues .modalIssues__div .modal__body .modal__body--title h1 {
+          color: #757575;
+          font-size: 1.3rem;
+          font-weight: 500; }
+        .modalIssues .modalIssues__div .modal__body .modal__body--title h2 {
+          color: #393939;
+          font-size: 1.3rem; }
+      .modalIssues .modalIssues__div .modal__body .project__issues {
+        box-shadow: 0px 5px 9px -1px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        min-height: 90%;
+        background: linear-gradient(90deg, rgba(205, 99, 255, 0.1), rgba(255, 133, 81, 0.1));
+        border-radius: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between; }
+        .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          padding: 0;
+          gap: 10px; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .project__issues--table--head {
+            display: flex;
+            flex-flow: column nowrap; }
+            .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .project__issues--table--head .project__issues--table--header {
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: center;
+              justify-content: space-between;
+              color: #6A6A6A;
+              font-weight: 600;
+              font-size: 0.8rem;
+              background: linear-gradient(90deg, rgba(205, 99, 255, 0.2), rgba(255, 133, 81, 0.2));
+              border-top-left-radius: 20px;
+              padding: 1vh 2vw;
+              border-top-right-radius: 20px;
+              height: 3vh; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .project__issues--row {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            padding: 1vh 2vw;
+            height: 3vh; }
+            .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .project__issues--row button {
+              color: white;
+              font-size: 0.7rem;
+              font-weight: 600;
+              height: 25px;
+              border-radius: 50px;
+              background-color: #7939FF; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__id {
+            width: 3%; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__id--vis {
+            color: #4E4E4E;
+            font-weight: 700; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__name {
+            width: 20%; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__name--vis {
+            color: #5539FF;
+            font-weight: 600; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__type {
+            width: 6%;
+            text-align: center; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__type--vis {
+            font-weight: 500;
+            color: #636363; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__priority {
+            width: 5%;
+            text-align: center; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__priority--vis {
+            font-weight: 700; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__author {
+            width: 20%;
+            text-align: center; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__author--vis {
+            color: #4E4E4E;
+            font-weight: 600; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__team {
+            width: 15%;
+            text-align: center; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__team--vis {
+            font-weight: 500;
+            color: #5539FF; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__lastEntry {
+            width: 10%;
+            text-align: center; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__notif {
+            width: 6%;
+            height: 20%; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__delete {
+            width: 6%;
+            height: 100%; }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__button {
+            width: 7%;
+            height: 10%; }
+        .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--footer {
+          width: 100%;
+          height: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          background: linear-gradient(90deg, rgba(205, 99, 255, 0.2), rgba(255, 133, 81, 0.2)); }
+          .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--footer button {
+            width: 50%;
+            height: 80%;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #cd63ff, #ff8551); }
+    .modalIssues .modalIssues__div .modal__footer {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0vh 1vw;
+      padding-top: 1vh; }
+      .modalIssues .modalIssues__div .modal__footer p {
+        font-size: 0.9rem;
+        color: #A5A5A5;
+        font-weight: 500; }
+      .modalIssues .modalIssues__div .modal__footer .delete {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FF5B45;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modalIssues .modalIssues__div .modal__footer .delete img {
+          height: 20px;
+          width: 20px; }
+      .modalIssues .modalIssues__div .modal__footer .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #7B4DFF;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modalIssues .modalIssues__div .modal__footer .close img {
+          height: 20px;
+          width: 20px; }
+
+.modalTeams {
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modalTeams .modalTeams__div {
+    height: 95vh;
+    width: 97vw;
+    margin-right: 2vw;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap; }
+    .modalTeams .modalTeams__div .modal__div--header {
+      height: 50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1vw; }
+      .modalTeams .modalTeams__div .modal__div--header .modal__title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 10px; }
+        .modalTeams .modalTeams__div .modal__div--header .modal__title h2 {
+          font-size: 1.4rem;
+          font-family: arial;
+          font-weight: 700;
+          color: #4D4D4D; }
+        .modalTeams .modalTeams__div .modal__div--header .modal__title img {
+          width: 25px;
+          height: 25px; }
+      .modalTeams .modalTeams__div .modal__div--header img {
+        width: 45px;
+        height: 45px; }
+    .modalTeams .modalTeams__div .modal__body {
+      display: flex;
+      flex-flow: column nowrap;
+      height: 75%;
+      padding: 2vh 1vw;
+      gap: 20px; }
+      .modalTeams .modalTeams__div .modal__body .modal__body--title {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between; }
+        .modalTeams .modalTeams__div .modal__body .modal__body--title h1 {
+          color: #757575;
+          font-size: 1.3rem;
+          font-weight: 500; }
+        .modalTeams .modalTeams__div .modal__body .modal__body--title h2 {
+          color: #393939;
+          font-size: 1.3rem; }
+      .modalTeams .modalTeams__div .modal__body .project__issues {
+        box-shadow: 0px 5px 9px -1px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        min-height: 90%;
+        background: linear-gradient(90deg, rgba(141, 131, 255, 0.1), rgba(28, 214, 255, 0.05));
+        border-radius: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between; }
+        .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          padding: 0;
+          gap: 10px; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .project__issues--table--head {
+            display: flex;
+            flex-flow: column nowrap; }
+            .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .project__issues--table--head .project__issues--table--header {
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: center;
+              justify-content: space-between;
+              color: #6A6A6A;
+              font-weight: 600;
+              font-size: 0.8rem;
+              background: linear-gradient(90deg, rgba(141, 131, 255, 0.2), rgba(28, 214, 255, 0.2));
+              border-top-left-radius: 20px;
+              padding: 1vh 2vw;
+              border-top-right-radius: 20px;
+              height: 3vh; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .project__issues--row {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            padding: 1vh 2vw;
+            height: 3vh; }
+            .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .project__issues--row button {
+              color: white;
+              font-size: 0.7rem;
+              font-weight: 600;
+              height: 25px;
+              border-radius: 50px;
+              background-color: #7939FF; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__id {
+            width: 3%; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__id--vis {
+            color: #4E4E4E;
+            font-weight: 700; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__name {
+            width: 15%; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__name--vis {
+            color: #5539FF;
+            font-weight: 600; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__lead {
+            width: 15%;
+            text-align: center; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__lead--vis {
+            color: #3a3a3a;
+            font-weight: 600; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__descr {
+            width: 20%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__descr--vis {
+            font-weight: 300; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__members {
+            width: 8%;
+            text-align: center; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__members--vis {
+            color: #4E4E4E;
+            font-weight: 600; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__date {
+            width: 10%;
+            text-align: center; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__date--vis {
+            font-weight: 500;
+            color: #5539FF; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__lastEntry {
+            width: 10%;
+            text-align: center; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__notif {
+            width: 6%;
+            height: 20%; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__delete {
+            width: 6%;
+            height: 100%; }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--table .team__button {
+            width: 7%;
+            height: 10%; }
+        .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--footer {
+          width: 100%;
+          height: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          background: linear-gradient(90deg, rgba(141, 131, 255, 0.2), rgba(28, 214, 255, 0.2)); }
+          .modalTeams .modalTeams__div .modal__body .project__issues .project__issues--footer button {
+            width: 50%;
+            height: 80%;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #8d83ff, #1cd6ff); }
+    .modalTeams .modalTeams__div .modal__footer {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0vh 1vw;
+      padding-top: 1vh; }
+      .modalTeams .modalTeams__div .modal__footer p {
+        font-size: 0.9rem;
+        color: #A5A5A5;
+        font-weight: 500; }
+      .modalTeams .modalTeams__div .modal__footer .delete {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FF5B45;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modalTeams .modalTeams__div .modal__footer .delete img {
+          height: 20px;
+          width: 20px; }
+      .modalTeams .modalTeams__div .modal__footer .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #7B4DFF;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modalTeams .modalTeams__div .modal__footer .close img {
+          height: 20px;
+          width: 20px; }
+
+.modalMembers {
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modalMembers .modalMembers__div {
+    height: 95vh;
+    width: 97vw;
+    margin-right: 2vw;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap; }
+    .modalMembers .modalMembers__div .modal__div--header {
+      height: 50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1vw; }
+      .modalMembers .modalMembers__div .modal__div--header .modal__title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 10px; }
+        .modalMembers .modalMembers__div .modal__div--header .modal__title h2 {
+          font-size: 1.4rem;
+          font-family: arial;
+          font-weight: 700;
+          color: #4D4D4D; }
+        .modalMembers .modalMembers__div .modal__div--header .modal__title img {
+          width: 25px;
+          height: 25px; }
+      .modalMembers .modalMembers__div .modal__div--header img {
+        width: 45px;
+        height: 45px; }
+    .modalMembers .modalMembers__div .modal__body {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      height: 75%;
+      padding: 2vh 1vw;
+      gap: 20px; }
+      .modalMembers .modalMembers__div .modal__body .modal__body--admins {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 10px; }
+        .modalMembers .modalMembers__div .modal__body .modal__body--admins h3 {
+          color: #757575;
+          font-size: 1.1rem;
+          font-weight: 500; }
+        .modalMembers .modalMembers__div .modal__body .modal__body--admins .modal__body--admins--div {
+          box-shadow: 0px 5px 9px -1px rgba(0, 0, 0, 0.15);
+          background: linear-gradient(90deg, rgba(154, 118, 255, 0.1), rgba(58, 0, 223, 0.1));
+          border-radius: 20px;
+          height: 15vh; }
+          .modalMembers .modalMembers__div .modal__body .modal__body--admins .modal__body--admins--div .modal__body--admins--table {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2vh 2vw;
+            gap: 20px; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--admins .modal__body--admins--div .modal__body--admins--table .admin {
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: center;
+              margin: 0 1vw;
+              gap: 10px; }
+              .modalMembers .modalMembers__div .modal__body .modal__body--admins .modal__body--admins--div .modal__body--admins--table .admin p {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #424242; }
+              .modalMembers .modalMembers__div .modal__body .modal__body--admins .modal__body--admins--div .modal__body--admins--table .admin button {
+                background-color: #7939FF;
+                color: white;
+                height: 30px;
+                width: 60px;
+                border-radius: 20px;
+                font-weight: 600; }
+      .modalMembers .modalMembers__div .modal__body .modal__body--main {
+        display: flex;
+        flex-flow: row nowrap;
+        min-height: 50vh;
+        justify-content: space-between; }
+        .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current {
+          display: flex;
+          flex-flow: column nowrap;
+          width: 55%;
+          gap: 10px; }
+          .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current h3 {
+            color: #757575;
+            font-size: 1.1rem;
+            font-weight: 500; }
+          .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div {
+            box-shadow: 0px 5px 9px -1px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(90deg, rgba(154, 118, 255, 0.1), rgba(58, 0, 223, 0.1));
+            border-radius: 20px;
+            height: 50vh; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .modal__body--head {
+              display: flex;
+              flex-flow: column nowrap; }
+              .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .modal__body--head .modal__body--header {
+                background: linear-gradient(90deg, rgba(154, 118, 255, 0.2), rgba(58, 0, 223, 0.2));
+                height: 5vh;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1vw;
+                gap: 20px; }
+                .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .modal__body--head .modal__body--header div {
+                  color: #6A6A6A;
+                  font-weight: 500;
+                  font-size: 0.9rem; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .modal__body--table {
+              display: flex;
+              flex-flow: column nowrap;
+              gap: 5px; }
+              .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .modal__body--table .modal__body--row {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1vh 1vw;
+                height: 4vh;
+                gap: 20px; }
+                .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .modal__body--table .modal__body--row button {
+                  color: white;
+                  font-size: 0.7rem;
+                  font-weight: 600;
+                  height: 25px;
+                  border-radius: 50px;
+                  background-color: #7939FF; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__id {
+              width: 3%; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__id--vis {
+              color: #4E4E4E;
+              font-weight: 700; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__img {
+              height: 40px;
+              width: 50px;
+              text-align: center;
+              margin-left: 0vw; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__img img {
+              border-radius: 50%;
+              width: 100%;
+              height: 100%; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__nick {
+              width: 15%; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__nick--vis {
+              color: #5539FF;
+              font-weight: 600; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__name {
+              width: 20%;
+              text-align: center; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__name--vis {
+              color: #3a3a3a;
+              font-weight: 600; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__email {
+              width: 35%; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__email--vis {
+              font-size: 0.8rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__role {
+              width: 10%; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__role--vis {
+              background-color: none; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__delete {
+              width: 5%;
+              height: 70%; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .user__view {
+              width: 10%; }
+        .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add {
+          display: flex;
+          flex-flow: column nowrap;
+          width: 44%;
+          gap: 10px; }
+          .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add h3 {
+            color: #757575;
+            font-size: 1.1rem;
+            font-weight: 500; }
+          .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div {
+            box-shadow: 0px 5px 9px -1px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(90deg, rgba(154, 118, 255, 0.1), rgba(58, 0, 223, 0.1));
+            border-radius: 20px;
+            height: 50vh;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .modal__body--head {
+              display: flex;
+              flex-flow: column nowrap; }
+              .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .modal__body--head .modal__body--header {
+                background: linear-gradient(90deg, rgba(154, 118, 255, 0.2), rgba(58, 0, 223, 0.2));
+                height: 5vh;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1vw; }
+                .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .modal__body--head .modal__body--header div {
+                  color: #6A6A6A;
+                  font-weight: 500;
+                  font-size: 0.9rem; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .modal__body--table {
+              display: flex;
+              flex-flow: column nowrap;
+              gap: 5px; }
+              .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .modal__body--table .modal__body--row {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1vh 1vw;
+                height: 4vh; }
+                .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .modal__body--table .modal__body--row button {
+                  color: white;
+                  font-size: 0.7rem;
+                  font-weight: 600;
+                  height: 25px;
+                  border-radius: 50px;
+                  background-color: #7939FF; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__id {
+              width: 5%; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__id--vis {
+              color: #4E4E4E;
+              font-weight: 700; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__img {
+              height: 40px;
+              width: 40px;
+              text-align: center;
+              margin-left: 0vw; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__img img {
+              border-radius: 50%;
+              width: 100%;
+              height: 100%; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__nick {
+              width: 15%;
+              text-align: center; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__nick--vis {
+              color: #5539FF;
+              font-weight: 600; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__name {
+              width: 20%;
+              text-align: center; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__name--vis {
+              color: #3a3a3a;
+              font-weight: 600; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__email {
+              width: 35%; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__email--vis {
+              font-size: 0.8rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .user__add {
+              width: 10%; }
+            .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--add--footer {
+              height: 4vh;
+              background: linear-gradient(90deg, rgba(154, 118, 255, 0.2), rgba(58, 0, 223, 0.2));
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              align-items: center;
+              padding: 1vh 2vw; }
+              .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--add--footer p {
+                color: #4D4D4D;
+                font-weight: 400; }
+                .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--add--footer p span {
+                  font-weight: 700; }
+              .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--add--footer input {
+                width: 60%;
+                height: 80%;
+                background-color: #EEE9FF;
+                border-radius: 20px;
+                text-align: center;
+                outline: none; }
+              .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--add--footer button {
+                width: 15%;
+                height: 80%;
+                color: white;
+                font-weight: 600;
+                background-color: #7B4DFF;
+                border-radius: 50px; }
+      .modalMembers .modalMembers__div .modal__body .project__issues {
+        box-shadow: 0px 5px 9px -1px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        min-height: 90%;
+        background: linear-gradient(90deg, rgba(141, 131, 255, 0.1), rgba(28, 214, 255, 0.05));
+        border-radius: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between; }
+        .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          padding: 0;
+          gap: 10px; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .project__issues--table--head {
+            display: flex;
+            flex-flow: column nowrap; }
+            .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .project__issues--table--head .project__issues--table--header {
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: center;
+              justify-content: space-between;
+              color: #6A6A6A;
+              font-weight: 600;
+              font-size: 0.8rem;
+              background: linear-gradient(90deg, rgba(141, 131, 255, 0.2), rgba(28, 214, 255, 0.2));
+              border-top-left-radius: 20px;
+              padding: 1vh 2vw;
+              border-top-right-radius: 20px;
+              height: 3vh; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .project__issues--row {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            padding: 1vh 2vw;
+            height: 3vh; }
+            .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .project__issues--row button {
+              color: white;
+              font-size: 0.7rem;
+              font-weight: 600;
+              height: 25px;
+              border-radius: 50px;
+              background-color: #7939FF; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__id {
+            width: 3%; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__id--vis {
+            color: #4E4E4E;
+            font-weight: 700; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__name {
+            width: 15%; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__name--vis {
+            color: #5539FF;
+            font-weight: 600; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__lead {
+            width: 15%;
+            text-align: center; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__lead--vis {
+            color: #3a3a3a;
+            font-weight: 600; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__descr {
+            width: 20%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__descr--vis {
+            font-weight: 300; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__members {
+            width: 8%;
+            text-align: center; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__members--vis {
+            color: #4E4E4E;
+            font-weight: 600; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__date {
+            width: 10%;
+            text-align: center; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__date--vis {
+            font-weight: 500;
+            color: #5539FF; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__lastEntry {
+            width: 10%;
+            text-align: center; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__notif {
+            width: 6%;
+            height: 20%; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__delete {
+            width: 6%;
+            height: 100%; }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--table .team__button {
+            width: 7%;
+            height: 10%; }
+        .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--footer {
+          width: 100%;
+          height: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          background: linear-gradient(90deg, rgba(141, 131, 255, 0.2), rgba(28, 214, 255, 0.2)); }
+          .modalMembers .modalMembers__div .modal__body .project__issues .project__issues--footer button {
+            width: 50%;
+            height: 80%;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #8d83ff, #1cd6ff); }
+    .modalMembers .modalMembers__div .modal__footer {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0vh 1vw;
+      padding-top: 1vh; }
+      .modalMembers .modalMembers__div .modal__footer p {
+        font-size: 0.9rem;
+        color: #A5A5A5;
+        font-weight: 500; }
+      .modalMembers .modalMembers__div .modal__footer .delete {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FF5B45;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modalMembers .modalMembers__div .modal__footer .delete img {
+          height: 20px;
+          width: 20px; }
+      .modalMembers .modalMembers__div .modal__footer .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #7B4DFF;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modalMembers .modalMembers__div .modal__footer .close img {
+          height: 20px;
+          width: 20px; }
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal .modal__div {
+    height: 95vh;
+    width: 97vw;
+    margin-right: 2vw;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap; }
+    .modal .modal__div .modal__div--header {
+      height: 50px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1vw; }
+      .modal .modal__div .modal__div--header .modal__title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 10px; }
+        .modal .modal__div .modal__div--header .modal__title h2 {
+          font-size: 1.4rem;
+          font-family: arial;
+          font-weight: 700;
+          color: #4D4D4D; }
+        .modal .modal__div .modal__div--header .modal__title img {
+          width: 25px;
+          height: 25px; }
+      .modal .modal__div .modal__div--header img {
+        width: 45px;
+        height: 45px; }
+    .modal .modal__div .modal__body {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      height: 75%;
+      padding: 2vh 1vw;
+      gap: 3vw; }
+      .modal .modal__div .modal__body .modal__body--one {
+        width: 20%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        margin-bottom: 3vh; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--img {
+          height: 35%;
+          width: 85%;
+          border-radius: 20px; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--name {
+          display: flex;
+          flex-flow: column nowrap; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--name h1 {
+            color: #2c2c2c; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--host {
+          display: flex;
+          flex-flow: column nowrap; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--host h4 {
+            color: #393939;
+            font-size: 1.8rem;
+            font-weight: 600; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--creator {
+          display: flex;
+          flex-flow: column nowrap; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--creator p {
+            color: #393939;
+            font-weight: 400;
+            font-size: 1.7rem; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--startDate, .modal .modal__div .modal__body .modal__body--one .project__modal--endDate {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 5px; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--startDate p, .modal .modal__div .modal__body .modal__body--one .project__modal--endDate p {
+            color: #393939;
+            font-weight: 300;
+            font-size: 1.5rem; }
+        .modal .modal__div .modal__body .modal__body--one .project__modal--info {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--info p {
+            font-size: 0.9rem;
+            color: #757575;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--one .project__modal--info img {
+            height: 20px;
+            width: 20px; }
+      .modal .modal__div .modal__body .modal__body--two {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 45%;
+        gap: 20px; }
+        .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__title {
+            font-size: 1.1rem;
+            color: #757575;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            height: 15vh;
+            width: 100%; }
+            .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list .repo__list--table {
+              display: flex;
+              flex-flow: column nowrap;
+              padding: 2vh 1vw;
+              gap: 10px;
+              color: #6F6F6F;
+              font-weight: 300;
+              font-size: 1rem; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list .repo__list--table .repo__list--row {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center; }
+            .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list .repo__list--footer {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 25%;
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              background-color: #d5d5d5; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list .repo__list--footer button {
+                width: 60%;
+                height: 80%;
+                border-radius: 50px;
+                background-color: #5A5A5A;
+                color: white;
+                font-weight: 600; }
+        .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__title {
+            font-size: 1.1rem;
+            color: #757575;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            height: 18vh;
+            width: 100%; }
+            .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list ul {
+              width: 100%;
+              display: flex;
+              flex-flow: row wrap;
+              justify-content: space-evenly;
+              color: #8F8F8F;
+              font-weight: 600;
+              font-size: 0.8rem;
+              padding: 2vh 0;
+              gap: 20px; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list ul li {
+                padding: 0 30px; }
+            .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-evenly;
+              align-items: center;
+              width: 100%;
+              height: 25%;
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              background-color: #d1c3c2; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer p {
+                color: #5C5C5C;
+                font-weight: 400; }
+                .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer p span {
+                  font-weight: 700; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer input {
+                border-radius: 50px;
+                background-color: #F1E7E7;
+                height: 80%;
+                width: 50%;
+                text-align: center;
+                color: #6F6F6F;
+                font-weight: 500;
+                text-transform: uppercase; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer button {
+                height: 80%;
+                width: 15%;
+                color: white;
+                font-weight: 600;
+                background-color: #834A4A;
+                border-radius: 50px; }
+        .modal .modal__div .modal__body .modal__body--two .modal__body--two--descr {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 10px; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--descr .project__descr--title {
+            display: flex;
+            flex-flow: row nowrap;
+            font-size: 1.1rem;
+            color: #757575;
+            font-weight: 700;
+            gap: 6px; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--two--descr .project__descr--text {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 2vh 1vw;
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            height: 12vh;
+            width: 95%;
+            color: #6e6e6e;
+            font-size: 0.9rem;
+            font-weight: 300; }
+        .modal .modal__div .modal__body .modal__body--two .modal__body--three {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 10px;
+          width: 100%; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues--title {
+            display: flex;
+            flex-flow: row nowrap;
+            font-size: 1.1rem;
+            color: #757575;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues {
+            width: 100%;
+            height: 25vh;
+            background: linear-gradient(90deg, rgba(205, 99, 255, 0.1), rgba(255, 133, 81, 0.1));
+            border-radius: 20px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between; }
+            .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues .project__issues--table {
+              display: flex;
+              flex-flow: column nowrap;
+              padding: 2vh 1.5vw;
+              gap: 10px; }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues .project__issues--table .project__issues--row {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.8rem; }
+                .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues .project__issues--table .project__issues--row .issue__id {
+                  color: #4E4E4E;
+                  font-weight: 700; }
+                .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues .project__issues--table .project__issues--row .issue__name {
+                  color: #5539FF;
+                  font-weight: 600; }
+                .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues .project__issues--table .project__issues--row .issue__type {
+                  font-weight: 500;
+                  color: #636363; }
+                .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues .project__issues--table .project__issues--row .issue__priority {
+                  font-weight: 700; }
+                .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues .project__issues--table .project__issues--row button {
+                  color: white;
+                  font-size: 0.7rem;
+                  font-weight: 600;
+                  height: 25px;
+                  width: 70px;
+                  border-radius: 50px;
+                  background-color: #7939FF; }
+            .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues .project__issues--footer {
+              width: 100%;
+              height: 18%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+              background: linear-gradient(90deg, rgba(205, 99, 255, 0.2), rgba(255, 133, 81, 0.2)); }
+              .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues .project__issues--footer button {
+                width: 50%;
+                height: 80%;
+                color: white;
+                font-size: 0.9rem;
+                font-weight: 600;
+                border-radius: 50px;
+                background: linear-gradient(90deg, #cd63ff, #ff8551); }
+      .modal .modal__div .modal__body .modal__body--current {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 55%;
+        gap: 10px; }
+        .modal .modal__div .modal__body .modal__body--current h3 {
+          color: #757575;
+          font-size: 1.1rem;
+          font-weight: 700; }
+        .modal .modal__div .modal__body .modal__body--current .modal__body--div {
+          box-shadow: 0px 5px 9px -1px rgba(0, 0, 0, 0.15);
+          background: linear-gradient(90deg, rgba(154, 118, 255, 0.1), rgba(58, 0, 223, 0.1));
+          border-radius: 20px;
+          height: 93%;
+          display: flex;
+          flex-flow: column nowrap; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .modal__body--head {
+            display: flex;
+            flex-flow: column nowrap; }
+            .modal .modal__div .modal__body .modal__body--current .modal__body--div .modal__body--head .modal__body--header {
+              background: linear-gradient(90deg, rgba(154, 118, 255, 0.2), rgba(58, 0, 223, 0.2));
+              height: 5vh;
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0 1vw;
+              gap: 20px; }
+              .modal .modal__div .modal__body .modal__body--current .modal__body--div .modal__body--head .modal__body--header div {
+                color: #6A6A6A;
+                font-weight: 500;
+                font-size: 0.9rem; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .modal__body--table {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 5px; }
+            .modal .modal__div .modal__body .modal__body--current .modal__body--div .modal__body--table .modal__body--row {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              align-items: center;
+              padding: 1vh 1vw;
+              height: 4vh;
+              gap: 20px; }
+              .modal .modal__div .modal__body .modal__body--current .modal__body--div .modal__body--table .modal__body--row button {
+                color: white;
+                font-size: 0.7rem;
+                font-weight: 600;
+                height: 25px;
+                border-radius: 50px;
+                background-color: #7939FF; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .modal__body--footer {
+            background: linear-gradient(90deg, rgba(154, 118, 255, 0.2), rgba(58, 0, 223, 0.2));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vh;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin-top: auto; }
+            .modal .modal__div .modal__body .modal__body--current .modal__body--div .modal__body--footer button {
+              background: linear-gradient(90deg, #9a76ff, #3a00df);
+              height: 80%;
+              width: 40%;
+              border-radius: 50px;
+              color: white;
+              font-weight: 600; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__id {
+            width: 3%; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__id--vis {
+            color: #4E4E4E;
+            font-weight: 700; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__img {
+            height: 30px;
+            width: 40px;
+            text-align: center;
+            margin-left: 0vw; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__img img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__nick {
+            width: 15%; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__nick--vis {
+            color: #5539FF;
+            font-weight: 600;
+            font-size: 0.9rem; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__name {
+            width: 20%;
+            text-align: center; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__name--vis {
+            color: #3a3a3a;
+            font-weight: 600;
+            font-size: 0.9rem; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__email {
+            width: 35%; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__email--vis {
+            font-size: 0.8rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__role {
+            width: 10%; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__role--vis {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #4D4D4D; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__delete {
+            width: 5%;
+            height: 70%; }
+          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__view {
+            width: 10%; }
+    .modal .modal__div .modal__footer {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0vh 1vw;
+      padding-top: 1vh; }
+      .modal .modal__div .modal__footer .delete {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FF5B45;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modal .modal__div .modal__footer .delete img {
+          height: 20px;
+          width: 20px; }
+      .modal .modal__div .modal__footer .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #7B4DFF;
+        height: 30px;
+        width: 10%;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        gap: 10px; }
+        .modal .modal__div .modal__footer .close img {
+          height: 20px;
+          width: 20px; }
+
+.newModal {
+  height: 100vh;
+  width: 100vw;
+  z-index: 999999;
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8); }
 
 .projectTeams__boards {
   display: flex;
@@ -629,33 +3145,59 @@ footer {
     width: 100%;
     display: table;
     min-height: 40%; }
-    .projectTeams__boards .table .cell {
-      display: table-cell;
-      padding: 0.5rem; }
     .projectTeams__boards .table .table__header {
-      display: table-row;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
       background-color: #EAECFF;
       font-size: 0.9rem;
       font-weight: 600;
-      color: #7C7C7C; }
+      color: #7C7C7C;
+      height: 5vh;
+      vertical-align: bottom;
+      line-height: 170%;
+      padding: 0 0.5vw; }
     .projectTeams__boards .table .row {
-      display: table-row; }
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      height: 5vh;
+      padding: 0 0.5vw; }
       .projectTeams__boards .table .row .project__title {
         color: #5539FF;
         font-weight: 600; }
       .projectTeams__boards .table .row .team__title {
         color: #5539FF;
         font-weight: 600; }
+  .projectTeams__boards .project__title {
+    width: 30%; }
   .projectTeams__boards .project__host {
-    margin: 0 2vw;
-    padding-right: 1vw;
+    width: 20%; }
+  .projectTeams__boards .project__host--vis {
     font-weight: 600;
     color: #3E3E3E; }
+  .projectTeams__boards .project__creator {
+    width: 20%; }
+  .projectTeams__boards .project__date {
+    width: 10%; }
+  .projectTeams__boards .project__notif {
+    width: 5%; }
+  .projectTeams__boards .project__view {
+    width: 10%; }
+  .projectTeams__boards .team__title {
+    width: 25%; }
   .projectTeams__boards .team__project {
-    font-weight: 600;
-    color: #3E3E3E; }
-  .projectTeams__boards .team__members--title, .projectTeams__boards .team__members {
+    width: 25%; }
+  .projectTeams__boards .team__members {
+    width: 15%;
     text-align: center; }
+  .projectTeams__boards .team__notif {
+    width: 10%;
+    text-align: center; }
+  .projectTeams__boards .team__view {
+    width: 10%; }
   .projectTeams__boards .more {
     display: flex;
     justify-content: center;
@@ -988,6 +3530,26 @@ html {
     flex-flow: column nowrap;
     align-items: center; }
 
+.project__cards {
+  width: 100%;
+  min-height: 60vh; }
+  .project__cards .project__cards--div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+
+.team__cards {
+  width: 100%;
+  min-height: 55vh; }
+  .team__cards .team__cards--div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+
 .newProject__board {
   background-color: #FAFAFA;
   border-radius: 15px;
@@ -1048,7 +3610,7 @@ html {
       justify-content: flex-start;
       gap: 5.1vw; }
       .newProject__board .newProject__form .newProject__form--rowTwo .newProject__description {
-        width: 70%; }
+        width: 50%; }
         .newProject__board .newProject__form .newProject__form--rowTwo .newProject__description textarea {
           width: 100%;
           background-color: #EAECFF;
@@ -1057,6 +3619,47 @@ html {
           color: #4D4D4D;
           outline: none;
           padding: 1rem; }
+      .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image {
+        width: 20%;
+        display: flex;
+        flex-flow: column nowrap; }
+        .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label {
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap; }
+          .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea {
+            background-color: #EAECFF;
+            border-radius: 20px;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea p {
+              border: 2px solid #abadbb;
+              border-radius: 15px;
+              padding: 9vh 1vw;
+              color: #adadad;
+              font-weight: 600;
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: center;
+              align-items: center;
+              gap: 10px; }
+              .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea p img {
+                width: 40px;
+                height: 40px; }
+            .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 10px; }
+          .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .active {
+            background-color: white;
+            border: 2px dashed #abadbb; }
+            .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .active p {
+              background-color: white;
+              border: 2px dashed #abadbb; }
       .newProject__board .newProject__form .newProject__form--rowTwo .newProject__dates {
         display: flex;
         flex-flow: column nowrap;
@@ -1090,6 +3693,14 @@ html {
         font-size: 1rem;
         font-weight: 500;
         color: #A5A5A5; }
+      .newProject__board .newProject__form .newProject__form--rowThree .newProject__createdRepos ul li {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 20px; }
+        .newProject__board .newProject__form .newProject__form--rowThree .newProject__createdRepos ul li img {
+          width: 20px;
+          height: 20px; }
     .newProject__board .newProject__form .newProject__form--rowFour {
       display: flex;
       flex-flow: column nowrap;
@@ -1104,10 +3715,24 @@ html {
           align-items: center;
           width: 100%;
           gap: 2vw; }
+          .newProject__board .newProject__form .newProject__form--rowFour .newProject__roles .newProject__roles--input .roles--input {
+            text-transform: uppercase; }
       .newProject__board .newProject__form .newProject__form--rowFour .newProject__createdRoles h6 {
         font-size: 1rem;
         font-weight: 500;
         color: #A5A5A5; }
+      .newProject__board .newProject__form .newProject__form--rowFour .newProject__createdRoles ul {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 70px; }
+        .newProject__board .newProject__form .newProject__form--rowFour .newProject__createdRoles ul li {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          gap: 5px; }
+          .newProject__board .newProject__form .newProject__form--rowFour .newProject__createdRoles ul li img {
+            width: 20px;
+            height: 20px; }
     .newProject__board .newProject__form .addMembers__board {
       background-color: white;
       display: flex;
@@ -1144,7 +3769,7 @@ html {
             background-color: #ECE8F5;
             border-radius: 20px; }
             .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__body--header {
-              height: 10vh;
+              height: 20%;
               width: 100%;
               display: flex;
               flex-flow: row nowrap;
@@ -1195,7 +3820,51 @@ html {
             font-weight: 600;
             color: #7C7C7C; }
           .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body {
-            background-color: #ECE8F5; }
+            background-color: #ECE8F5;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px; }
+            .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table {
+              width: 100%;
+              display: table;
+              min-height: 40%; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .currentMembers__table--header {
+                height: 5vh;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #9372D9;
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: #ffffff;
+                padding: 0 1vw;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .currentMembers__table--body {
+                display: flex;
+                flex-flow: column nowrap;
+                width: 100%; }
+                .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .currentMembers__table--body .row {
+                  height: 4vh;
+                  padding: 0 1vw;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  font-size: 0.9rem;
+                  color: #8E8E8E;
+                  font-weight: 600; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .member__id {
+                width: 5%; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .member__nick {
+                width: 15%; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .member__name {
+                width: 20%; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .member__role {
+                width: 15%; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .member__delete {
+                height: 80%;
+                width: 10%; }
       .newProject__board .newProject__form .addMembers__board .addMembers__footer {
         padding: 1rem;
         color: #A5A5A5;

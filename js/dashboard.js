@@ -1,16 +1,5 @@
-
-
-// LOAD USER DATA:
-
-function cargarDatosUsuarios() {
-
-    USER_CURRENT = JSON.parse(localStorage.getItem("Usuario activo"));
-    console.log(USER_CURRENT);
-
-    userList = JSON.parse(localStorage.getItem("Lista de Usuarios"));
-    console.log(userList);
-
-}
+// CARGA DE DATOS 📚
+cargarDatosProyectos();
 
 cargarDatosUsuarios();
 
@@ -21,11 +10,6 @@ navCurrentUser = document.querySelector("#nav-current-user");
 usernick = USER_CURRENT.nickname;
 
 navCurrentUser.innerHTML = usernick;
-console.log(usernick);
-
-
-console.log(oldestUser());
-console.log(newestUser())
 
 // LOG OFF BUTTON
 
@@ -45,18 +29,6 @@ function desloguear() {
 
 desloguear();
 
-
-function cargarDatosProjectos() {
-
-    
-    projectList = JSON.parse(localStorage.getItem("Lista de Proyectos"));
-    console.log(projectList);
-
-}
-
-cargarDatosProjectos();
-
-
 // SHOW PROJECTS
 
 function mostrarProyectos() {
@@ -74,7 +46,7 @@ function mostrarProyectos() {
 
                                     </div>`;
 
-    projectList.forEach(project =>{
+    USER_CURRENT.projects.forEach(project =>{
 
         projectsDashboard.innerHTML += `
                     <div class="row">
@@ -89,6 +61,9 @@ function mostrarProyectos() {
                     </div>`
 
     })
+
+    const showActiveProjects = document.querySelector("#dashboard-projects-active")
+    showActiveProjects.innerText = `ACTIVE PROJECTS: ${USER_CURRENT.projects.length}`
 
 }
 
