@@ -32,6 +32,13 @@ function guardarProyecto(projectNew){
 
 }
 
+// 1.4 GUARDAR EQUIPO:
+
+function guardarEquipo(teamNew){
+    teamList.push(teamNew)
+    const saveTeamList = JSON.stringify(teamList);
+    localStorage.setItem("Lista de Equipos", saveTeamList)
+}
 
 // 2-------------------------CARGAR DATOS: 
 
@@ -40,34 +47,59 @@ function guardarProyecto(projectNew){
 function cargarDatosUsuarios(){
 
     userList = JSON.parse(localStorage.getItem("Lista de Usuarios"));
-    console.log(userList);
+
+    if (userList == null){
+        userList = []
+    }
 
     userList.forEach(user => {
-        if(projectList == null){
-            console.log("%cNO PROJECT STORED", "color: white; background-color: red; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
-            projectList = []
+
+        function loadUserProjects(){
+            if(projectList == null || projectList == undefined){
+                console.log("%cNO PROJECT STORED", "color: white; background-color: red; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
+                projectList = []
+            }
+            else {
+            console.log(projectList)
+            console.log(user.projects)
+            user.projects = projectList.filter(project => project.members.find(member => member.id == user.id))
+            }
         }
-        else {
-        user.projects = projectList.filter(project => project.members.find(member => member.id == user.id))
+        loadUserProjects()
+        function loadUserTeams(){
+            if(teamList == null || teamList == undefined){
+                console.log("%cNO PROJECT STORED", "color: white; background-color: red; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
+                teamList = []
+            }
+            else {
+            console.log(teamList)
+            console.log(user.teams)
+            user.teams = teamList.filter(team => team.members.find(member => member.id == user.id))
+            }
         }
-        user.teams = []
+        loadUserTeams()
         user.issues = []
+        console.log(user.issues)
     })
 
     USER_CURRENT = JSON.parse(localStorage.getItem("Usuario activo"));
-    console.log(USER_CURRENT);
 
-    USER_CURRENT.projects = projectList.filter(project => project.members.find(member => member.id == USER_CURRENT.id))
-    USER_CURRENT.teams = []
-    USER_CURRENT.issues = []
+    try {
 
-    function mostrarDatosUsuario(){
-        navCurrentUser = document.querySelector("#nav-current-user");
-        usernick = USER_CURRENT.nickname;
-        navCurrentUser.innerHTML = usernick;
+        USER_CURRENT.projects = projectList.filter(project => project.members.find(member => member.id == USER_CURRENT.id))
+        USER_CURRENT.teams = teamList.filter(team => team.members.find(member => member.id == USER_CURRENT.id))
+        
+        USER_CURRENT.issues = []
+
+        function mostrarDatosUsuario(){
+            navCurrentUser = document.querySelector("#nav-current-user");
+            usernick = USER_CURRENT.nickname;
+            navCurrentUser.innerHTML = usernick;
+        }
+        mostrarDatosUsuario();
+    } catch (error) {
+        
     }
-
-    mostrarDatosUsuario();
 
     console.log("%cUSER DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")    
 
@@ -77,12 +109,35 @@ function cargarDatosUsuarios(){
 
 function cargarDatosProyectos(){
 
-    projectList = JSON.parse(localStorage.getItem("Lista de Proyectos"));
-    console.log(projectList);
+    projectList = JSON.parse(localStorage.getItem("Lista de Proyectos"))
+    console.log(projectList)
 
     console.log("%cPROJECT DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
-
 }
 
+function cargarDatosEquipos(){
+
+    teamList = JSON.parse(localStorage.getItem("Lista de Equipos"))
+
+    if (teamList == null){
+        teamList = []
+    }
+
+    console.log(teamList)
+
+    console.log("%cTEAM DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
+}
+
+
+
+
+
+// 3. COMPROBAR SI EL CURRENT USER ES ADMIN DEL PROYECTO: 
+
+function isUserAdmin(project){
+    const findCurrentUser = project.members.find(member => member.id == USER_CURRENT.id)
+    let isUserAdmin = findCurrentUser.admin
+    return isUserAdmin
+}
 
 

@@ -1,7 +1,12 @@
+// DATA LOAD: 📚
+
+cargarDatosProyectos();
+
+cargarDatosUsuarios();
+
 // FUNCION CONSTRUCTORA DE CLASE DE OBJETO "USER" /USUARIOS:
 
 console.log("USER_CURRENT")
-
 
 console.log("userList")
 
@@ -35,6 +40,10 @@ function crearUsuario () {
         userSecondPassword = document.querySelector("#userConfirmPassword").value;
         // console.log(userSecondPassword)
 
+        let userProjects = []
+        let userTeams = []
+        let userIssues = []
+
         if (userName == "" || userLastName == "" || userNickName == "" || userEmail == ""  || userPhone == ""){
 
             Swal.fire({
@@ -59,11 +68,8 @@ function crearUsuario () {
 
         userPassword = userSecondPassword;
         console.log(userPassword)
-    
-        userDate = `${trueDay} ${dayDate} de ${trueMonth} de ${year}, a las ${hour}hs.`;
-        console.log(userDate)
 
-        userNew = new User(userId, userName, userLastName, userNickName, userEmail, userPhone, userPassword)
+        userNew = new User(userId, userName, userLastName, userNickName, userEmail, userPhone, userPassword, userProjects, userTeams, userIssues)
 
         userList.push(userNew);
 
@@ -96,13 +102,6 @@ function crearUsuario () {
         }, 2000)
 
     });
-
-
-    // let userFormReset = document.querySelector("#userReset");
-
-    // userFormReset.addEventListener("click", ()=>{
-    //     document.querySelector("#userForm").reset();
-    // })
 
 }
 

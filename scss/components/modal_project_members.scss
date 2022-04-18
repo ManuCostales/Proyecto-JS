@@ -3,7 +3,7 @@
 .modalMembers {
     height: 100vh;
     width: 100vw;
-    z-index: 9999;
+    z-index: 99999;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
@@ -76,6 +76,7 @@
                         justify-content: space-between;
                         padding: 2vh 2vw;
                         gap: 20px;
+                        overflow-y: auto;
                         .admin {
                             display: flex;
                             flex-flow: row nowrap;
@@ -144,6 +145,8 @@
                             display: flex;
                             flex-flow: column nowrap;
                             gap: 5px;
+                            height: 35vh;
+                            overflow-y: auto;
                             .modal__body--row {
                                 display: flex;
                                 flex-flow: row nowrap;
@@ -264,6 +267,8 @@
                                 display: flex;
                                 flex-flow: column nowrap;
                                 gap: 5px;
+                                height: 30vh;
+                                overflow-y: auto;
                                 .modal__body--row {
                                     display: flex;
                                     flex-flow: row nowrap;

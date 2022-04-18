@@ -1145,6 +1145,8 @@ footer {
         font-size: 0.8rem;
         color: #A5A5A5;
         font-weight: 600; }
+  .list__board--div .list__board--inactive {
+    display: none; }
 
 .modal {
   height: 100vh;
@@ -1276,7 +1278,8 @@ footer {
               gap: 10px;
               color: #6F6F6F;
               font-weight: 300;
-              font-size: 1rem; }
+              font-size: 1rem;
+              overflow-y: auto; }
               .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list .repo__list--table .repo__list--row {
                 display: flex;
                 flex-flow: row nowrap;
@@ -1288,7 +1291,7 @@ footer {
               justify-content: center;
               align-items: center;
               width: 100%;
-              height: 25%;
+              height: 4vh;
               border-bottom-left-radius: 20px;
               border-bottom-right-radius: 20px;
               background-color: #d5d5d5; }
@@ -1326,17 +1329,24 @@ footer {
               padding: 2vh 0;
               gap: 20px; }
               .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list ul li {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
                 padding: 0 30px; }
+                .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list ul li img {
+                  width: 20px;
+                  height: 20px; }
             .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer {
               display: flex;
               flex-flow: row nowrap;
               justify-content: space-evenly;
               align-items: center;
               width: 100%;
-              height: 25%;
+              height: 4vh;
               border-bottom-left-radius: 20px;
               border-bottom-right-radius: 20px;
-              background-color: #d1c3c2; }
+              background-color: #d1c3c2;
+              overflow-y: auto; }
               .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer p {
                 color: #5C5C5C;
                 font-weight: 400; }
@@ -1350,7 +1360,8 @@ footer {
                 text-align: center;
                 color: #6F6F6F;
                 font-weight: 500;
-                text-transform: uppercase; }
+                text-transform: uppercase;
+                outline: none; }
               .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list .role__list--footer button {
                 height: 80%;
                 width: 15%;
@@ -1389,7 +1400,8 @@ footer {
         .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues {
           display: flex;
           flex-flow: column nowrap;
-          gap: 10px; }
+          gap: 10px;
+          width: 100%; }
           .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues--title {
             display: flex;
             flex-flow: row nowrap;
@@ -1408,7 +1420,9 @@ footer {
               display: flex;
               flex-flow: column nowrap;
               padding: 2vh 1.5vw;
-              gap: 10px; }
+              gap: 10px;
+              overflow-y: auto;
+              height: 7vh; }
               .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--table .project__issues--row {
                 display: flex;
                 flex-flow: row nowrap;
@@ -1436,7 +1450,7 @@ footer {
                   background-color: #7939FF; }
             .modal .modal__div .modal__body .modal__body--three .modal__body--three--issues .project__issues .project__issues--footer {
               width: 100%;
-              height: 25%;
+              height: 4vh;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -1454,7 +1468,8 @@ footer {
         .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams {
           display: flex;
           flex-flow: column nowrap;
-          gap: 10px; }
+          gap: 10px;
+          width: 100%; }
           .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams--title {
             display: flex;
             flex-flow: row nowrap;
@@ -1473,7 +1488,9 @@ footer {
               display: flex;
               flex-flow: column nowrap;
               padding: 2vh 1.5vw;
-              gap: 10px; }
+              gap: 10px;
+              overflow-y: auto;
+              height: 7vh; }
               .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--table .project__teams--row {
                 display: flex;
                 flex-flow: row nowrap;
@@ -1501,7 +1518,7 @@ footer {
                   background-color: #7939FF; }
             .modal .modal__div .modal__body .modal__body--three .modal__body--three--teams .project__teams .project__teams--footer {
               width: 100%;
-              height: 25%;
+              height: 4vh;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -1519,7 +1536,8 @@ footer {
         .modal .modal__div .modal__body .modal__body--three .modal__body--three--members {
           display: flex;
           flex-flow: column nowrap;
-          gap: 10px; }
+          gap: 10px;
+          width: 100%; }
           .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members--title {
             display: flex;
             flex-flow: row nowrap;
@@ -1538,7 +1556,9 @@ footer {
               display: flex;
               flex-flow: column nowrap;
               padding: 2vh 1.5vw;
-              gap: 10px; }
+              gap: 10px;
+              overflow-y: auto;
+              height: 19vh; }
               .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row {
                 display: flex;
                 flex-flow: row nowrap;
@@ -1547,13 +1567,22 @@ footer {
                 font-size: 0.8rem; }
                 .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .member__id {
                   color: #4E4E4E;
-                  font-weight: 700; }
+                  font-weight: 700;
+                  width: 5%; }
                 .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .member__nick {
                   color: #5539FF;
-                  font-weight: 600; }
+                  font-weight: 600;
+                  width: 15%; }
                 .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .member__name {
                   font-weight: 500;
-                  color: #636363; }
+                  color: #636363;
+                  width: 15%; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .member__role {
+                  width: 10%; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .member__delete {
+                  width: 5%; }
+                .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .member__view {
+                  width: 10%; }
                 .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row .team__lead {
                   font-weight: 700; }
                 .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--table .project__members--row button {
@@ -1566,7 +1595,7 @@ footer {
                   background-color: #7939FF; }
             .modal .modal__div .modal__body .modal__body--three .modal__body--three--members .project__members .project__members--footer {
               width: 100%;
-              height: 25%;
+              height: 5vh;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -1628,7 +1657,7 @@ footer {
 .modalRepos {
   height: 100vh;
   width: 100vw;
-  z-index: 9999;
+  z-index: 99999;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
@@ -1784,7 +1813,7 @@ footer {
 .modalIssues {
   height: 100vh;
   width: 100vw;
-  z-index: 9999;
+  z-index: 99999;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
@@ -1990,7 +2019,7 @@ footer {
 .modalTeams {
   height: 100vh;
   width: 100vw;
-  z-index: 9999;
+  z-index: 99999;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
@@ -2198,7 +2227,7 @@ footer {
 .modalMembers {
   height: 100vh;
   width: 100vw;
-  z-index: 9999;
+  z-index: 99999;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
@@ -2262,7 +2291,8 @@ footer {
             align-items: center;
             justify-content: space-between;
             padding: 2vh 2vw;
-            gap: 20px; }
+            gap: 20px;
+            overflow-y: auto; }
             .modalMembers .modalMembers__div .modal__body .modal__body--admins .modal__body--admins--div .modal__body--admins--table .admin {
               display: flex;
               flex-flow: row nowrap;
@@ -2320,7 +2350,9 @@ footer {
             .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .modal__body--table {
               display: flex;
               flex-flow: column nowrap;
-              gap: 5px; }
+              gap: 5px;
+              height: 35vh;
+              overflow-y: auto; }
               .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--current .modal__body--div .modal__body--table .modal__body--row {
                 display: flex;
                 flex-flow: row nowrap;
@@ -2414,7 +2446,9 @@ footer {
             .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .modal__body--table {
               display: flex;
               flex-flow: column nowrap;
-              gap: 5px; }
+              gap: 5px;
+              height: 30vh;
+              overflow-y: auto; }
               .modalMembers .modalMembers__div .modal__body .modal__body--main .modal__body--add .modal__body--div .modal__body--mainData .modal__body--table .modal__body--row {
                 display: flex;
                 flex-flow: row nowrap;
@@ -2643,6 +2677,76 @@ footer {
           height: 20px;
           width: 20px; }
 
+.change__project--prop {
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .change__project--prop .changeProp__div {
+    background-color: #FAFAFA;
+    min-width: 30vw;
+    min-height: 27vh;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column nowrap; }
+    .change__project--prop .changeProp__div .changeProp__div--header {
+      height: 5vh;
+      padding: 1vh 1vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .change__project--prop .changeProp__div .changeProp__div--header h5 {
+        color: #4e4e4e;
+        font-size: 1.1rem;
+        font-weight: 500; }
+    .change__project--prop .changeProp__div .changeProp__div--body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 10vh;
+      padding: 1vh 1vw; }
+      .change__project--prop .changeProp__div .changeProp__div--body textarea {
+        padding: 1vh 1vw;
+        height: 20vh;
+        width: 50vw;
+        background-color: #EAECFF;
+        border-radius: 20px;
+        outline: none; }
+      .change__project--prop .changeProp__div .changeProp__div--body input {
+        font-size: 1.1rem;
+        background-color: #EAECFF;
+        text-align: center;
+        padding: 0 2vw;
+        height: 5vh;
+        width: 100%;
+        border-radius: 50px;
+        outline: none; }
+    .change__project--prop .changeProp__div .changeProp__div--footer {
+      margin-top: auto;
+      height: 5vh;
+      padding: 1vh 1vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .change__project--prop .changeProp__div .changeProp__div--footer .cancel {
+        background-color: #FF5B45;
+        border-radius: 50px;
+        height: 80%;
+        width: 100px;
+        font-weight: 600;
+        color: white; }
+      .change__project--prop .changeProp__div .changeProp__div--footer .accept {
+        background-color: #7B4DFF;
+        border-radius: 50px;
+        height: 80%;
+        width: 100px;
+        font-weight: 600;
+        color: white; }
+
 .modal {
   height: 100vh;
   width: 100vw;
@@ -2773,7 +2877,8 @@ footer {
               gap: 10px;
               color: #6F6F6F;
               font-weight: 300;
-              font-size: 1rem; }
+              font-size: 1rem;
+              height: 7vh; }
               .modal .modal__div .modal__body .modal__body--two .modal__body--two--repos .repo__list .repo__list--table .repo__list--row {
                 display: flex;
                 flex-flow: row nowrap;
@@ -2785,7 +2890,7 @@ footer {
               justify-content: center;
               align-items: center;
               width: 100%;
-              height: 25%;
+              height: 4vh;
               border-bottom-left-radius: 20px;
               border-bottom-right-radius: 20px;
               background-color: #d5d5d5; }
@@ -2814,6 +2919,7 @@ footer {
             width: 100%; }
             .modal .modal__div .modal__body .modal__body--two .modal__body--two--roles .role__list ul {
               width: 100%;
+              height: 7vh;
               display: flex;
               flex-flow: row wrap;
               justify-content: space-evenly;
@@ -2830,7 +2936,7 @@ footer {
               justify-content: space-evenly;
               align-items: center;
               width: 100%;
-              height: 25%;
+              height: 4vh;
               border-bottom-left-radius: 20px;
               border-bottom-right-radius: 20px;
               background-color: #d1c3c2; }
@@ -2873,7 +2979,7 @@ footer {
             padding: 2vh 1vw;
             background-color: #f4f4f4;
             border-radius: 20px;
-            height: 12vh;
+            height: 20vh;
             width: 95%;
             color: #6e6e6e;
             font-size: 0.9rem;
@@ -3101,6 +3207,48 @@ footer {
   position: fixed;
   display: none;
   background-color: rgba(0, 0, 0, 0.8); }
+
+.modal .modal__div .modal__body .modal__body--one {
+  width: 20%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px; }
+
+.modal .modal__div .modal__body .modal__body--two {
+  width: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 20px; }
+  .modal .modal__div .modal__body .modal__body--two .issue__descr div {
+    height: 15vh; }
+  .modal .modal__div .modal__body .modal__body--two .issue__comments .comments__div {
+    background-color: gray;
+    height: 50vh;
+    display: flex;
+    flex-flow: column nowrap; }
+    .modal .modal__div .modal__body .modal__body--two .issue__comments .comments__div .comments__table {
+      height: 50%; }
+    .modal .modal__div .modal__body .modal__body--two .issue__comments .comments__div .comments__footer {
+      margin-top: auto;
+      height: 5vh;
+      display: flex;
+      justify-content: center; }
+
+.modal .modal__div .modal__body .modal__body--three {
+  width: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end; }
+  .modal .modal__div .modal__body .modal__body--three .modal__body--current {
+    width: 100%;
+    height: 50vh; }
+  .modal .modal__div .modal__body .modal__body--three .issues__final--div {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px; }
+  .modal .modal__div .modal__body .modal__body--three .issue__solved {
+    background-color: lime; }
 
 .projectTeams__boards {
   display: flex;
@@ -3538,7 +3686,8 @@ html {
     height: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; }
+    justify-content: flex-start;
+    gap: 30px; }
 
 .team__cards {
   width: 100%;
@@ -3884,3 +4033,684 @@ html {
   width: 150px;
   text-overflow: ellipsis;
   overflow: hidden; }
+
+.newProject__board {
+  background-color: #FAFAFA;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 20vh; }
+  .newProject__board .newProject__header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; }
+    .newProject__board .newProject__header .newProject__header--title {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 10px; }
+      .newProject__board .newProject__header .newProject__header--title h1 {
+        font-family: arial;
+        font-size: 1.4rem;
+        color: #4D4D4D; }
+    .newProject__board .newProject__header p {
+      font-weight: 600;
+      color: #7C7C7C; }
+  .newProject__board .newProject__form {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 3rem;
+    gap: 5vh; }
+    .newProject__board .newProject__form .newTeam__form--rowOne {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      gap: 10px;
+      width: 100%; }
+      .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 65%;
+        gap: 20px; }
+        .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newTeam__header {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between; }
+          .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newTeam__header .newProject__title {
+            width: 35%; }
+          .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newTeam__header .newProject__host {
+            width: 55%; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newTeam__header .newProject__host .lead__div {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              height: 2.5rem; }
+              .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newTeam__header .newProject__host .lead__div .input__lead {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 48%;
+                background-color: #EAECFF;
+                height: 2.5rem;
+                border-radius: 25px;
+                font-size: 1rem;
+                color: #4D4D4D;
+                outline: none;
+                text-align: center;
+                height: 2.5rem; }
+        .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newProject__description textarea {
+          width: 100%;
+          background-color: #EAECFF;
+          border-radius: 10px;
+          font-size: 1rem;
+          color: #4D4D4D;
+          outline: none;
+          padding: 1rem; }
+      .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 25%; }
+        .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project {
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px; }
+          .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--title {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 10px; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--title h6 {
+              color: #757575;
+              font-weight: 700;
+              font-size: 1.2rem; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--title p {
+              font-weight: 300;
+              color: #757575;
+              font-size: 0.8rem; }
+          .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--select {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--select select {
+              width: 100%;
+              background-color: #EAECFF;
+              height: 2.5rem;
+              border-radius: 25px;
+              font-size: 1rem;
+              color: #4D4D4D;
+              outline: none;
+              text-align: center;
+              padding: 0 2vw; }
+          .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--body {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 10px; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--body h4 {
+              font-size: 1.2rem;
+              color: #5e5e5e; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--body div {
+              background-color: #EAECFF;
+              height: 22vh;
+              width: 25vh;
+              border-radius: 20px;
+              overflow: hidden; }
+              .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--body div img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover; }
+    .newProject__board .newProject__form label {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      color: #757575;
+      font-weight: 700;
+      font-size: 1.2rem;
+      gap: 8px; }
+      .newProject__board .newProject__form label div {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 5px; }
+      .newProject__board .newProject__form label p {
+        font-weight: 300;
+        color: #757575;
+        font-size: 0.8rem; }
+      .newProject__board .newProject__form label .newProject__creator--name {
+        font-weight: 400;
+        font-size: 1.5rem; }
+    .newProject__board .newProject__form .newProject__form--rowOne {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      gap: 5vw; }
+      .newProject__board .newProject__form .newProject__form--rowOne .newProject__title, .newProject__board .newProject__form .newProject__form--rowOne .newProject__host {
+        width: 32%; }
+    .newProject__board .newProject__form .newProject__form--rowTwo {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      gap: 5.1vw; }
+      .newProject__board .newProject__form .newProject__form--rowTwo .newProject__description {
+        width: 50%; }
+        .newProject__board .newProject__form .newProject__form--rowTwo .newProject__description textarea {
+          width: 100%;
+          background-color: #EAECFF;
+          border-radius: 10px;
+          font-size: 1rem;
+          color: #4D4D4D;
+          outline: none;
+          padding: 1rem; }
+      .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image {
+        width: 20%;
+        display: flex;
+        flex-flow: column nowrap; }
+        .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label {
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap; }
+          .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea {
+            background-color: #EAECFF;
+            border-radius: 20px;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea p {
+              border: 2px solid #abadbb;
+              border-radius: 15px;
+              padding: 9vh 1vw;
+              color: #adadad;
+              font-weight: 600;
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: center;
+              align-items: center;
+              gap: 10px; }
+              .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea p img {
+                width: 40px;
+                height: 40px; }
+            .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 10px; }
+          .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .active {
+            background-color: white;
+            border: 2px dashed #abadbb; }
+            .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .active p {
+              background-color: white;
+              border: 2px dashed #abadbb; }
+      .newProject__board .newProject__form .newProject__form--rowTwo .newProject__dates {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 5vh; }
+    .newProject__board .newProject__form .newProject__form--rowThree {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      width: 100%; }
+      .newProject__board .newProject__form .newProject__form--rowThree .newProject__repos {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start; }
+        .newProject__board .newProject__form .newProject__form--rowThree .newProject__repos .newProject__repos--input {
+          display: flex;
+          flex-flow: row nowrap;
+          width: 100%;
+          align-items: center;
+          gap: 2vw; }
+          .newProject__board .newProject__form .newProject__form--rowThree .newProject__repos .newProject__repos--input input {
+            width: 90%;
+            background-color: #EAECFF;
+            height: 2.5rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            color: #4D4D4D;
+            outline: none;
+            text-align: center; }
+      .newProject__board .newProject__form .newProject__form--rowThree .newProject__createdRepos h6 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #A5A5A5; }
+      .newProject__board .newProject__form .newProject__form--rowThree .newProject__createdRepos ul li {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 20px; }
+        .newProject__board .newProject__form .newProject__form--rowThree .newProject__createdRepos ul li img {
+          width: 20px;
+          height: 20px; }
+    .newProject__board .newProject__form .newProject__form--rowFour {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      width: 100%; }
+      .newProject__board .newProject__form .newProject__form--rowFour .newProject__roles {
+        width: 100%; }
+        .newProject__board .newProject__form .newProject__form--rowFour .newProject__roles .newProject__roles--input {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          gap: 2vw; }
+          .newProject__board .newProject__form .newProject__form--rowFour .newProject__roles .newProject__roles--input .roles--input {
+            text-transform: uppercase; }
+      .newProject__board .newProject__form .newProject__form--rowFour .newProject__createdRoles h6 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #A5A5A5; }
+      .newProject__board .newProject__form .newProject__form--rowFour .newProject__createdRoles ul {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 70px; }
+        .newProject__board .newProject__form .newProject__form--rowFour .newProject__createdRoles ul li {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          gap: 5px; }
+          .newProject__board .newProject__form .newProject__form--rowFour .newProject__createdRoles ul li img {
+            width: 20px;
+            height: 20px; }
+    .newProject__board .newProject__form .addMembers__board {
+      background-color: white;
+      display: flex;
+      flex-flow: column nowrap;
+      border-radius: 10px;
+      box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.16); }
+      .newProject__board .newProject__form .addMembers__board .addMembers__header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        padding: 1rem;
+        font-size: 0.8rem;
+        font-weight: 300;
+        color: #7C7C7C; }
+      .newProject__board .newProject__form .addMembers__board .newMembers {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 1rem;
+        padding-top: 2rem;
+        gap: 2vw; }
+        .newProject__board .newProject__form .addMembers__board .newMembers .addMembers {
+          width: 50%;
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 1vh; }
+          .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__title--p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #7C7C7C; }
+          .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body {
+            display: flex;
+            flex-flow: column nowrap;
+            background-color: #ECE8F5;
+            border-radius: 20px; }
+            .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__body--header {
+              height: 20%;
+              width: 100%;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-evenly;
+              color: white; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__body--header .addMembers__friends--title {
+                width: 50%;
+                background-color: #CDBAF5;
+                border-top-left-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center; }
+                .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__body--header .addMembers__friends--title h4 {
+                  font-weight: 600; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__body--header .addMembers__search--title {
+                width: 50%;
+                background-color: #9372D9;
+                border-top-right-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center; }
+                .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__body--header .addMembers__search--title h4 {
+                  font-weight: 600; }
+            .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__search--table {
+              font-size: 0.9rem;
+              color: #8E8E8E;
+              font-weight: 600; }
+            .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__search--search label {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: center;
+              font-size: 0.9rem;
+              padding: 1rem;
+              align-items: center; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .addMembers .addMembers__body .addMembers__search--search label input {
+                width: 70%;
+                border-radius: 20px;
+                background-color: #C4BED7;
+                text-align: center;
+                height: 2rem; }
+        .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 1vh;
+          width: 50%; }
+          .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #7C7C7C; }
+          .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body {
+            background-color: #ECE8F5;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px; }
+            .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table {
+              width: 100%;
+              display: table;
+              min-height: 40%; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .currentMembers__table--header {
+                height: 5vh;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #9372D9;
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: #ffffff;
+                padding: 0 1vw;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .currentMembers__table--body {
+                display: flex;
+                flex-flow: column nowrap;
+                width: 100%; }
+                .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .currentMembers__table--body .row {
+                  height: 4vh;
+                  padding: 0 1vw;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  font-size: 0.9rem;
+                  color: #8E8E8E;
+                  font-weight: 600; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .member__id {
+                width: 5%; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .member__nick {
+                width: 15%; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .member__name {
+                width: 20%; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .member__role {
+                width: 15%; }
+              .newProject__board .newProject__form .addMembers__board .newMembers .currentMembers .currentMembers__body .currentMembers__table .member__delete {
+                height: 80%;
+                width: 10%; }
+      .newProject__board .newProject__form .addMembers__board .addMembers__footer {
+        padding: 1rem;
+        color: #A5A5A5;
+        font-weight: 600;
+        font-size: 0.7rem; }
+
+.search__nick {
+  width: 100px;
+  text-overflow: ellipsis; }
+
+.search__name {
+  width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.search__email {
+  width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.newProject__board {
+  background-color: #FAFAFA;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 20vh; }
+  .newProject__board .newProject__header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; }
+    .newProject__board .newProject__header .newProject__header--title {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 10px; }
+      .newProject__board .newProject__header .newProject__header--title h1 {
+        font-family: arial;
+        font-size: 1.4rem;
+        color: #4D4D4D; }
+    .newProject__board .newProject__header p {
+      font-weight: 600;
+      color: #7C7C7C; }
+  .newProject__board .newProject__form {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 3rem;
+    gap: 5vh; }
+    .newProject__board .newProject__form .newTeam__form--rowOne {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      gap: 10px;
+      width: 100%; }
+      .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 65%;
+        gap: 20px; }
+        .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newTeam__header {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between; }
+          .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newTeam__header .newProject__title {
+            width: 35%; }
+          .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newTeam__header .newProject__host {
+            width: 55%; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newTeam__header .newProject__host .author__div {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              height: 2.5rem; }
+              .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newTeam__header .newProject__host .author__div p {
+                font-size: 2rem; }
+        .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnOne .newProject__description textarea {
+          width: 100%;
+          background-color: #EAECFF;
+          border-radius: 10px;
+          font-size: 1rem;
+          color: #4D4D4D;
+          outline: none;
+          padding: 1rem; }
+      .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 25%; }
+        .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project {
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px; }
+          .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--title {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 10px; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--title h6 {
+              color: #757575;
+              font-weight: 700;
+              font-size: 1.2rem; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--title p {
+              font-weight: 300;
+              color: #757575;
+              font-size: 0.8rem; }
+          .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--select {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--select select {
+              width: 100%;
+              background-color: #EAECFF;
+              height: 2.5rem;
+              border-radius: 25px;
+              font-size: 1rem;
+              color: #4D4D4D;
+              outline: none;
+              text-align: center;
+              padding: 0 2vw; }
+          .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--body {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 10px; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--body h4 {
+              font-size: 1.2rem;
+              color: #5e5e5e; }
+            .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--body div {
+              background-color: #EAECFF;
+              height: 22vh;
+              width: 25vh;
+              border-radius: 20px;
+              overflow: hidden; }
+              .newProject__board .newProject__form .newTeam__form--rowOne .newTeam__form--rowOne--columnTwo .newTeam__project .newTeam__project--body div img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover; }
+    .newProject__board .newProject__form .newIssue__form--rowTwo {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between; }
+      .newProject__board .newProject__form .newIssue__form--rowTwo .newIssue__form--rowTwo--columnOne {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 30px;
+        width: 60%; }
+        .newProject__board .newProject__form .newIssue__form--rowTwo .newIssue__form--rowTwo--columnOne .newIssue__columnOne--rowOne {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          gap: 20px; }
+        .newProject__board .newProject__form .newIssue__form--rowTwo .newIssue__form--rowTwo--columnOne .newIssue__columnOne--rowTwo {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          gap: 30px; }
+      .newProject__board .newProject__form .newIssue__form--rowTwo .newIssue__form--rowTwo--columnTwo {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 30px; }
+        .newProject__board .newProject__form .newIssue__form--rowTwo .newIssue__form--rowTwo--columnTwo .newIssue__columnTwo--rowOne {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center; }
+          .newProject__board .newProject__form .newIssue__form--rowTwo .newIssue__form--rowTwo--columnTwo .newIssue__columnTwo--rowOne label {
+            display: flex;
+            flex-flow: column nowrap; }
+            .newProject__board .newProject__form .newIssue__form--rowTwo .newIssue__form--rowTwo--columnTwo .newIssue__columnTwo--rowOne label div {
+              display: flex;
+              flex-flow: column nowrap;
+              align-items: center; }
+        .newProject__board .newProject__form .newIssue__form--rowTwo .newIssue__form--rowTwo--columnTwo .newIssue__columnTwo--rowTwo .newProject__title .issue__creationDate {
+          font-size: 1.5rem; }
+    .newProject__board .newProject__form label {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      color: #757575;
+      font-weight: 700;
+      font-size: 1.2rem;
+      gap: 8px; }
+      .newProject__board .newProject__form label div {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 5px; }
+      .newProject__board .newProject__form label p {
+        font-weight: 300;
+        color: #757575;
+        font-size: 0.8rem; }
+      .newProject__board .newProject__form label .newProject__creator--name {
+        font-weight: 400;
+        font-size: 1.5rem; }
+    .newProject__board .newProject__form .newProject__form--rowOne {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      gap: 5vw; }
+      .newProject__board .newProject__form .newProject__form--rowOne .newProject__title, .newProject__board .newProject__form .newProject__form--rowOne .newProject__host {
+        width: 32%; }
+    .newProject__board .newProject__form .newProject__form--rowTwo {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      gap: 5.1vw; }
+      .newProject__board .newProject__form .newProject__form--rowTwo .newProject__description {
+        width: 50%; }
+        .newProject__board .newProject__form .newProject__form--rowTwo .newProject__description textarea {
+          width: 100%;
+          background-color: #EAECFF;
+          border-radius: 10px;
+          font-size: 1rem;
+          color: #4D4D4D;
+          outline: none;
+          padding: 1rem; }
+      .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image {
+        width: 20%;
+        display: flex;
+        flex-flow: column nowrap; }
+        .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label {
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap; }
+          .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea {
+            background-color: #EAECFF;
+            border-radius: 20px;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea p {
+              border: 2px solid #abadbb;
+              border-radius: 15px;
+              padding: 9vh 1vw;
+              color: #adadad;
+              font-weight: 600;
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: center;
+              align-items: center;
+              gap: 10px; }
+              .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea p img {
+                width: 40px;
+                height: 40px; }
+            .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .droparea img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 10px; }
+          .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .active {
+            background-color: white;
+            border: 2px dashed #abadbb; }
+            .newProject__board .newProject__form .newProject__form--rowTwo .newProject__image label .active p {
+              background-color: white;
+              border: 2px dashed #abadbb; }
+      .newProject__board .newProject__form .newProject__form--rowTwo .newProject__dates {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 5vh; }

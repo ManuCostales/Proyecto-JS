@@ -9,6 +9,7 @@
     <script src="./js/data.js" defer></script>
     <script src="./js/users.js" defer></script>
     <script src="./js/projects.js" defer></script>
+    <script src="./js/teams.js" defer></script>
     <script src="./js/time.js" defer></script>
     <script src="./js/dashboard.js" defer></script>
     <title>Proyecto JS</title>
@@ -179,7 +180,7 @@
                             <p id="dashboard-projects-active">ACTIVE PROJECTS: 6</p>
                         </div>
             
-                        <button class="btnNewProject" id="btnNewProject"><a href="./projects.html">New Project</a></button>
+                        <button class="btnNewProject" id="btnNewProject"><a href="./new_project.html">New Project</a></button>
                     </div>
                 </div>
         
@@ -199,7 +200,7 @@
         
                 <div class="gradient--purple separator__big--bluePurple"></div>
         
-                <div class="table">
+                <div class="table" id="teamsDashboard">
         
                     <div class="table__header">
         
@@ -242,7 +243,7 @@
                     <div class="gradient--purple separator__small--bluePurple"></div>
                     <div class="trueFooter">
                         <div class="active">
-                            <p>ACTIVE TEAMS: 6</p>
+                            <p id="dashboard-teams-active">ACTIVE TEAMS: 6</p>
                         </div>
             
                         <button class="btnNewProject" id="btnNewProject">New Team</button>

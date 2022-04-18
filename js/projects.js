@@ -1,7 +1,7 @@
 // FUNCION CONSTRUCTORA DE CLASE DE OBJETO "PROJECT" /PROYECTOS:
 
 class Project {
-    constructor(id, title, host, creator, descr, creationDate, endDate, repos, roles, members, image) {
+    constructor(id, title, host, creator, descr, creationDate, endDate, repos, roles, members, image, teams, issues) {
         this.id = id;
         this.title = title;
         this.host = host;
@@ -12,7 +12,9 @@ class Project {
         this.repos = repos;
         this.roles = roles;
         this.members = members; 
-        this.image = image
+        this.image = image;
+        this.teams = teams;
+        this.issues = issues;
         }
 
     info() {
@@ -37,6 +39,8 @@ let projectRepos = [];
 let projectRoles = ["ADMIN"];
 let projectMembers = [];
 let projectImage = "";
+let projectTeams = [];
+let projectIssues = []
 
 
 

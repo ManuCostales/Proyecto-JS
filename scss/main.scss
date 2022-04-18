@@ -21,7 +21,9 @@
 @import "../scss/components/modal_project_issues.scss";
 @import "../scss/components/modal_project_teams.scss";
 @import "../scss/components/modal_project_members.scss";
+@import "../scss/components/modal_project_change_props.scss";
 @import "../scss/components/modal_team.scss";
+@import "../scss/components/modal_issue.scss";
 @import "../scss/pages/dashboard-projects-teams.scss";
 @import "../scss/pages/dashboard-issues.scss";
 @import "../scss/pages/dashboard-issues_graphics.scss";
@@ -31,3 +33,5 @@
 @import "../scss/pages/projects.scss";
 @import "../scss/pages/teams.scss";
 @import "../scss/pages/new-project.scss";
+@import "../scss/pages/new-team.scss";
+@import "../scss/pages/new-issue.scss"

@@ -1,6 +1,8 @@
 // CARGA DE DATOS 📚
 cargarDatosProyectos();
 
+cargarDatosEquipos();
+
 cargarDatosUsuarios();
 
 
@@ -432,7 +434,7 @@ function createProject(){
         }
         addCreatorAsMember()
 
-        projectNew = new Project(projectId, projectName, projectHost, projectCreator, projectDescr, projectStartDate, projectEndDate, projectRepos, projectRoles, projectMembers, projectImage);
+        projectNew = new Project(projectId, projectName, projectHost, projectCreator, projectDescr, projectStartDate, projectEndDate, projectRepos, projectRoles, projectMembers, projectImage, projectTeams, projectIssues);
 
         if (projectName == "" || projectHost == "" || projectDescr == ""){
 

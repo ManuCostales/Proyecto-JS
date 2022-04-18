@@ -14,7 +14,7 @@
     <script src="./js/new-team.js" defer></script>
     <title>Proyecto JS</title>
 </head>
-<body onload= "init()">
+<body>
 
     <!-- HEADER -->
 
@@ -95,7 +95,7 @@
         <section id="section__info" class="section__info">
 
             <div class="section__title">
-                <h1 id="sectionTitle" class="sectionTitle">TEAM</h1>
+                <h1 id="sectionTitle" class="sectionTitle">ISSUE</h1>
                 <p class="sectionDescr">Create a new team</p>
             </div>
 
@@ -116,12 +116,12 @@
                 <div class="newProject__header">
                     <div class="newProject__header--title">
                         <img src="./img/board_project_title.svg" alt="">
-                        <h1>Create New Team</h1>
+                        <h1>Create New Issue</h1>
                     </div>
-                    <p>CUSTOM TEAM</p>
+                    <p>CUSTOM ISSUE</p>
                 </div>
     
-                <div class="separator__extraBig--bluePurple"></div>
+                <div class="separator__extraBig--pinkSalmon"></div>
     
                 <div class="newProject__form">
                     
@@ -130,27 +130,26 @@
                         <div class="newTeam__form--rowOne--columnOne">
 
                             <div class="newTeam__header">
-                                <label for="" class="newProject__title">Team Name:
+                                <label for="" class="newProject__title">Issue Title:
                                     <div>
-                                        <p>Name of the team for identification.</p>
+                                        <p>Name of the issue for identification.</p>
                                         <input class="input-text" type="text" id="projectName" required>
                                     </div>
                                 </label>
         
-                                <label for="" class="newProject__host">Team Lead:
+                                <label for="" class="newProject__host">Issue Author:
                                     <div>
-                                        <p>Name of the person that will lead the team.</p>
-                                        <div class="lead__div">
-                                            <div class="input__lead" id="input-lead"></div>
-                                            <select class="input__lead" id="search-lead"></select>
+                                        <p>Name of the person that creates the issue.</p>
+                                        <div class="author__div">
+                                            <p>Manuel Costales</p>
                                         </div>
                                     </div>
                                 </label>
                             </div>
 
-                            <label for="" class="newProject__description">Team Description:
+                            <label for="" class="newProject__description">Issue Description:
                                 <div>
-                                    <p>Description of the project goals and situation:</p>
+                                    <p>Description of the issue:</p>
                                     <textarea name="" cols="30" rows="10" id="projectDescr" required></textarea>
                                 </div>
                             </label>
@@ -160,7 +159,7 @@
                             <div class="newTeam__project">
                                 <div class="newTeam__project--title">
                                     <h6>Project</h6>
-                                    <p>Choose the project in which the team will be created:</p>
+                                    <p>Choose the project in which the issue will be created:</p>
                                 </div>
                                 <div class="newTeam__project--select">
                                     <select name="" id="select-team-project" placeholder="Select Project">
@@ -175,101 +174,60 @@
                         </div>
                     </div>
 
-                    <div class="newProject__form--rowThree">
-
-                        <label for="" class="newProject__repos">Project Repository/s (Optional):
-                            <div>
-                                <p>Github links to repository or repositories of the project. (Can be added later!)</p>
-                                <div class="newProject__repos--input">
-                                    <input type="url" id="projectRepos" placeholder="Enter Repository URL">
-                                    <button type="submit" class="login__form--submit" id="addRepo">Add</button>
-                                </div>
+                    <div class="newIssue__form--rowTwo">
+                        <div class="newIssue__form--rowTwo--columnOne">
+                            <div class="newIssue__columnOne--rowOne">
+                                <label for="" class="newProject__title">Issue Type:
+                                    <div>
+                                        <p>Choose a type based on issue characteristics.</p>
+                                        <select class="input-text" id="projectName"></select>
+                                    </div>
+                                </label>
+                                <label for="" class="newProject__title">Issue Priority:
+                                    <div>
+                                        <p>Choose a priority based on the urgency for the issue to </p>
+                                        <select class="input-text" id="projectName"></select>
+                                    </div>
+                                </label>
                             </div>
-                        </label>
-
-                        <div class="newProject__createdRepos">
-                            <h6>ADDED REPOS:</h6>
-                            <ul id="createdRepos-list"></ul>
+                            <div class="newIssue__columnOne--rowTwo">
+                                <label for="" class="newProject__title">Issue Finish Date(Optional):
+                                    <div>
+                                        <p>Establish when the issue must be finished.</p>
+                                        <input type="datetime-local">
+                                    </div>
+                                </label>
+                                <label for="" class="newProject__title">Issue Estimated Finish Time:
+                                    <div>
+                                        <p>An estimated amount of hours or days for solving the issue.</p>
+                                        <input type="text" class="input-text">
+                                    </div>
+                                </label>
+                            </div>
                         </div>
-
+                        <div class="newIssue__form--rowTwo--columnTwo">
+                            <div class="newIssue__columnTwo--rowOne">
+                                <label for="" class="newProject__title">Team (Optional):
+                                    <div>
+                                        <p>Choose a whole team for the issue to be asigned</p>
+                                        <select class="input-text" id="projectName"></select>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="newIssue__columnTwo--rowTwo">
+                                <label for="" class="newProject__title">Issue Creation Date:
+                                    <div>
+                                        <p>Choose a whole team for the issue to be asigned</p>
+                                        <p class="issue__creationDate">23/34/22</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="addMembers__board">
+                    
 
-                        <div class="addMembers__header">
-                            <h3>ADD MEMBERS</h3>
-                        </div>
-
-                        <div class="separator__big--bluePurple-2"></div>
-
-                        <div class="newMembers">
-
-                            <div class="addMembers">
-                                <div class="addMembers__title"><p class="addMembers__title--p">ADD</p></div>
-                                <div class="addMembers__body">
-
-                                    <div class="addMembers__body--header">
-                                        <div class="addMembers__friends--title"><h4>Friends List</h4></div>
-                                        <div class="addMembers__search--title"><h4>Search</h4></div>
-                                    </div>
-
-                                    <div class="addMembers__search--table table" id="searchList">
-
-                                        <div class="row">
-                                            <div class="cell">Nick7823</div>
-                                            <div class="cell">Nick Menza</div>
-                                            <div class="cell">nickmenza@hotmail.com</div>
-                                            <button class="add__member--btn" type="submit" value="add member"><p>Add</p></button>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="addMembers__search--search">
-                                        <label for="">Search User:
-                                            <input type="text" id="search-input">
-                                            <button type="submit" value="" class="addMembers__search--btn">Search</button>
-                                        </label>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="currentMembers">
-
-                                <div class="currentMembers__title"><p class="addMembers__title--p" >CURRENT MEMBERS</p></div>
-
-                                <div class="currentMembers__body">
-                                    <div class="currentMembers__table">
-
-                                        <div class="currentMembers__table--header">
-            
-                                            <div class="cell member__id">ID</div>
-                                            <div class="cell member__nick">Username</div>
-                                            <div class="cell member__name">Full name</div>
-                                            <div class="cell member__delete"></div>
-                            
-                                        </div>
-
-                                        <div class="currentMembers__table--body" id="currentMembers-table">
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="separator__small--purpleOrange"></div>
-
-                        <div class="addMembers__footer">
-                            <p id="footerCurrent">CURRENT MEMBERS: 3</p>
-                        </div>
-
-                    </div>
-
-                    <button type="submit" class="create__project--btn" id="submitProject">Create Project</button>
+                    <button type="submit" class="create__project--btn" id="submitProject">Create Issue</button>
     
                 </div>
             </div>

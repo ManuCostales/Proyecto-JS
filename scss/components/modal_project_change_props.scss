@@ -1,0 +1,81 @@
+
+
+.change__project--prop {
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .changeProp__div {
+        background-color: #FAFAFA;
+        min-width: 30vw;
+        min-height: 27vh;
+        border-radius: 15px;
+        display: flex;
+        flex-flow: column nowrap;
+        .changeProp__div--header {
+            height: 5vh;
+            padding: 1vh 1vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h5 {
+                color:rgb(78, 78, 78);
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+        }
+        .changeProp__div--body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            padding: 1vh 1vw;
+            textarea{
+                padding: 1vh 1vw;
+                height: 20vh;
+                width: 50vw;
+                background-color: #EAECFF;
+                border-radius: 20px;
+                outline: none;
+            }
+            input {
+                font-size: 1.1rem;
+                background-color: #EAECFF;
+                text-align: center;
+                padding: 0 2vw;
+                height: 5vh;
+                width: 100%;
+                border-radius: 50px;
+                outline: none;
+            }
+        }
+        .changeProp__div--footer {
+            margin-top: auto;
+            height: 5vh;
+            padding: 1vh 1vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .cancel{
+                background-color: #FF5B45;
+                border-radius: 50px;
+                height: 80%;
+                width: 100px;
+                font-weight: 600;
+                color: white;
+            }
+            .accept{
+                background-color: #7B4DFF;
+                border-radius: 50px;
+                height: 80%;
+                width: 100px;
+                font-weight: 600;
+                color: white;
+            }
+        }
+    }
+}
