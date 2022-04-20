@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script src="./js/data.js" defer></script>
     <script src="./js/users.js" defer></script>
     <script src="./js/projects.js" defer></script>
-    <script src="./js/expense.js" defer></script>
-    <script src="js/sign-in.js" ></script>
-    <script src="./js/dashboard.js" defer></script>
-    <script src="./js/log-in.js" defer></script>
-    <script src="./js/new-project.js" defer></script>
+    <script src="./js/teams.js" defer></script>
+    <script src="./js/time.js" defer></script>
+    <script src="./js/teams-page.js" defer></script>
     <title>Proyecto JS</title>
 </head>
 <body onload= "init()">
@@ -57,29 +56,17 @@
                     <img src="./img/sidenav_dashboard.svg" alt="Dashboard">
                     <a href="./index.html">Dashboard</a>
                 </li>
-                <li class="sideNav__ul--li sideNav__ul--projects ">
+                <li class="sideNav__ul--li sideNav__ul--projects">
                     <img src="./img/sidenav_projects.svg" alt="Projects">
                     <a href="./projects.html">Projects</a>
                 </li>
-                <li class="sideNav__ul--li sideNav__ul--teams current">
+                <li class="sideNav__ul--li sideNav__ul--teams  current">
                     <img src="./img/sidenav_teams.svg" alt="Teams">
-                    <a href="">Teams</a>
+                    <a href="./teams.html">Teams</a>
                 </li>
                 <li class="sideNav__ul--li sideNav__ul--tickets">
                     <img src="./img/sidenav_tickets.svg" alt="Tickets">
-                    <a href="">Tickets</a>
-                </li>
-                <li class="sideNav__ul--li sideNav__ul--history">
-                    <img src="./img/sidenav_history.svg" alt="History">
-                    <a href="">History</a>
-                </li>
-                <li class="sideNav__ul--li sideNav__ul--calendar">
-                    <img src="./img/sidenav_calendar.svg" alt="Calendar">
-                    <a href="">Calendar</a>
-                </li>
-                <li class="sideNav__ul--li sideNav__ul--user">
-                    <img src="./img/sidenav_user.svg" alt="User">
-                    <a href="">User</a>
+                    <a href="./issues.html">Issues</a>
                 </li>
             </ul>
 
@@ -115,7 +102,7 @@
 
         <section class="team__cards">
 
-            <div class="team__cards--div">
+            <div class="team__cards--div" id="team-card-list">
 
                 <div class="team__card">
 
@@ -258,7 +245,6 @@
                         <button class="team__card--btn">Open</button>
                     </div>
                     
-
                 </div>
 
                 <div class="team__card--new">
@@ -307,7 +293,7 @@
                     </ul>
                 </div>
         
-                <div class="list__board--table">
+                <div class="list__board--table" id="teams-table">
         
                     <div class="list__board--table--header">
         
@@ -384,10 +370,10 @@
 
                 <div class="list__board--addDelete">
                     <button class="list__board--delete--btn">Delete</button>
-                    <button class="list__board--add-btn">New</button>
+                    <button class="list__board--add-btn"><a href="./new_team.html">New</a></button>
                 </div>
 
-                <div class="list__board--preview">
+                <div class="list__board--preview list__board--inactive" id="project-preview">
                     <div class="list__board--preview--header">
                         <h5>PREVIEW</h5>
                     </div>
@@ -464,6 +450,6 @@
 
     </footer>
 
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

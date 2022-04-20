@@ -58,9 +58,14 @@ function currentLocation(zone){
 function showDateAndLocation(time, location){
 
     clock = document.querySelector("#showDate__text");
-    clock.innerHTML= `${time.day}, ${time.month}, ${time.year}<br>
-    ${time.hour}:${time.minutes}:${time.seconds}<br>
-    <span class="location">${location.city}, ${location.country}</span>`
+    try {
+        clock.innerHTML= `${time.day}, ${time.month}, ${time.year}<br>
+        ${time.hour}:${time.minutes}:${time.seconds}<br>
+        <span class="location">${location.city}, ${location.country}</span>`
+    } catch (error) {
+        
+    }
+    
 }
 
 async function APIrequest() {

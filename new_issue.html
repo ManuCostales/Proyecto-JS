@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script src="./js/data.js" defer></script>
     <script src="./js/users.js" defer></script>
     <script src="./js/projects.js" defer></script>
     <script src="./js/teams.js" defer></script>
+    <script src="./js/issues.js" defer></script>
     <script src="./js/time.js" defer></script>
-    <script src="./js/new-team.js" defer></script>
+    <script src="./js/new-issue.js" defer></script>
     <title>Proyecto JS</title>
 </head>
 <body>
@@ -55,29 +57,17 @@
                     <img src="./img/sidenav_dashboard.svg" alt="Dashboard">
                     <a href="./index.html">Dashboard</a>
                 </li>
-                <li class="sideNav__ul--li sideNav__ul--projects current">
+                <li class="sideNav__ul--li sideNav__ul--projects">
                     <img src="./img/sidenav_projects.svg" alt="Projects">
-                    <a href="">Projects</a>
+                    <a href="./projects.html">Projects</a>
                 </li>
                 <li class="sideNav__ul--li sideNav__ul--teams">
                     <img src="./img/sidenav_teams.svg" alt="Teams">
-                    <a href="">Teams</a>
+                    <a href="./teams.html">Teams</a>
                 </li>
-                <li class="sideNav__ul--li sideNav__ul--tickets">
+                <li class="sideNav__ul--li sideNav__ul--tickets current">
                     <img src="./img/sidenav_tickets.svg" alt="Tickets">
-                    <a href="">Tickets</a>
-                </li>
-                <li class="sideNav__ul--li sideNav__ul--history">
-                    <img src="./img/sidenav_history.svg" alt="History">
-                    <a href="">History</a>
-                </li>
-                <li class="sideNav__ul--li sideNav__ul--calendar">
-                    <img src="./img/sidenav_calendar.svg" alt="Calendar">
-                    <a href="">Calendar</a>
-                </li>
-                <li class="sideNav__ul--li sideNav__ul--user">
-                    <img src="./img/sidenav_user.svg" alt="User">
-                    <a href="">User</a>
+                    <a href="./issues.html">Issues</a>
                 </li>
             </ul>
 
@@ -141,7 +131,7 @@
                                     <div>
                                         <p>Name of the person that creates the issue.</p>
                                         <div class="author__div">
-                                            <p>Manuel Costales</p>
+                                            <p id="issue-author">Manuel Costales</p>
                                         </div>
                                     </div>
                                 </label>
@@ -162,7 +152,7 @@
                                     <p>Choose the project in which the issue will be created:</p>
                                 </div>
                                 <div class="newTeam__project--select">
-                                    <select name="" id="select-team-project" placeholder="Select Project">
+                                    <select name="" id="select-issue-project" placeholder="Select Project">
                                     </select>
                                 </div>
                                 <div class="newTeam__project--body" id="chosen-team-project">
@@ -180,13 +170,22 @@
                                 <label for="" class="newProject__title">Issue Type:
                                     <div>
                                         <p>Choose a type based on issue characteristics.</p>
-                                        <select class="input-text" id="projectName"></select>
+                                        <select class="input-text" id="issue-type">
+                                            <option value="FEATURE">FEATURE</option>
+                                            <option value="BUG">BUG</option>
+                                            <option value="TASK">TASK</option>
+                                            <option value="TEST">TEST</option>
+                                        </select>
                                     </div>
                                 </label>
                                 <label for="" class="newProject__title">Issue Priority:
                                     <div>
                                         <p>Choose a priority based on the urgency for the issue to </p>
-                                        <select class="input-text" id="projectName"></select>
+                                        <select class="input-text" id="issue-priority">
+                                            <option value="HIGH">HIGH</option>
+                                            <option value="MEDIUM">MEDIUM</option>
+                                            <option value="LOW">LOW</option>
+                                        </select>
                                     </div>
                                 </label>
                             </div>
@@ -194,13 +193,13 @@
                                 <label for="" class="newProject__title">Issue Finish Date(Optional):
                                     <div>
                                         <p>Establish when the issue must be finished.</p>
-                                        <input type="datetime-local">
+                                        <input type="datetime-local" id="issue-end-date">
                                     </div>
                                 </label>
                                 <label for="" class="newProject__title">Issue Estimated Finish Time:
                                     <div>
                                         <p>An estimated amount of hours or days for solving the issue.</p>
-                                        <input type="text" class="input-text">
+                                        <input type="text" class="input-text" id="issue-estimated">
                                     </div>
                                 </label>
                             </div>
@@ -210,7 +209,8 @@
                                 <label for="" class="newProject__title">Team (Optional):
                                     <div>
                                         <p>Choose a whole team for the issue to be asigned</p>
-                                        <select class="input-text" id="projectName"></select>
+                                        <select class="input-text" id="issueTeam">
+                                        </select>
                                     </div>
                                 </label>
                             </div>
@@ -218,7 +218,7 @@
                                 <label for="" class="newProject__title">Issue Creation Date:
                                     <div>
                                         <p>Choose a whole team for the issue to be asigned</p>
-                                        <p class="issue__creationDate">23/34/22</p>
+                                        <p class="issue__creationDate" id="issue-creation-date">23/34/22</p>
                                     </div>
                                 </label>
                             </div>
@@ -226,9 +226,12 @@
                     </div>
 
                     
-
-                    <button type="submit" class="create__project--btn" id="submitProject">Create Issue</button>
     
+                </div>
+                <div class="separator__big--pinkSalmon-2"></div>
+
+                <div class="new__issue--footer">
+                    <button type="submit" class="create__issue--btn" id="submitProject">Create Issue</button>
                 </div>
             </div>
 
@@ -260,6 +263,6 @@
 
     </footer>
 
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

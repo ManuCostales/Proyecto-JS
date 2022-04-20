@@ -5,12 +5,31 @@ cargarDatosUsuarios();
 
 cargarDatosEquipos();
 
+desloguear();
+
+sendToLogin()
+
+Toastify({
+    text: "You can create a new team inside a project to gather a smaller group of people, to which then you can assign tasks",
+    duration: 5000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "bottom", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00D0DD, #8D83FF)",
+    },
+    onClick: function(){} // Callback after click
+  }).showToast();
+
 // FUNCION CONSTRUCTORA DE CLASE DE OBJETO "TEAM" /EQUIPOS:
 
 function createTeam(){
 
     if(USER_CURRENT.projects.length === 0){
-        alert("Before creating a team, you must first create a project")
+        alert("Before creating a team, you must first create a project, or you must be part of one")
         location.href= "./index.html";
     }
 

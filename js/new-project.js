@@ -5,10 +5,26 @@ cargarDatosEquipos();
 
 cargarDatosUsuarios();
 
+desloguear();
 
-
+sendToLogin()
 
 // FUNCION CONSTRUCTORA DE CLASE DE OBJETO "PROJECT" /PROYECTOS:
+
+Toastify({
+    text: "By creating a project you bring a group of people together to work on different tasks. You can assign roles to members of the project. The role 'ADMIN' is special, because it allows to have total control of the project, keep that in mind",
+    duration: 5000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "bottom", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00D0DD, #8D83FF)",
+    },
+    onClick: function(){} // Callback after click
+  }).showToast();
 
 function createProject(){
 
@@ -398,6 +414,13 @@ function createProject(){
         
         let endDate = document.querySelector("#projectEndDate").value 
         projectEndDate = new Date(endDate)
+
+        function defaultImage(){
+            if(projectImage == "" || projectImage == false){
+                projectImage = `./img/defaultproject.png`
+            }
+        }
+        defaultImage()
 
         function submitMembersAndRoles(){
             projectUserRoles = projectMembers.forEach(member => {

@@ -12,7 +12,7 @@
     <script src="./js/projects.js" defer></script>
     <script src="./js/teams.js" defer></script>
     <script src="./js/time.js" defer></script>
-    <script src="./js/projects-page.js" defer></script>
+    <script src="./js/issues-page.js" defer></script>
     <script src="./js/projects-modal.js" defer></script>
     <title>Proyecto JS</title>
 </head>
@@ -75,7 +75,7 @@
                     <img src="./img/sidenav_dashboard.svg" alt="Dashboard">
                     <a href="./index.html">Dashboard</a>
                 </li>
-                <li class="sideNav__ul--li sideNav__ul--projects current">
+                <li class="sideNav__ul--li sideNav__ul--projects">
                     <img src="./img/sidenav_projects.svg" alt="Projects">
                     <a href="./projects.html">Projects</a>
                 </li>
@@ -83,7 +83,7 @@
                     <img src="./img/sidenav_teams.svg" alt="Teams">
                     <a href="./teams.html">Teams</a>
                 </li>
-                <li class="sideNav__ul--li sideNav__ul--tickets">
+                <li class="sideNav__ul--li sideNav__ul--tickets current">
                     <img src="./img/sidenav_tickets.svg" alt="Tickets">
                     <a href="./issues.html">Issues</a>
                 </li>
@@ -104,140 +104,16 @@
 
             <div class="section__title">
                 <div class="title-info">
-                    <h1 id="sectionTitle" class="sectionTitle">PROJECTS</h1>
+                    <h1 id="sectionTitle" class="sectionTitle">ISSUES</h1>
                     <img src="./img/info_section.svg" alt="Section information">
                 </div>
-                <p class="sectionDescr">Shows the projects that you are part of</p>
+                <p class="sectionDescr">Shows all the issues</p>
             </div>
                        
 
             <div id="section__info--div" class="section__info--div">
                 <p id="showDate__text"></p>
             </div>
-
-        </section>
-
-        <!-- PROJECT CARDS -->
-
-        <section class="project__cards">
-
-            <div class="project__cards--div" id="project-card-list">
-
-                <div class="project__card">
-
-                    <div class="project__card--header">
-                        <div class="project__card--header--info">
-                            <img src="./img/board_project_title.svg" alt="Project Icon">
-                            <p>1</p>
-                        </div>
-                        <h3 class="project__card--header--title">Steam Webpage</h3>
-                        <div class="project__card--header--notif">2</div>
-                    </div>
-
-                    <div class="separator__big--orangeYellow"></div>
-
-                    <div class="project__card--img">
-                        <img src="./img/Spotify.jpg" alt="Project image">
-                    </div>
-
-                    <div class="separator__small--purpleOrange"></div>
-
-                    <div class="project__card--description">
-                        <h5>Valve</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sed totam quasi distinctio fugit ipsum neque blanditiis ipsa ad similique.</p>
-                    </div>
-
-                    <button class="project__card--btn">Open</button>
-
-                    <div class="project__card--footer">
-                        <p>04/21</p>
-                        <p>8 Hours</p>
-                    </div>
-
-                </div>
-
-                <div class="project__card">
-
-                    <div class="project__card--header">
-                        <div class="project__card--header--info">
-                            <img src="./img/board_project_title.svg" alt="Project Icon">
-                            <p>1</p>
-                        </div>
-                        <h3 class="project__card--header--title">Steam Webpage</h3>
-                        <div class="project__card--header--notif">2</div>
-                    </div>
-
-                    <div class="separator__big--orangeYellow"></div>
-
-                    <div class="project__card--img">
-                        <img src="./img/microsoft.jpg" alt="Project image">
-                    </div>
-
-                    <div class="separator__small--purpleOrange"></div>
-
-                    <div class="project__card--description">
-                        <h5>Valve</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sed totam quasi distinctio fugit ipsum neque blanditiis ipsa ad similique.</p>
-                    </div>
-
-                    <button class="project__card--btn">Open</button>
-
-                    <div class="project__card--footer">
-                        <p>04/21</p>
-                        <p>8 Hours</p>
-                    </div>
-
-                </div>
-
-                <div class="project__card">
-
-                    <div class="project__card--header">
-                        <div class="project__card--header--info">
-                            <img src="./img/board_project_title.svg" alt="Project Icon">
-                            <p>1</p>
-                        </div>
-                        <h3 class="project__card--header--title">Steam Webpage</h3>
-                        <div class="project__card--header--notif">2</div>
-                    </div>
-
-                    <div class="separator__big--orangeYellow"></div>
-
-                    <div class="project__card--img">
-                        <img src="./img/steam.jpg" alt="Project image">
-                    </div>
-
-                    <div class="separator__small--purpleOrange"></div>
-
-                    <div class="project__card--description">
-                        <h5>Valve</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sed totam quasi distinctio fugit ipsum neque blanditiis ipsa ad similique.</p>
-                    </div>
-
-                    <button class="project__card--btn">Open</button>
-
-                    <div class="project__card--footer">
-                        <p>04/21</p>
-                        <p>8 Hours</p>
-                    </div>
-
-                </div>
-
-                <div class="project__card--new">
-
-                    <div class="project__card--new--div">
-
-                        <h5>ADD</h5>
-                        <img src="./img/plus.svg" alt="Add Project">
-                        <img src="./img/project_big.svg" alt="Project Icon Big">
-                        <h6>New Project</h6>
-
-                    </div>
-
-                </div>
-                
-
-            </div>
-
 
         </section>
 
@@ -250,25 +126,19 @@
                 <div class="list__board--header">
                     <div class="list__board--header--title">
                         <img src="./img/board_project_title.svg" alt="Project Icon">
-                        <h3>Projects</h3>
+                        <h3>Issues</h3>
                     </div>
-                    <p>FULL LIST</p>
+                    <p id="issue-list-indicator">FULL LIST</p>
                 </div>
 
-                <div class="separator__extraBig--orangeYellow"></div>
+                <div class="separator__extraBig--pinkSalmon"></div>
 
-                <div id="showProjects" class="list__board--order dropdown">
-                    <p>Order By:</p>
-                    <button class="dropbtn">▼</button>
-                    <ul id="issuesDropdown" class="projectGraphic__show--dropdown dropdown-content">
-                        <li>All</li>
-                        <li>By Type</li>
-                        <li>By Date</li>
-                        <li>By Priority</li>
-                    </ul>
+                <div id="showProjects" class="issues__view--buttons">
+                    <button class="available" id="issues-available">Show Available</button>
+                    <button class="taken" id="issues-taken">Show Taken</button>
                 </div>
         
-                <div class="list__board--table" id="projects-table">
+                <div class="list__board--table" id="issues-table">
         
                     <div class="list__board--table--header">
         
@@ -339,13 +209,11 @@
                         <div class="project__view" data-title="view"><button class="btnView">Open</button></div>
         
                     </div>
-
-                
                 </div>
 
                 <div class="list__board--addDelete">
                     <button class="list__board--delete--btn" id="delete-project-btn">Delete</button>
-                    <button class="list__board--add-btn"  id="new-project-btn" >New</button>
+                    <button class="list__board--add-btn"  id="new-project-btn" ><a href="./new_issue.html">New</a></button>
                 </div>
 
                 <div class="list__board--preview list__board--inactive" id="project-preview">
@@ -396,11 +264,7 @@
 
                 </div>
 
-                
-
             </div>
-
-            
 
         </section>
 

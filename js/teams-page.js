@@ -2,114 +2,133 @@
 
 cargarDatosProyectos();
 
+cargarDatosEquipos();
+
 cargarDatosUsuarios();
 
+cargarDatosIssues();
 
+desloguear();
 
-const projectCardList = document.querySelector("#project-card-list");
-const projectsTable = document.querySelector("#projects-table")
+sendToLogin()
+
+Toastify({
+    text: "Teams allow you to gather a smaller group of people inside a project, to work on certain tasks",
+    duration: 5000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "bottom", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00D0DD, #8D83FF)",
+    },
+    onClick: function(){} // Callback after click
+  }).showToast();
+
+const teamCardList = document.querySelector("#team-card-list");
+const teamsTable = document.querySelector("#teams-table")
 
 console.log(USER_CURRENT)
 
-function addProjectCards(){
+function addTeamCards(){
 
-    projectCardList.innerHTML = ""
+    teamCardList.innerHTML = ""
     
-    USER_CURRENT.projects.forEach(project => {
+    USER_CURRENT.teams.forEach(team => {
+
+        const foundProject = projectList.find(project => project.id == team.project)
+        console.log(foundProject)
 
         let cardDiv = document.createElement("div")
-        cardDiv.className = "project__card"
-        cardDiv.id = `dproject-card-${project.id}`
-        cardDiv.innerHTML = `<div class="project__card--header">
-                                <div class="project__card--header--info">
-                                    <img src="./img/board_project_title.svg" alt="Project Icon">
-                                    <p>${project.id}</p>
+        cardDiv.className = "team__card"
+        cardDiv.id = `team-card-${team.id}`
+        cardDiv.innerHTML = ` <div class="team__card--header">
+                                <div class="team__card--header--info">
+                                    <img src="./img/board_team_title.svg" alt="team Icon">
+                                    <p>${team.id}</p>
                                 </div>
-                                <h3 class="project__card--header--title">${project.title}</h3>
-                                <div class="project__card--header--notif">2</div>
+                                <h3 class="team__card--header--title">${team.name}</h3>
+                                <div class="team__card--header--notif">2</div>
                             </div>
 
-                            <div class="separator__big--orangeYellow"></div>
+                            <div class="separator__big--bluePurple-2"></div>
 
-                            <div class="project__card--img">
-                                <img src="${project.image}" alt="Project image">
+                            <div class="team__card--body">
+                                <div class="card--body--header">
+                                    <p>PROJECT</p>
+                                    <h6>${foundProject.title}</h6>
+                                </div>
+                                <div class="card--body--desc">
+                                    <p>${team.descr}</p>
+                                </div>
                             </div>
 
-                            <div class="separator__small--purpleOrange"></div>
+                            <div class="separator__small--bluePurple"></div>
 
-                            <div class="project__card--description">
-                                <h5>${project.host}</h5>
-                                <p>${project.descr}</p>
-                            </div>
-
-                            <button class="project__card--btn" id="project-card-${project.id}">Open</button>
-
-                            <div class="project__card--footer">
-                                <p>${project.creationDate.slice(0, 10)}</p>
-                                <p>8 Hours</p>
+                            <div class="team__card--footer">
+                                <button class="team__card--btn" id="open-card-team-${team.id}">Open</button>
                             </div>`
 
-        projectCardList.append(cardDiv)
+        teamCardList.append(cardDiv)
 
     })
 }
-addProjectCards()
+addTeamCards()
 
 
 
-function addProjectNewCard(){
-    let newProjectCard = document.createElement("div")
-    newProjectCard.className = "project__card--new"
-    newProjectCard.innerHTML = `<div class="project__card--new--div">
+function addTeamNewCard(){
+    let newTeamCard = document.createElement("div")
+    newTeamCard.className = "team__card--new"
+    newTeamCard.innerHTML = `<div class="team__card--new--div">
                                     <h5>ADD</h5>
                                     <img src="./img/plus.svg" alt="Add Project">
                                     <img src="./img/project_big.svg" alt="Project Icon Big">
-                                    <h6>New Project</h6>
+                                    <h6>New Team</h6>
                                 </div>`
-    projectCardList.append(newProjectCard)
-    newProjectCard.addEventListener("click", () => location.href = "./new_project.html")
+    teamCardList.append(newTeamCard)
+    newTeamCard.addEventListener("click", () => location.href = "./new_team.html")
 }
-addProjectNewCard()
+addTeamNewCard()
 
 
 
-function addProjectRow(){
+function addTeamRow(){
 
-    projectsTable.innerHTML = ``
+    teamsTable.innerHTML = ``
 
     let tableHeader = document.createElement("div")
     tableHeader.className = "list__board--table--header"
     tableHeader.innerHTML = `<div class="project__id">ID</div>
-                            <div class="project__title">TITLE</div>
-                            <div class="project__host">HOST</div>
-                            <div class="project__creator">CREATOR</div>
+                            <div class="team__name">NAME</div>
+                            <div class="team__project">PROJECT</div>
+                            <div class="team__lead">LEAD</div>
                             <div class="project__description">DESCRIPTION</div>
-                            <div class="project__date">CREATION</div>
-                            <div class="project__lastEntry">LAST ENTRY</div>
                             <div class="project__notif"></div>
                             <div class="project__view"></div>`
-    projectsTable.append(tableHeader)
+    teamsTable.append(tableHeader)
 
-    USER_CURRENT.projects.forEach(project => {
+    USER_CURRENT.teams.forEach(team => {
 
-        let projectRow = document.createElement("div")
-        projectRow.id = `projectRow-${project.id}`
-        projectRow.className = "list__board--row"
-        projectRow.innerHTML = `<div class="project__id project__id--vis" data-title="project-id">${project.id}</div>
-                                <div class="project__title project__title--vis" data-title="issue-title">${project.title}</div>
-                                <div class="project__host project__host--vis" data-title="project-host">${project.host}</div>
-                                <div class="project__creator project__creator--vis" data-title="project-creator">${project.creator}</div>
-                                <div class="project__description project__description--vis" data-title="project-description">${project.descr}</div>
-                                <div class="project__date" data-title="project-project">${project.creationDate.slice(0, 10)}</div>
-                                <div class="project__lastEntry" data-title="project-lastEntry">Yesterday</div>
-                                <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
-                                <div class="project__view" data-title="view"><button class="btnView" id="project-open-${project.id}">Open</button></div>`
+        const foundProject = projectList.find(project => project.id == team.project)
 
-        projectsTable.append(projectRow)
+        let teamRow = document.createElement("div")
+        teamRow.id = `teamRow-${team.id}`
+        teamRow.className = "list__board--row"
+        teamRow.innerHTML = `<div class="project__id project__id--vis" data-title="project-id">${team.id}</div>
+                            <div class="team__name team__name--vis" data-title="issue-title">${team.name}</div>
+                            <div class="team__project team__project--vis" data-title="project-host">${foundProject.title}</div>
+                            <div class="team__lead team__lead--vis" data-title="project-creator">${team.lead.firstName} ${team.lead.lastName}</div>
+                            <div class="project__description project__description--vis" data-title="project-description">${team.descr}</div>
+                            <div class="project__notif" data-title="notifications"><button class="btnNoti">2</button></div>
+                            <div class="project__view" data-title="view"><button id="open-team-${team.id}"class="btnView">Open</button></div>`
+
+        teamsTable.append(teamRow)
     })
-
 }
-addProjectRow()
+addTeamRow()
 
 
 
@@ -138,17 +157,15 @@ function addOrDeleteProject(){
     }
 }
 
-addOrDeleteProject()
 
 
-
-function showProjectPreview(){
+function showTeamPreview(){
 
     const active = (row) => row.classList.add("active")
     const inactive = (row) => row.classList.remove("active")
     let rows = []
     let row
-    let selectedProject
+    let selectedTeam
 
     document.addEventListener("click", function (e){
         if (e.target.classList.contains("list__board--row")|| e.target.closest('.list__board--row') !== null){
@@ -157,14 +174,14 @@ function showProjectPreview(){
                 rows.forEach(row => inactive(row))
                 row = rows[rows.length - 1]
                 active(row)
-                selectedProject = e.target
+                selectedTeam = e.target
             }
             else {
                 rows.push(e.target.closest('.list__board--row'))
                 rows.forEach(row => inactive(row))
                 row = rows[rows.length - 1]
                 active(row)
-                selectedProject = e.target.parentNode
+                selectedTeam = e.target.parentNode
             }
         
         }
@@ -173,12 +190,13 @@ function showProjectPreview(){
             rows = []
         }
 
-        function addProjectPreview(){
-            let projectId
-            let foundProject
+        function addTeamPreview(){
+            let teamId
+            let foundTeam
             try {
-                projectId = selectedProject.id.match(/\d+/g)
-                foundProject = projectList.find(project => project.id == projectId)
+                teamId = selectedTeam.id.match(/\d+/g)
+                foundTeam = teamList.find(team => team.id == teamId)
+                const foundProject = projectList.find(project => project.id == foundTeam.project)
 
                 const previewNode = document.querySelector('#project-preview')
                 previewNode.classList.remove("list__board--inactive")
@@ -189,34 +207,31 @@ function showProjectPreview(){
                                         <div class="list__board--preview--info">
                                             <div class="list__board--preview--one">
                                                 <div class="list__preview--one--title">
-                                                    <p class="list__preview--one--title--id">${foundProject.id}</p>
-                                                    <h4>${foundProject.title}</h4>
-                                                    <p class="list__preview--one--title--host">${foundProject.host}</p>
+                                                    <p class="list__preview--one--title--id">${foundTeam.id}</p>
+                                                    <h4>${foundTeam.name}</h4>
+                                                    <p class="list__preview--one--title--host">${foundProject.title}</p>
                                                 </div>
                                                 <div class="list__preview--one--descr">
-                                                    <p>${foundProject.descr}</p>
+                                                    <p>${foundTeam.descr}</p>
                                                 </div>
                                             </div>
                                             <div class="list__board--preview--two">
-                                                <p>CREATOR: ${foundProject.creator}</p>
-                                                <p>ASSIGNED MEMBERS: ${foundProject.members.length}</p>
+                                                <p>LEAD: ${foundTeam.lead.firstName} ${foundTeam.lead.lastName}</p>
+                                                <p>ASSIGNED MEMBERS: ${foundTeam.members.length}</p>
                                                 <p>ACTIVE TEAMS: </p>
                                                 <p>ACTIVE ISSUES: </p>
                                                 <p>SOLVED ISSUES: </p>
-                                                <p>REPOSITORIES: ${foundProject.repos.length}</p>
+                                                <p>REPOSITORIES: ${foundTeam.repos.length}</p>
                                             </div>
                                             <div class="list__board--preview--three">
                                                 <div class="list__preview--three--data">
-                                                    <p>CREATION DATE: ${foundProject.creationDate.slice(0, 10)}</p>
-                                                    <p>FINISH DATE: ${foundProject.endDate.slice(0, 10)}</p>
-                                                    <p>ROLES CREATED: ${foundProject.roles.length}</p>
                                                 </div>
                                                 <div class="list__preview--three--more">
                                                     <div class="list__preview--three--notif">
                                                         <p>Notifications:</p>
                                                         <div>2</div>
                                                     </div>
-                                                    <button class="project__preview--btn" id="preview-btn-${foundProject.id}">See Full Info</button>
+                                                    <button class="project__preview--btn" id="preview-btn-${foundTeam.id}">See Full Info</button>
                                                 </div>
                                             </div>
                                         </div> 
@@ -234,23 +249,39 @@ function showProjectPreview(){
             
         }
 
-        addProjectPreview()
+        addTeamPreview()
 
     })
 }
-showProjectPreview()
+showTeamPreview()
 
 
-
-function openProjectModal(){
+function openTeamModal(){
     document.addEventListener("click", function(e){
-        if (e.target.closest('.project__card--btn') !== null || e.target.closest('.btnView') !== null || e.target.closest('.project__preview--btn') !== null){
-            console.log("ASD")
+        if (e.target.closest('.project__card--btn') !== null || e.target.closest('.btnView') !== null || e.target.closest('.project__preview--btn') !== null || e.target.closest('.team__card--btn') !== null){
             let targetId = e.target.id
             let numberId = targetId.match(/\d+/g)
-            let foundProject = USER_CURRENT.projects.find(project => project.id == numberId)
-            openPreview(foundProject)
+
+            let foundTeams = []
+            teamList.forEach(team => {
+
+                isUserOnTeam = team.members.find(member => member.id == USER_CURRENT.id)
+                if (isUserOnTeam == ""|| isUserOnTeam == false){
+                    return
+                }
+                else{
+                    foundTeams.push(team)  
+                }
+            })
+            foundTeam = foundTeams.filter(team => team.id == numberId)
+
+            localStorage.setItem("Equipo Activo", JSON.stringify(...foundTeam))
+
+            location.href= "./modal__team.html";
+            console.log(foundTeam)
+            
+            // openPreview(foundProject)
         }
     })
 }
-openProjectModal()
+openTeamModal()

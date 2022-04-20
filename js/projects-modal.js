@@ -1,8 +1,12 @@
-// LOAD DATA
+// DATA LOAD 📚
 
 cargarDatosProyectos();
 
 cargarDatosUsuarios();
+
+cargarDatosEquipos();
+
+cargarDatosIssues();
 
 // MODAL PROJECT 
 

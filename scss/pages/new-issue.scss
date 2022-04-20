@@ -301,3 +301,20 @@
         }
     }
 }        
+
+
+.new__issue--footer{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        width: 20%;
+        padding: 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+        background-color: #7B4DFF;
+        border-radius: 10px;
+    }
+}

@@ -9,14 +9,13 @@
     <script src="./js/data.js" defer></script>
     <script src="./js/users.js" defer></script>
     <script src="./js/projects.js" defer></script>
-    <script src="./js/expense.js" defer></script>
-    <script src="js/sign-in.js" ></script>
-    <script src="./js/dashboard.js" defer></script>
-    <script src="./js/log-in.js" defer></script>
-    <script src="./js/new-project.js" defer></script>
+    <script src="./js/teams.js" defer></script>
+    <script src="./js/issues.js" defer></script>
+    <script src="./js/time.js" defer></script>
+    <script src="./js/issue-modal.js" defer></script>
     <title>Proyecto JS</title>
 </head>
-<body onload= "init()">
+<body>
 
     <div class="modal">
 
@@ -27,7 +26,7 @@
                     <img src="./img/board_project_title.svg" alt="Project Icon">
                     <h2>Team</h2>
                 </div>
-                <img src="./img/close.svg" alt="Close Window">
+                <img class="close__modal" src="./img/close.svg" alt="Close Window">
             </div>
 
             <div class="separator__extraBig--pinkSalmon"></div>
@@ -36,37 +35,37 @@
 
                 <div class="modal__body--one">
                     <div class="issue__name">
-                        <p>Issue Name</p>
-                        <h1>Developers</h1>
+                        <p class="issue__info">Issue Name</p>
+                        <h1 id="issue-title">Developers</h1>
                         <div class="issue__created">
-                            <p>Created</p>
-                            <p>23/04/21</p>
+                            <p>Created:</p>
+                            <p id="issue-creation-date">23/04/21</p>
                         </div>
                     </div>
                     <div class="issue__project">
                         <div class="project__name">
-                            <p>Project</p>
-                            <h4>Spotify Web App</h4>
+                            <p class="issue__info">Project</p>
+                            <h4 id="project-name">Spotify Web App</h4>
                         </div>
                         <div class="project__image">
-                            <img src="./img/Spotify.jpg" alt="">
+                            <img id="project-image" src="./img/Spotify.jpg" alt="">
                         </div>
                     </div>
                     <div class="issue__team">
-                        <p>Team</p>
-                        <h4>Developers</h4>
+                        <p class="issue__info">Team</p>
+                        <h4 id="issue-team">Developers</h4>
                     </div>
                     <div class="issue__author">
-                        <p>Issue Author</p>
-                        <p>Manuel Costales</p>
+                        <p class="issue__info">Issue Author</p>
+                        <p id="issue-author">Manuel Costales</p>
                     </div>
                     <div class="issue__type">
-                        <p>Issue Type</p>
-                        <p>FEATURE</p>
+                        <p class="issue__info">Issue Type</p>
+                        <p id="issue-type">FEATURE</p>
                     </div>
                     <div class="issue__priority">
-                        <p>Issue Priority</p>
-                        <p>HIGH</p>
+                        <p class="issue__info">Issue Priority</p>
+                        <p id="issue-priority">HIGH</p>
                     </div>
                     <div class="issue__estimatedFinish">
                         <p>8 Hours</p>
@@ -74,27 +73,8 @@
                 </div>
 
                 <div class="modal__body--two">
-                    <div class="issue__descr">
-                        <p>Issue Description</p>
-                        <div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum impedit libero iusto optio corrupti illo amet consequatur error soluta harum.</p>
-                        </div>
-                    </div>
-                    <div class="issue__comments">
-                        <p>Comments</p>
-                        <div class="comments__div">
-                            <div class="comments__table"></div>
-                            <div class="comments__footer">
-                                <input type="text">
-                                <button>Add Comment</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal__body--three">
                     <div class="modal__body--current">
-                        <h3>Team Members:</h3>
+                        <h3>Issue Users:</h3>
                         <div class="modal__body--div">
                             <div class="modal__body--head">
                                 <div class="modal__body--header">
@@ -103,20 +83,20 @@
                                     <div class="user__nick">NICKNAME</div>
                                     <div class="user__name">FULL NAME</div>
                                     <div class="user__email">EMAIL</div>
-                                    <div class="user__role">ROLE</div>
+                                    <div class="user__team">TEAM</div>
                                     <div class="user__delete"></div>
                                     <div class="user__view"></div>
                                 </div>
                                 <div class="separator__big--purple"></div>
                             </div>
-                            <div class="modal__body--table">
+                            <div class="modal__body--table" id="project-modal-members-table">
                                 <div class="modal__body--row">
                                     <p class="user__id user__id--vis">123</p>
                                     <div class="user__img user__img--vis"><img src="./img/meme-10-guy-chico-drogado_400x400.jpg" alt=""></div>
                                     <p class="user__nick user__nick--vis">Nick7568</p>
                                     <p class="user__name user__name--vis">Nick Mensa</p>
                                     <p class="user__email user__email--vis">nickmensa@hotmail.com</p>
-                                    <p class="user__role user__role--vis" >Developer</p>
+                                    <p class="user__team user__team--vis" >Devs</p>
                                     <img class="user__delete" src="./img/addMember_delete.svg" alt="Delete Member">
                                     <button class="user__view">View</button>
                                 </div>
@@ -132,7 +112,38 @@
                                 </div>
                             </div>
                             <div class="modal__body--footer">
-                                <button>Join Issue</button>
+                                <button id="issue-add-user">Join Issue</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="issue__descr">
+                        <p class="issue__info">Issue Description</p>
+                        <div>
+                            <p id="issue-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum impedit libero iusto optio corrupti illo amet consequatur error soluta harum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal__body--three">
+                    <div class="issue__comments">
+                        <p class="issue__info">Issue Comments</p>
+                        <div class="comments__div">
+                            <div class="comments__table">
+                                <div>
+                                    <div class="comment__div">
+                                        <div class="comment__header">
+                                            <p class="author">Manuel Costales</p>
+                                            <p class="date">23 Apr 20:18</p>
+                                        </div>
+                                        <div class="comment__body">
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas vero nam inventore fugit ad! Ab neque dolorum recusandae corrupti nam?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comments__footer">
+                                <textarea id="comment__input" type="text"></textarea>
+                                <button id="comment__add">Add Comment</button>
                             </div>
                         </div>
                     </div>
@@ -141,8 +152,8 @@
                             <p>Issue Finish Date</p>
                             <p class="issue__endDate--p">23/40/22</p>
                         </div>
-                        <div class="issue__solved">
-                            <p>Mark As Solved</p>
+                        <div class="issue__solved" id="mark-as-solved">
+                            <p>Mark This Issue As Solved</p>
                             <img src="./img/tick.svg" alt="">
                         </div>
                     </div>
@@ -153,8 +164,8 @@
             <div class="separator__big--pinkSalmon-2"></div>
 
             <div class="modal__footer">
-                <button class="delete">Delete Project <img src="./img/delete_white.svg" alt="Delete Project"></button>
-                <button class="close">Close <img src="./img/close_white.svg" alt="Close Window"></button>
+                <button class="delete" id="delete-issue">Delete Issue<img src="./img/delete_white.svg" alt="Delete Project"></button>
+                <button class="close close__modal">Close <img src="./img/close_white.svg" alt="Close Window"></button>
             </div>
 
         </div>

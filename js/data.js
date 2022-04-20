@@ -83,13 +83,16 @@ function cargarDatosUsuarios(){
     })
 
     USER_CURRENT = JSON.parse(localStorage.getItem("Usuario activo"));
+    console.log(teamList)
+    
+    
 
     try {
 
-        USER_CURRENT.projects = projectList.filter(project => project.members.find(member => member.id == USER_CURRENT.id))
         USER_CURRENT.teams = teamList.filter(team => team.members.find(member => member.id == USER_CURRENT.id))
-        
+        USER_CURRENT.projects = projectList.filter(project => project.members.find(member => member.id == USER_CURRENT.id))
         USER_CURRENT.issues = []
+
 
         function mostrarDatosUsuario(){
             navCurrentUser = document.querySelector("#nav-current-user");
@@ -109,11 +112,15 @@ function cargarDatosUsuarios(){
 
 function cargarDatosProyectos(){
 
+    issuesList = JSON.parse(localStorage.getItem("Lista de Tareas"))
+
     projectList = JSON.parse(localStorage.getItem("Lista de Proyectos"))
     console.log(projectList)
 
     console.log("%cPROJECT DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
 }
+
+// 2.3 CARGAR DATOS DE EQUIPOS
 
 function cargarDatosEquipos(){
 
@@ -128,7 +135,20 @@ function cargarDatosEquipos(){
     console.log("%cTEAM DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
 }
 
+// 2.4 CARGAR DATOS DE ISSUES
 
+function cargarDatosIssues(){
+
+    issueList = JSON.parse(localStorage.getItem("Lista de Tareas"))
+
+    if (issueList == null){
+        issueList = []
+    }
+
+    console.log(issueList)
+
+    console.log("%cISSUE DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
+}
 
 
 
@@ -139,5 +159,42 @@ function isUserAdmin(project){
     let isUserAdmin = findCurrentUser.admin
     return isUserAdmin
 }
+
+
+// 4. DESLOGUEAR
+
+try {
+    function desloguear() {
+
+        const logOff = document.querySelector("#log-off");
+    
+        logOff.addEventListener("click", ()=>{
+    
+            localStorage.removeItem("Usuario Activo");
+    
+            location.href= "./user_login.html";
+    
+        })
+    
+    }
+    
+    // desloguear();
+} catch (error) {
+    
+}
+
+
+// 5 ENVIAR A LOG
+
+function sendToLogin(){
+
+    if(USER_CURRENT == null || USER_CURRENT == ""){
+        location.href= "./user_login.html"
+    }
+    else {
+        return
+    }
+}
+
 
 

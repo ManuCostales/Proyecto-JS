@@ -1,4 +1,12 @@
+// DATA LOAD: 📚
 
+cargarDatosProyectos();
+
+cargarDatosUsuarios();
+
+cargarDatosEquipos();
+
+cargarDatosIssues();
 
 // Ingreso de usuario/validacion de datos:
 

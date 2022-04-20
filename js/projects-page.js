@@ -4,7 +4,28 @@ cargarDatosProyectos();
 
 cargarDatosUsuarios();
 
+cargarDatosEquipos();
 
+cargarDatosIssues();
+
+desloguear();
+
+sendToLogin()
+
+Toastify({
+    text: "Projects Allow you to get a list of people working together on different issues",
+    duration: 5000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "bottom", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00D0DD, #8D83FF)",
+    },
+    onClick: function(){} // Callback after click
+  }).showToast();
 
 const projectCardList = document.querySelector("#project-card-list");
 const projectsTable = document.querySelector("#projects-table")
@@ -115,8 +136,6 @@ addProjectRow()
 
 function addOrDeleteProject(){
 
-    console.log("hey")
-
     const newProjectBtn = document.querySelector("#new-project-btn")
     newProjectBtn.onclick = () => location.href = "./new_project.html"
 
@@ -125,12 +144,10 @@ function addOrDeleteProject(){
         let active = projectsTable.querySelectorAll(".active")
         if(active.length === 0){
             console.log(active)
-            console.log("WTF")
             return
         }
         else {
             console.log(active)
-            console.log("hey")
             deleteProjectBtn.onclick = () => {
                 
             }

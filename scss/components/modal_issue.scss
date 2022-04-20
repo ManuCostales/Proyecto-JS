@@ -1,11 +1,84 @@
 .modal {
     .modal__div {
         .modal__body {
+            .issue__info {
+                font-size: 1.1rem;
+                color: #757575;
+                font-weight: 700;
+            }
             .modal__body--one {
                 width: 20%;
                 display:flex;
                 flex-flow: column nowrap;
                 gap: 20px;
+                .issue__name {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 0px;
+                    #issue-title {
+                        font-size: 2.2rem;
+                    }
+                    .issue__created {
+                        margin-top: 10px;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        p {
+                            font-size: 1rem;
+                            color: #757575;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .issue__project {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 5px;
+                    .project__name {
+                        #project-name {
+                            font-size: 1.6rem;
+                            color: rgb(44, 44, 44);
+                        }
+                    }
+                    .project__image {
+                        border-radius: 20px;
+                        width: 80%;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 20px
+                        }
+                    }
+                }
+                .issue__team {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    h4{
+                        font-size: 1.3rem;
+                        color: rgb(44, 44, 44);
+                    }
+                }
+                .issue__author {
+                    #issue-author {
+                        font-size: 1.2rem;
+                    }
+                }
+                .issue__type {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    #issue-type {
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                    }
+                }
+                .issue__priority {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    #issue-priority {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                }
             }
             .modal__body--two {
                 width: 40%;
@@ -15,25 +88,22 @@
                 gap: 20px;
                 .issue__descr {
                     div {
-                        height: 15vh;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        padding: 2vh 1vw;
+                        background-color: #f4f4f4;
+                        border-radius: 20px;
+                        height: 13vh;
+                        width: 95%;
+                        color: #6e6e6e;
+                        font-size: 0.9rem;
+                        font-weight: 300;
                     }
                 }
-                .issue__comments {
-                    .comments__div {
-                        background-color: gray;
-                        height: 50vh;
-                        display: flex;
-                        flex-flow: column nowrap;
-                        .comments__table {
-                            height: 50%;
-                        }
-                        .comments__footer {
-                            margin-top: auto;
-                            height: 5vh;
-                            display: flex;
-                            justify-content: center;
-                        }
-                    }
+                .modal__body--current{
+                    width: 100%;
+                    height: 50vh;
                 }
             }
             .modal__body--three {
@@ -41,17 +111,111 @@
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: flex-end;
-                .modal__body--current{
+                .issue__comments {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 10px;
+                    height: 60vh;
                     width: 100%;
-                    height: 50vh;
+                    .comments__div {
+                        background-color: rgb(243, 237, 237);
+                        height: 60vh;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        border-radius: 20px;
+                        .comments__table {
+                            height: 40vh;
+                            padding: 0 1vw;
+                            padding-top: 2vh;
+                            overflow-y: auto;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            gap: 20px;
+                            .comment__div {
+                                display: flex;
+                                flex-flow: column nowrap;
+                                padding: 1vh 0.5vw;
+                                border-radius: 15px;
+                                gap: 5px;
+                                background-color: rgb(233, 217, 217);
+                                .comment__header {
+                                    display: flex;
+                                    flex-flow: row nowrap;
+                                    justify-content: space-between;
+                                    .author {
+                                        color: rgb(53, 53, 53);
+                                        font-weight: 600;
+                                    }
+                                    .date {
+                                        font-size: 0.9rem;
+                                        color: gray;
+                                        font-size: 600;
+                                    }
+                                }
+                            }
+                        }
+                        .comments__footer {
+                            margin-top: auto;
+                            height: 15vh;
+                            padding: 1vh 1vw;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            justify-content: space-between;
+                            align-items: center;
+                            background-color: rgb(230, 198, 198);
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            textarea {
+                                height: 9vh;
+                                width: 95%;
+                                background-color: rgb(243, 237, 237);
+                                border-radius: 20px;
+                                padding: 1vh 1vw;
+                                outline: none;
+                                vertical-align:top;
+                            }
+                            button {
+                                height: 30px;
+                                width: 150px;
+                                border-radius: 20px;
+                                color: white;
+                                font-weight: 600;
+                                background-color: rgb(146, 52, 52);
+                                border: 50px;
+                            }
+                        }
+                    }
                 }
                 .issues__final--div{
+                    margin-top: auto;
                     display: flex;
+                    width: 100%;
                     flex-flow: row nowrap;
+                    justify-content: space-between;
+                    align-items: center;
                     gap: 20px;
+                    height: 8vh;
                 }
                 .issue__solved {
-                    background-color: lime;
+                    background-color: rgb(150, 21, 255);
+                    border-radius: 50px;
+                    width: 80%;
+                    height: 8vh;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    padding: 0 2vw;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        margin-left: auto;
+                    }
+                    p {
+                        font-size: 2rem;
+                        color: white;
+                        font-weight: 600;
+                    }
                 }
             }
         }

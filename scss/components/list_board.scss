@@ -40,6 +40,33 @@
         font-size: 1.2rem;
         font-weight: 600;
     }
+    .issues__view--buttons {
+        margin: 0 auto;
+        padding: 2vh 1vw;
+        width: 95%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        .available {
+            height: 40px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: #1edf95;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+        }
+        .taken {
+            height: 40px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: #ff8750;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white; 
+        }
+    }
     .list__board--table {
         width: 100%;
         display: flex;
@@ -162,6 +189,69 @@
             white-space: nowrap;
             overflow: hidden;
         }
+
+        // PROJECT SPECIFIC CELLS:
+
+        .issues__id {
+            width: 3%;
+        }
+        .issues__id--vis {
+            color: #4E4E4E;
+            font-weight: 600;
+        }
+        .issues__title {
+            width: 10%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .issues__title--vis {
+            font-weight: 600;
+            color: #5539FF;
+        }
+        .issues__host {
+            width: 8%;
+        }
+        .issues__host--vis {
+            color: #4E4E4E;
+            font-weight: 600;
+        }
+        .issues__creator {
+            width: 8%;
+        }
+        .issues__creator--vis {
+            color: #4E4E4E;
+            font-weight: 600;
+        }
+        .issues__description {
+            width: 10%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .issues__description--vis{
+            color: #848484;
+        }
+        .issues__date {
+            width: 20%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-right: 30px;
+        }
+        .issues__lastEntry {
+            width: 15%;
+        }
+        .issues__lastEntry--vis {
+          color: #5539FF;
+          font-weight: 600;
+        }
+        .issues__notif {
+            width: 3%;
+        }
+        .issues__view {
+            width: 5%;
+        }
     }
     .list__board--addDelete {
         display: flex;
@@ -251,6 +341,13 @@
                     color: #7C7C7C;
                     font-size: 0.8rem;
                     font-weight: 600;
+                }
+                .team{
+                    font-size: 1rem;
+                    color: #5539FF;
+                }
+                .important{
+                    color: black;
                 }
             }
             .list__board--preview--three {

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script src="./js/data.js" defer></script>
     <script src="./js/users.js" defer></script>
@@ -67,19 +68,7 @@
                 </li>
                 <li class="sideNav__ul--li sideNav__ul--tickets">
                     <img src="./img/sidenav_tickets.svg" alt="Tickets">
-                    <a href="">Tickets</a>
-                </li>
-                <li class="sideNav__ul--li sideNav__ul--history">
-                    <img src="./img/sidenav_history.svg" alt="History">
-                    <a href="">History</a>
-                </li>
-                <li class="sideNav__ul--li sideNav__ul--calendar">
-                    <img src="./img/sidenav_calendar.svg" alt="Calendar">
-                    <a href="">Calendar</a>
-                </li>
-                <li class="sideNav__ul--li sideNav__ul--user">
-                    <img src="./img/sidenav_user.svg" alt="User">
-                    <a href="">User</a>
+                    <a href="./issues.html">Issues</a>
                 </li>
             </ul>
 
@@ -124,7 +113,7 @@
                         <img src="./img/board_project_title.svg" alt="">
                         <h3>Projects</h3>
                     </div>
-                    <a href="">Go to</a>
+                    <a href="./projects.html">Go to</a>
                 </div>
         
                 <div class="gradient--purple separator__big--orangeYellow-2"></div>
@@ -169,7 +158,7 @@
                 </div>
         
                 <div class="more">
-                    <button class="btnMore">...See More</button>
+                    <button class="btnMore"><a href="./projects.html">...See More</a></button>
                 </div>
         
         
@@ -195,7 +184,7 @@
                         <img src="./img/board_team_title.svg" alt="">
                         <h3>Teams</h3>
                     </div>
-                    <a href="">Go to</a>
+                    <a href="./teams.html">Go to</a>
                 </div>
         
                 <div class="gradient--purple separator__big--bluePurple"></div>
@@ -235,7 +224,7 @@
                 </div>
         
                 <div class="more">
-                    <button class="btnMore">...See More</button>
+                    <button class="btnMore"><a href="./teams.html">...See More</a></button>
                 </div>
         
         
@@ -246,7 +235,7 @@
                             <p id="dashboard-teams-active">ACTIVE TEAMS: 6</p>
                         </div>
             
-                        <button class="btnNewProject" id="btnNewProject">New Team</button>
+                        <button class="btnNewProject" id="btnNewProject"><a href="./new_team.html">New Team</a></button>
                     </div>
                 </div>
         
@@ -266,7 +255,7 @@
                         <img src="./img/board_issues_title.svg" alt="">
                         <h3>Tickets</h3>
                     </div>
-                    <a href="">Go to</a>
+                    <a href="./issues.html">Go to</a>
                 </div>
         
                 <div class="gradient--purple separator__big--pinkSalmon"></div>
@@ -292,11 +281,11 @@
 
                     <!-- ISSUES GRAPHICS -->
 
-                    <div id="issuesGraphics" class="issues__graphics">
+                    <!-- <div id="issuesGraphics" class="issues__graphics"> -->
 
                         <!-- ISSUES GRAPHIC ONE -->
 
-                        <div id="graphicOne" class="graphic--body graphic__one">
+                        <!-- <div id="graphicOne" class="graphic--body graphic__one">
                             <h6 id="graphicOne__title" class="graphic--title graphic__one--title">By Type:</h6>
                             <div id="graphicOne__chart" class="graphic--chart graphic__one--chart">
                                 <img src="./img/graphic.svg" alt="Graphic One" id="graphicOne__img" class="graphic--img graphic__one--img">
@@ -306,11 +295,11 @@
                                     <li><div class="color--info color--3"></div>Request</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- ISSUES GRAPHIC TWO -->
 
-                        <div id="graphicTwo" class="graphic--body graphic__Two">
+                        <!-- <div id="graphicTwo" class="graphic--body graphic__Two">
                             <h6 id="graphicTwo__title" class="graphic--title graphic__two--title">By Status:</h6>
                             <div id="graphicTwo__chart" class="graphic--chart graphic__two--chart">
                                 <img src="./img/graphic.svg" alt="Graphic Two" id="graphicTwo__img" class="graphic--img graphic__two--img">
@@ -320,11 +309,11 @@
                                     <li><div class="color--info color--3"></div>Request</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- ISSUES GRAPHIC THREE -->
 
-                        <div id="graphicThree" class="graphic--body graphic__three">
+                        <!-- <div id="graphicThree" class="graphic--body graphic__three">
                             <h6 id="graphicThree__title" class="graphic--title graphic__three--title">By Priority:</h6>
                             <div id="graphicThree__chart" class="graphic--chart  graphic__three--chart">
                                 <img src="./img/graphic.svg" alt="Graphic Three" id="graphicThree__img" class="graphic--img graphic__three--img">
@@ -334,9 +323,9 @@
                                     <li><div class="color--info color--3"></div>Request</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                         
-                    </div>
+                    <!-- </div> -->
 
                 </div>
 
@@ -371,7 +360,7 @@
                         </ul>
                     </div>
             
-                    <div class="table">
+                    <div class="table" id="issuesDashboard">
             
                         <div class="table__header">
             
@@ -451,7 +440,7 @@
                     </div>
             
                     <div class="more">
-                        <button class="btnMore">View Full List</button>
+                        <button class="btnMore"><a href="./issues.html">View Full List</a></button>
                     </div>
             
             
@@ -459,10 +448,10 @@
                         <div class="gradient--purple separator__small--purpleOrange-2"></div>
                         <div class="trueFooter">
                             <div class="active">
-                                <p>ACTIVE PROJECTS: 6</p>
+                                <p id="active-issues">ACTIVE ISSUES:</p>
                             </div>
                 
-                            <button class="btnNewProject" id="btnNewProject">New Issue</button>
+                            <button class="btnNewProject" id="btnNewProject"><a href="./new_issue.html">New Issue</a></button>
                         </div>
                     </div>
 
@@ -496,6 +485,6 @@
 
     </footer>
 
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

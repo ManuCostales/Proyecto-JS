@@ -5,6 +5,9 @@
   list-style-type: none;
   border: none; }
 
+a {
+  color: white; }
+
 html {
   height: 100%; }
 
@@ -768,7 +771,7 @@ footer {
 
 .team__card {
   background-color: #FAFAFA;
-  height: 400px;
+  height: 350px;
   width: 300px;
   border-radius: 20px;
   display: flex;
@@ -807,7 +810,6 @@ footer {
   .team__card .team__card--body {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
     height: 60%; }
     .team__card .team__card--body .card--body--header {
       background-color: #EAECFF;
@@ -828,6 +830,7 @@ footer {
     .team__card .team__card--body .card--body--desc {
       display: flex;
       align-items: center;
+      justify-content: center;
       padding: 2vh 1vw; }
       .team__card .team__card--body .card--body--desc p {
         color: #686868;
@@ -847,7 +850,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 2vh 2vw;
-    height: 30px; }
+    height: 20px; }
     .team__card .team__card--footer button {
       height: 30px;
       width: 70px;
@@ -860,7 +863,7 @@ footer {
 .team__card--new {
   backdrop-filter: blur(14px);
   background-color: rgba(255, 255, 255, 0.3);
-  height: 400px;
+  height: 350px;
   width: 300px;
   border-radius: 20px;
   border: solid 1px white;
@@ -920,6 +923,30 @@ footer {
     color: #7C7C7C;
     font-size: 1.2rem;
     font-weight: 600; }
+  .list__board--div .issues__view--buttons {
+    margin: 0 auto;
+    padding: 2vh 1vw;
+    width: 95%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+    .list__board--div .issues__view--buttons .available {
+      height: 40px;
+      width: 200px;
+      border-radius: 20px;
+      background-color: #1edf95;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white; }
+    .list__board--div .issues__view--buttons .taken {
+      height: 40px;
+      width: 200px;
+      border-radius: 20px;
+      background-color: #ff8750;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white; }
   .list__board--div .list__board--table {
     width: 100%;
     display: flex;
@@ -1014,6 +1041,51 @@ footer {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden; }
+    .list__board--div .list__board--table .issues__id {
+      width: 3%; }
+    .list__board--div .list__board--table .issues__id--vis {
+      color: #4E4E4E;
+      font-weight: 600; }
+    .list__board--div .list__board--table .issues__title {
+      width: 10%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
+    .list__board--div .list__board--table .issues__title--vis {
+      font-weight: 600;
+      color: #5539FF; }
+    .list__board--div .list__board--table .issues__host {
+      width: 8%; }
+    .list__board--div .list__board--table .issues__host--vis {
+      color: #4E4E4E;
+      font-weight: 600; }
+    .list__board--div .list__board--table .issues__creator {
+      width: 8%; }
+    .list__board--div .list__board--table .issues__creator--vis {
+      color: #4E4E4E;
+      font-weight: 600; }
+    .list__board--div .list__board--table .issues__description {
+      width: 10%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
+    .list__board--div .list__board--table .issues__description--vis {
+      color: #848484; }
+    .list__board--div .list__board--table .issues__date {
+      width: 20%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-right: 30px; }
+    .list__board--div .list__board--table .issues__lastEntry {
+      width: 15%; }
+    .list__board--div .list__board--table .issues__lastEntry--vis {
+      color: #5539FF;
+      font-weight: 600; }
+    .list__board--div .list__board--table .issues__notif {
+      width: 3%; }
+    .list__board--div .list__board--table .issues__view {
+      width: 5%; }
   .list__board--div .list__board--addDelete {
     display: flex;
     flex-flow: row nowrap;
@@ -1091,6 +1163,11 @@ footer {
           color: #7C7C7C;
           font-size: 0.8rem;
           font-weight: 600; }
+        .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--two .team {
+          font-size: 1rem;
+          color: #5539FF; }
+        .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--two .important {
+          color: black; }
       .list__board--div .list__board--preview .list__board--preview--info .list__board--preview--three {
         display: flex;
         flex-flow: column nowrap;
@@ -1920,7 +1997,12 @@ footer {
             color: #4E4E4E;
             font-weight: 700; }
           .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__name {
-            width: 20%; }
+            width: 20%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; }
           .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__name--vis {
             color: #5539FF;
             font-weight: 600; }
@@ -1943,7 +2025,7 @@ footer {
             font-weight: 600; }
           .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__team {
             width: 15%;
-            text-align: center; }
+            margin-left: 40px; }
           .modalIssues .modalIssues__div .modal__body .project__issues .project__issues--table .issue__team--vis {
             font-weight: 500;
             color: #5539FF; }
@@ -2979,7 +3061,7 @@ footer {
             padding: 2vh 1vw;
             background-color: #f4f4f4;
             border-radius: 20px;
-            height: 20vh;
+            height: 13vh;
             width: 95%;
             color: #6e6e6e;
             font-size: 0.9rem;
@@ -2997,7 +3079,7 @@ footer {
             font-weight: 700; }
           .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues {
             width: 100%;
-            height: 25vh;
+            height: 23vh;
             background: linear-gradient(90deg, rgba(205, 99, 255, 0.1), rgba(255, 133, 81, 0.1));
             border-radius: 20px;
             display: flex;
@@ -3035,7 +3117,7 @@ footer {
                   background-color: #7939FF; }
             .modal .modal__div .modal__body .modal__body--two .modal__body--three .project__issues .project__issues--footer {
               width: 100%;
-              height: 18%;
+              height: 4vh;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -3153,12 +3235,6 @@ footer {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__role {
-            width: 10%; }
-          .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__role--vis {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #4D4D4D; }
           .modal .modal__div .modal__body .modal__body--current .modal__body--div .user__delete {
             width: 5%;
             height: 70%; }
@@ -3208,11 +3284,65 @@ footer {
   display: none;
   background-color: rgba(0, 0, 0, 0.8); }
 
+.modal .modal__div .modal__body .issue__info {
+  font-size: 1.1rem;
+  color: #757575;
+  font-weight: 700; }
+
 .modal .modal__div .modal__body .modal__body--one {
   width: 20%;
   display: flex;
   flex-flow: column nowrap;
   gap: 20px; }
+  .modal .modal__div .modal__body .modal__body--one .issue__name {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0px; }
+    .modal .modal__div .modal__body .modal__body--one .issue__name #issue-title {
+      font-size: 2.2rem; }
+    .modal .modal__div .modal__body .modal__body--one .issue__name .issue__created {
+      margin-top: 10px;
+      display: flex;
+      flex-flow: row nowrap; }
+      .modal .modal__div .modal__body .modal__body--one .issue__name .issue__created p {
+        font-size: 1rem;
+        color: #757575;
+        font-weight: 500; }
+  .modal .modal__div .modal__body .modal__body--one .issue__project {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px; }
+    .modal .modal__div .modal__body .modal__body--one .issue__project .project__name #project-name {
+      font-size: 1.6rem;
+      color: #2c2c2c; }
+    .modal .modal__div .modal__body .modal__body--one .issue__project .project__image {
+      border-radius: 20px;
+      width: 80%; }
+      .modal .modal__div .modal__body .modal__body--one .issue__project .project__image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px; }
+  .modal .modal__div .modal__body .modal__body--one .issue__team {
+    display: flex;
+    flex-flow: column nowrap; }
+    .modal .modal__div .modal__body .modal__body--one .issue__team h4 {
+      font-size: 1.3rem;
+      color: #2c2c2c; }
+  .modal .modal__div .modal__body .modal__body--one .issue__author #issue-author {
+    font-size: 1.2rem; }
+  .modal .modal__div .modal__body .modal__body--one .issue__type {
+    display: flex;
+    flex-flow: column nowrap; }
+    .modal .modal__div .modal__body .modal__body--one .issue__type #issue-type {
+      font-size: 1.2rem;
+      font-weight: 500; }
+  .modal .modal__div .modal__body .modal__body--one .issue__priority {
+    display: flex;
+    flex-flow: column nowrap; }
+    .modal .modal__div .modal__body .modal__body--one .issue__priority #issue-priority {
+      font-size: 1.5rem;
+      font-weight: 700; }
 
 .modal .modal__div .modal__body .modal__body--two {
   width: 40%;
@@ -3221,34 +3351,118 @@ footer {
   justify-content: space-between;
   gap: 20px; }
   .modal .modal__div .modal__body .modal__body--two .issue__descr div {
-    height: 15vh; }
-  .modal .modal__div .modal__body .modal__body--two .issue__comments .comments__div {
-    background-color: gray;
-    height: 50vh;
     display: flex;
-    flex-flow: column nowrap; }
-    .modal .modal__div .modal__body .modal__body--two .issue__comments .comments__div .comments__table {
-      height: 50%; }
-    .modal .modal__div .modal__body .modal__body--two .issue__comments .comments__div .comments__footer {
-      margin-top: auto;
-      height: 5vh;
-      display: flex;
-      justify-content: center; }
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 2vh 1vw;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    height: 13vh;
+    width: 95%;
+    color: #6e6e6e;
+    font-size: 0.9rem;
+    font-weight: 300; }
+  .modal .modal__div .modal__body .modal__body--two .modal__body--current {
+    width: 100%;
+    height: 50vh; }
 
 .modal .modal__div .modal__body .modal__body--three {
   width: 40%;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end; }
-  .modal .modal__div .modal__body .modal__body--three .modal__body--current {
-    width: 100%;
-    height: 50vh; }
+  .modal .modal__div .modal__body .modal__body--three .issue__comments {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    height: 60vh;
+    width: 100%; }
+    .modal .modal__div .modal__body .modal__body--three .issue__comments .comments__div {
+      background-color: #f3eded;
+      height: 60vh;
+      display: flex;
+      flex-flow: column nowrap;
+      border-radius: 20px; }
+      .modal .modal__div .modal__body .modal__body--three .issue__comments .comments__div .comments__table {
+        height: 40vh;
+        padding: 0 1vw;
+        padding-top: 2vh;
+        overflow-y: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px; }
+        .modal .modal__div .modal__body .modal__body--three .issue__comments .comments__div .comments__table .comment__div {
+          display: flex;
+          flex-flow: column nowrap;
+          padding: 1vh 0.5vw;
+          border-radius: 15px;
+          gap: 5px;
+          background-color: #e9d9d9; }
+          .modal .modal__div .modal__body .modal__body--three .issue__comments .comments__div .comments__table .comment__div .comment__header {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between; }
+            .modal .modal__div .modal__body .modal__body--three .issue__comments .comments__div .comments__table .comment__div .comment__header .author {
+              color: #353535;
+              font-weight: 600; }
+            .modal .modal__div .modal__body .modal__body--three .issue__comments .comments__div .comments__table .comment__div .comment__header .date {
+              font-size: 0.9rem;
+              color: gray;
+              font-size: 600; }
+      .modal .modal__div .modal__body .modal__body--three .issue__comments .comments__div .comments__footer {
+        margin-top: auto;
+        height: 15vh;
+        padding: 1vh 1vw;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #e6c6c6;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px; }
+        .modal .modal__div .modal__body .modal__body--three .issue__comments .comments__div .comments__footer textarea {
+          height: 9vh;
+          width: 95%;
+          background-color: #f3eded;
+          border-radius: 20px;
+          padding: 1vh 1vw;
+          outline: none;
+          vertical-align: top; }
+        .modal .modal__div .modal__body .modal__body--three .issue__comments .comments__div .comments__footer button {
+          height: 30px;
+          width: 150px;
+          border-radius: 20px;
+          color: white;
+          font-weight: 600;
+          background-color: #923434;
+          border: 50px; }
   .modal .modal__div .modal__body .modal__body--three .issues__final--div {
+    margin-top: auto;
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 8vh; }
+  .modal .modal__div .modal__body .modal__body--three .issue__solved {
+    background-color: #9615ff;
+    border-radius: 50px;
+    width: 80%;
+    height: 8vh;
     display: flex;
     flex-flow: row nowrap;
-    gap: 20px; }
-  .modal .modal__div .modal__body .modal__body--three .issue__solved {
-    background-color: lime; }
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 2vw; }
+    .modal .modal__div .modal__body .modal__body--three .issue__solved img {
+      width: 40px;
+      height: 40px;
+      margin-left: auto; }
+    .modal .modal__div .modal__body .modal__body--three .issue__solved p {
+      font-size: 2rem;
+      color: white;
+      font-weight: 600; }
 
 .projectTeams__boards {
   display: flex;
@@ -3697,7 +3911,8 @@ html {
     height: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; }
+    gap: 30px;
+    justify-content: flex-start; }
 
 .newProject__board {
   background-color: #FAFAFA;
@@ -4714,3 +4929,17 @@ html {
         display: flex;
         flex-flow: column nowrap;
         gap: 5vh; }
+
+.new__issue--footer {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .new__issue--footer button {
+    width: 20%;
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: #7B4DFF;
+    border-radius: 10px; }

@@ -4,6 +4,10 @@ cargarDatosProyectos();
 
 cargarDatosUsuarios();
 
+cargarDatosEquipos();
+
+cargarDatosIssues();
+
 // FUNCION CONSTRUCTORA DE CLASE DE OBJETO "USER" /USUARIOS:
 
 console.log("USER_CURRENT")

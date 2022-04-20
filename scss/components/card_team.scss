@@ -2,7 +2,7 @@
 
 .team__card {
     background-color: #FAFAFA;
-    height: 400px;
+    height: 350px;
     width: 300px;
     border-radius: 20px;
     display: flex;
@@ -46,7 +46,7 @@
     .team__card--body {
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
+        // justify-content: space-between;
         height: 60%;
         .card--body--header {
             background-color: #EAECFF;
@@ -70,6 +70,7 @@
         .card--body--desc {
             display: flex;
             align-items: center;
+            justify-content: center;
             padding: 2vh 1vw;
             p {
                 color: #686868;
@@ -94,7 +95,7 @@
         justify-content: center;
         align-items: center;
         padding: 2vh 2vw;
-        height: 30px;
+        height: 20px;
         button {
             height: 30px;
             width: 70px;
@@ -111,7 +112,7 @@
     // background-color: white;
     backdrop-filter: blur(14px);
     background-color: rgba(255, 255, 255, 0.3);
-    height: 400px;
+    height: 350px;
     width: 300px;
     border-radius: 20px;
     border: solid 1px white;
