@@ -60,9 +60,6 @@ function cargarDatosUsuarios(){
                 projectList = []
             }
             else {
-            console.log(projectList)
-            console.log(user.projects)
-            user.projects = projectList.filter(project => project.members.find(member => member.id == user.id))
             }
         }
         loadUserProjects()
@@ -72,18 +69,14 @@ function cargarDatosUsuarios(){
                 teamList = []
             }
             else {
-            console.log(teamList)
-            console.log(user.teams)
             user.teams = teamList.filter(team => team.members.find(member => member.id == user.id))
             }
         }
         loadUserTeams()
         user.issues = []
-        console.log(user.issues)
     })
 
     USER_CURRENT = JSON.parse(localStorage.getItem("Usuario activo"));
-    console.log(teamList)
     
     
 
@@ -115,7 +108,6 @@ function cargarDatosProyectos(){
     issuesList = JSON.parse(localStorage.getItem("Lista de Tareas"))
 
     projectList = JSON.parse(localStorage.getItem("Lista de Proyectos"))
-    console.log(projectList)
 
     console.log("%cPROJECT DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
 }
@@ -130,8 +122,6 @@ function cargarDatosEquipos(){
         teamList = []
     }
 
-    console.log(teamList)
-
     console.log("%cTEAM DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
 }
 
@@ -144,8 +134,6 @@ function cargarDatosIssues(){
     if (issueList == null){
         issueList = []
     }
-
-    console.log(issueList)
 
     console.log("%cISSUE DATA LOADED", "color: white; background-color: limegreen; padding: 0.5rem 1rem; border: 5px double white; border-radius: 15px;")
 }

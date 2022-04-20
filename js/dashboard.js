@@ -11,7 +11,6 @@ cargarDatosIssues();
 sendToLogin()
 
 // SHOW CURRENT USER:
-console.log(USER_CURRENT)
 
 navCurrentUser = document.querySelector("#nav-current-user");
 
@@ -19,8 +18,6 @@ usernick = USER_CURRENT.nickname;
 
 navCurrentUser.innerHTML = usernick;
 
-console.log(USER_CURRENT.projects)
-console.log(USER_CURRENT.teams)
 
 Toastify({
     text: "The Dashboard shows all the information related to the user",
@@ -58,7 +55,6 @@ function mostrarProyectos() {
 
                                     </div>`;
 
-    console.log(USER_CURRENT.projects)
 
     USER_CURRENT.projects.forEach(project =>{
 
@@ -97,11 +93,9 @@ function mostrarEquipos() {
                                     </div>`;
 
 
-    console.log(USER_CURRENT.teams)
 
     USER_CURRENT.teams.forEach(team =>{
 
-        console.log(team)
 
         const foundProject = projectList.find(project => project.id == team.project)
 
@@ -133,7 +127,6 @@ function mostrarTareas() {
     projectsUser.forEach(project => {
         issuesFullList.push(...project.issues)
     })
-    console.log(issuesFullList)
     
     if(issuesFullList == []|| issuesFullList == false){
         issuesDashboard.innerHTML = ``
@@ -156,7 +149,6 @@ function mostrarTareas() {
 
         issuesFullList.forEach(issue =>{
 
-            console.log(issue.author)
             const foundProject = projectList.find(project => project.id == issue.project)
             let foundTeam = teamList.find(team => team.id == issue.team)
             const foundUser = userList.find(user =>user.id == issue.author)
@@ -165,7 +157,6 @@ function mostrarTareas() {
                     name: "None"
                 }
             }
-            console.log(foundUser)
 
             issuesDashboard.innerHTML += `
                                         <div class="row">

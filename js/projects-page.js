@@ -30,7 +30,6 @@ Toastify({
 const projectCardList = document.querySelector("#project-card-list");
 const projectsTable = document.querySelector("#projects-table")
 
-console.log(USER_CURRENT)
 
 function addProjectCards(){
 

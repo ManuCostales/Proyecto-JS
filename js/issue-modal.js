@@ -8,24 +8,20 @@ cargarDatosEquipos();
 
 cargarDatosIssues();
 
-console.log(issueList)
 
 let commentsList  = []
 
 JSON.parse(localStorage.getItem("Lista de Comentarios")) == null ? commentsList = [] : commentsList = JSON.parse(localStorage.getItem("Lista de Comentarios"))
 
-console.log(commentsList)
 
 issue = JSON.parse(localStorage.getItem("Issue Activo"))
 
-console.log(issue)
 
 function openPreview(issue){
 
     let issueCommentsList = []
     let allIssueComments = issue.comments.forEach(comment => {
 
-        console.log(comment)
 
         if(commentsList == false){
             issueCommentsList = []
@@ -38,7 +34,6 @@ function openPreview(issue){
         
     })
 
-    console.log(issueCommentsList)
 
     let issueMembersList = []
     let allIssueMembers = issue.users.forEach(member => {
@@ -50,7 +45,6 @@ function openPreview(issue){
         else {
             const foundUser = userList.find(finduser => finduser.id == member)
             issueMembersList.push(foundUser)
-            console.log(issueMembersList)
         }
     })
 
@@ -72,7 +66,6 @@ function openPreview(issue){
     issueDate()
 
     modalDiv = document.querySelector(".modal")
-    console.log(modalDiv)
     const projectOfIssue = projectList.find(project => project.id == issue.project)
     let teamOfIssue = teamList.find(team => team.id == issue.team)
     if(teamOfIssue == undefined){
@@ -103,7 +96,6 @@ function openPreview(issue){
     function deleteIssue(){
 
         const deleteButton = modalDiv.querySelector("#delete-issue")
-        console.log(deleteButton)
         deleteButton.addEventListener("click", ()=>{
             if(isUserAdmin(projectOfIssue) != true){
                 alert("You dont have permission to do this")
@@ -113,9 +105,7 @@ function openPreview(issue){
                 deleteButton.onclick = () => {
                     issueList.splice(issueList.indexOf(issue), 1)
                     issueCommentsList.forEach(comment => {
-                        console.log(comment)
                         commentsList.splice(commentsList.indexOf(comment), 1)
-                        console.log(commentsList)
                     })
                     projectOfIssue.issues.splice(projectOfIssue.issues.indexOf(issue), 1)
                     teamOfIssue.issues.splice(teamOfIssue.issues.indexOf(issue), 1)
@@ -193,12 +183,10 @@ function openPreview(issue){
 
         function setComments(){
             issueCommentsTable.innerHTML = ``
-            console.log(issueCommentsList)
             if(issueCommentsList == [] || issueCommentsList == false){
                 return
             }
             else {
-                console.log(issueCommentsList)
                 issueCommentsList.forEach(comment => {
 
                     commentBox = document.createElement("div")
@@ -206,7 +194,6 @@ function openPreview(issue){
                     commentBox.id = `issue-comment-${comment.id}`
                     commentDate = currentTime(comment.date)
                     trueCommentDate = `${commentDate.hour}:${commentDate.minutes} ${commentDate.month} ${commentDate.dayNumber}` 
-                    console.log(trueCommentDate)
                     commentBox.innerHTML = `<div class="comment__header">
                                             <p class="author">${comment.author.firstName} ${comment.author.lastName}</p>
                                             <p class="date">${trueCommentDate}</p>
@@ -240,7 +227,6 @@ function openPreview(issue){
                         date: trueIssueTime,
                         content: commentInput.value
                     }
-                    console.log(newComment)
     
                     commentsList.push(newComment)
                     issue.comments.push(newComment.id)
@@ -287,10 +273,8 @@ function openPreview(issue){
 
         const membersTable = document.querySelector("#project-modal-members-table")
         function createMemberTable(){
-            console.log(issue.users)
             membersTable.innerHTML = ``
             issue.users.forEach(member => {
-                console.log(issue.users)
                 const foundUser = userList.find(user => user.id == member)
                 const memberRow = document.createElement("div")
                 memberRow.className = "modal__body--row"
@@ -359,7 +343,6 @@ function openPreview(issue){
                     issue.users.splice(issue.users.indexOf(USER_CURRENT.id), 1)
                     foundUser.issues.splice(foundUser.issues.indexOf(issue), 1)
                     USER_CURRENT.issues.splice(USER_CURRENT.issues.indexOf(issue), 1)
-                    console.log(issue.users)
 
                     issueList.splice(issueList.indexOf(issue), 1)
                     issueList.push(issue)
@@ -389,11 +372,8 @@ function openPreview(issue){
         function markAsSolved(){
 
             issueList.splice(issueList.indexOf(issue), 1)
-            console.log(issueCommentsList)
             issueCommentsList.forEach(comment => {
-                console.log(comment)
                 commentsList.splice(commentsList.indexOf(comment), 1)
-                console.log(commentsList)
             })
             projectOfIssue.issues.splice(projectOfIssue.issues.indexOf(issue), 1)
             teamOfIssue.issues.splice(teamOfIssue.issues.indexOf(issue), 1)

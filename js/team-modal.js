@@ -10,14 +10,9 @@ cargarDatosIssues();
 
 team = JSON.parse(localStorage.getItem("Equipo Activo"))
 
-console.log(team)
-
-console.log(team.project)
-
 function openPreview(team){
 
     modalDiv = document.querySelector(".modal")
-    console.log(modalDiv)
     const projectOfTeam = projectList.find(project => project.id == team.project)
 
     function closeWindow(element){
@@ -41,7 +36,6 @@ function openPreview(team){
     function deleteTeam(){
 
         const deleteButton = modalDiv.querySelector("#delete-project")
-        console.log(deleteButton)
         
         if(isUserAdmin(projectOfTeam) != true){
             deleteButton.innerText = "Leave Project"
@@ -68,7 +62,6 @@ function openPreview(team){
     function teamModalRepos(){
 
         const reposTable = document.querySelector("#project-modal-repos")
-        console.log(team.repos)
         function createRepoList(){
             team.repos.forEach(repo => {
 
@@ -202,7 +195,6 @@ function openPreview(team){
                 // Close window buttons:
 
                 const closeButtons = repoModal.querySelectorAll(".close__window")
-                console.log(closeButtons)
                 closeButtons.forEach(button => {
                     button.addEventListener("click", ()=> {
                         closeWindow(repoModal)

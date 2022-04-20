@@ -60,7 +60,6 @@ function createTeam(){
 
         function choseProject(){
             if(projectsToChoose.length == 1){
-                console.log(projectsToChoose[0])
                 addedProject(projectsToChoose[0])
             }
             selectNode.addEventListener("click", ()=> {
@@ -110,8 +109,6 @@ function createTeam(){
             searchList.addEventListener("click", function(e) {
                 if(e.target.classList.contains("add__member--btn")|| e.target.closest('.add__member--btn') !== null){
                     let button = e.target
-                    console.log(e.target)
-                    console.log(e.target.tagName)
                     addNewMember(button)
                 }
             })
@@ -120,14 +117,10 @@ function createTeam(){
             
         function addNewMember(button){
             currentMembersTable.innerHTML = ``
-            console.log("HEY")
             let numberId = button.id.match(/\d+/g);
             let userFound = teamProject.members.find(user => user.id == numberId)
             let eraseRow = document.querySelector(`#searchUserRow-${numberId}`);
-            console.log(eraseRow)
             eraseRow.remove();
-
-            console.log(teamMembers)
 
             teamMembers.push(userFound)
 
@@ -145,9 +138,6 @@ function createTeam(){
                 </div>`
             })
 
-            console.log(teamMembers)
-
-  
 
             // FOOTER CURRENT MEMBERS
             let footerCurrent = document.querySelector("#footerCurrent")
@@ -168,7 +158,6 @@ function createTeam(){
         function eraseMember(button){
             let numberId = button.parentNode.id.match(/\d+/g);
             let removedUser = teamMembers.find(user => user.id == numberId)
-            console.log(removedUser)
             button.parentNode.remove();
             
             searchList.innerHTML += `<div class="row" id="searchUserRow-${removedUser.id}">
@@ -181,7 +170,6 @@ function createTeam(){
 
             teamMembers.splice(teamMembers.indexOf(removedUser), 1)
 
-            console.log(teamMembers)
 
             // FOOTER CURRENT MEMBERS
             let footerCurrent = document.querySelector("#footerCurrent")
@@ -232,7 +220,6 @@ function createTeam(){
             showSearchLead()
         })
         searchList.addEventListener("change", ()=> {
-            console.log(searchList.value)
             searchInput.innerText = searchList.value
             let newLead = teamProject.members.find(member => member.nickname == searchList.value)
             teamLead = newLead
@@ -348,7 +335,6 @@ function createTeam(){
                 showConfirmButton: false,
             })
     
-            console.log(teamList)
 
             localStorage.setItem("Lista de Equipos", JSON.stringify(teamList));
             localStorage.setItem("Lista de Usuarios", JSON.stringify(userList))

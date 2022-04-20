@@ -29,8 +29,6 @@ Toastify({
 
 const issueTable = document.querySelector("#issues-table")
 
-console.log(USER_CURRENT)
-
 function showIssueTable(){
 
     const projectsUser = USER_CURRENT.projects
@@ -156,7 +154,6 @@ showIssueTable()
 
 function addOrDeleteProject(){
 
-    console.log("hey")
 
     const newProjectBtn = document.querySelector("#new-project-btn")
     newProjectBtn.onclick = () => location.href = "./new_project.html"
@@ -165,11 +162,9 @@ function addOrDeleteProject(){
     deleteProjectBtn.onclick = () => {
         let active = projectsTable.querySelectorAll(".active")
         if(active.length === 0){
-            console.log(active)
             return
         }
         else {
-            console.log(active)
             deleteProjectBtn.onclick = () => {
                 
             }
@@ -287,30 +282,12 @@ function openIssueModal(){
             let targetId = e.target.id
             let numberId = targetId.match(/\d+/g)
 
-            // let foundIssues = []
-            // issueList.forEach(team => {
-
-            //     isUserOnTeam = team.members.find(member => member.id == USER_CURRENT.id)
-            //     if (isUserOnTeam == ""|| isUserOnTeam == false){
-            //         return
-            //     }
-            //     else{
-            //         foundTeams.push(team)  
-            //     }
-            // })
-            // foundTeam = foundTeams.filter(team => team.id == numberId)
-
-            console.log(numberId)
             let foundIssue = issueList.find(issue => issue.id == numberId)
-            console.log(foundIssue)
 
             localStorage.setItem("Issue Activo", JSON.stringify(foundIssue))
-
             
             location.href= "./modal__issue.html";
-            console.log(foundIssue)
             
-            // openPreview(foundProject)
         }
     })
 }

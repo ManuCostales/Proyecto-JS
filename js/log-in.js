@@ -18,10 +18,8 @@ const userLogin = document.querySelector("#user-login").addEventListener("click"
     e.preventDefault();
 
     userNameEmail = document.querySelector("#user-login-nameEmail").value;
-    console.log(userNameEmail);
 
     userLoginPassword = document.querySelector("#user-login-password").value;
-    console.log(userLoginPassword);
 
     // 1 VALIDACION DE DATOS:
     // 1.2 VALIDACION DE NOMBRE/EMAIL:
@@ -33,17 +31,13 @@ const userLogin = document.querySelector("#user-login").addEventListener("click"
     // Creacion de maps con datos especificos (nickname e email)
 
     let userNickList = userList.map(a=>a.nickname);
-    console.log(userNickList);
 
     let userEmailList = userList.map(a=>a.email);
-    console.log(userEmailList);
 
     // Variables booleanas
 
     let userValidateNick = userNickList.includes(userNameEmail);
-    console.log(userValidateNick);
     let userValidateEmail = userEmailList.includes(userNameEmail);
-    console.log(userValidateEmail);
 
     // Condicional
 
@@ -53,11 +47,9 @@ const userLogin = document.querySelector("#user-login").addEventListener("click"
         let userFound = userList.find((userList)=>
             userList.nickname == userNameEmail
         )
-        console.log(userFound);
 
         // Luego, de este usuario se extrae la contraseña para la validacion.
         userFoundPassword = userFound.password;
-        console.log(userFoundPassword);
 
         // VALIDACION DE CONTRASEÑA:
         if (userLoginPassword == userFoundPassword) {
@@ -99,11 +91,9 @@ const userLogin = document.querySelector("#user-login").addEventListener("click"
         let userFound = userList.find((userList)=>
             userList.email == userNameEmail
         )
-        console.log(userFound);
 
         // Luego, de este usuario se extrae la contraseña para la validacion.
         userFoundPassword = userFound.password;
-        console.log(userFoundPassword);
 
         // VALIDACION DE CONTRASEÑA:
         if (userLoginPassword == userFoundPassword) {

@@ -203,7 +203,6 @@ function openPreview(project){
     function projectModalRepos(){
 
         const reposTable = document.querySelector("#project-modal-repos")
-        console.log(project.repos)
         function createRepoList(){
             project.repos.forEach(repo => {
 
@@ -227,13 +226,11 @@ function openPreview(project){
                         return
                     }
                     else{
-                        console.log(e.target)
                         let getRow = e.target.parentNode
                         let rowId = e.target.parentNode.id.match(/\d+/g)
                         let repoName = getRow.querySelector(`#repo-name-${rowId}`).innerText
                         let foundRepo = project.repos.find(repo => repo == repoName)
                         let repoToRemove = project.repos.indexOf(foundRepo)
-                        console.log(repoToRemove)
                         project.repos.splice((repoToRemove), 1)
                         e.target.parentNode.remove()
                         localStorage.setItem("Lista de Proyectos", JSON.stringify(projectList))
@@ -336,7 +333,6 @@ function openPreview(project){
                 // Close window buttons:
 
                 const closeButtons = repoModal.querySelectorAll(".close__window")
-                console.log(closeButtons)
                 closeButtons.forEach(button => {
                     button.addEventListener("click", ()=> {
                         closeWindow(repoModal)
@@ -356,7 +352,6 @@ function openPreview(project){
     function projectModalRoles(){
 
         const rolesList = document.querySelector("#project-modal-roles")
-        console.log(project.roles)
         project.roles.forEach(role => {
             if(role == "ADMIN"){
                 return
@@ -727,8 +722,6 @@ function openPreview(project){
         const teamsTable = document.querySelector("#project-modal-teams-table")
         function createTableTeamList(){
 
-            console.log(project.teams)
-
             teamsTable.innerHTML = ``
 
             project.teams.forEach(team => {
@@ -814,7 +807,6 @@ function openPreview(project){
                     if(project.teams == false){
                         return
                     }
-                    console.log("hey")
                     const teamRow = document.createElement("div")
                     teamRow.className = "project__issues--row"
                     teamRow.id = `project-team-row-${team.id}`
@@ -828,7 +820,6 @@ function openPreview(project){
                                         <button class="team__button">View</button>`
                     document.querySelector("#project-teams-table").append(teamRow)
                 }
-                console.log(project.teams)
                 project.teams.forEach(team => createTeamRow(team))
 
                 const closeButtons = teamTableList.querySelectorAll(".close__teams")
@@ -1066,7 +1057,6 @@ function openPreview(project){
                                             }
                                             localStorage.setItem("Lista de Proyectos", JSON.stringify(projectList))
                                             
-                                            console.log(user.role)
                                         }
                                     })
                                 }   
@@ -1122,11 +1112,9 @@ function openPreview(project){
                     function addNewMember(){
                         const addMemberBtn = searchUserList.querySelectorAll(".user__add")
                         function addUserToCurrent(button){
-                            console.log("SHIT")
                             const userId = button.parentNode.id.match(/\d+/g)
                             const foundUser = userList.find(user => user.id == userId)
                             project.members.push(foundUser)
-                            console.log(foundUser)
                             projectSearchUser()
                             projectCurrentMembers()
                             localStorage.setItem("Lista de Proyectos", JSON.stringify(projectList))

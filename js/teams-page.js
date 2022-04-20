@@ -39,7 +39,6 @@ function addTeamCards(){
     USER_CURRENT.teams.forEach(team => {
 
         const foundProject = projectList.find(project => project.id == team.project)
-        console.log(foundProject)
 
         let cardDiv = document.createElement("div")
         cardDiv.className = "team__card"
@@ -134,7 +133,6 @@ addTeamRow()
 
 function addOrDeleteProject(){
 
-    console.log("hey")
 
     const newProjectBtn = document.querySelector("#new-project-btn")
     newProjectBtn.onclick = () => location.href = "./new_project.html"
@@ -143,13 +141,9 @@ function addOrDeleteProject(){
     deleteProjectBtn.onclick = () => {
         let active = projectsTable.querySelectorAll(".active")
         if(active.length === 0){
-            console.log(active)
-            console.log("WTF")
             return
         }
         else {
-            console.log(active)
-            console.log("hey")
             deleteProjectBtn.onclick = () => {
                 
             }
@@ -278,9 +272,6 @@ function openTeamModal(){
             localStorage.setItem("Equipo Activo", JSON.stringify(...foundTeam))
 
             location.href= "./modal__team.html";
-            console.log(foundTeam)
-            
-            // openPreview(foundProject)
         }
     })
 }

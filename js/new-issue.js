@@ -62,7 +62,6 @@ function createIssue(){
 
         function choseProject(){
             if(projectsToChoose.length == 1){
-                console.log(projectsToChoose[0])
                 addedProject(projectsToChoose[0])
             }
             selectNode.addEventListener("click", ()=> {
@@ -133,7 +132,6 @@ function createIssue(){
 
     issueCreateDate()
     
-    console.log(issueList)
     // SUBMIT NEW ISSUE:
 
     function submitNewIssue(){
@@ -156,7 +154,6 @@ function createIssue(){
 
             function setIssueTeam(){
                 let findTeam = document.querySelector("#issueTeam").value.match(/\d+/g)
-                console.log(findTeam)
                 if(findTeam == null || findTeam == []){
                     issueTeam = ""
                     return
@@ -215,9 +212,6 @@ function createIssue(){
                 showConfirmButton: false,
             })
     
-            console.log(issueList)
-            console.log(teamList)
-            console.log(projectList)
 
             localStorage.setItem("Lista de Tareas", JSON.stringify(issueList));
             localStorage.setItem("Lista de Equipos", JSON.stringify(teamList));

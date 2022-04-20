@@ -62,7 +62,6 @@ function createProject(){
 
     function setProjectImage(){
         let dropArea = document.querySelector("#droparea")
-        console.log(dropArea)
         const active = () => dropArea.classList.add("active")
         const inactive = () => dropArea.classList.remove("active")
         const prevent = (e) => e.preventDefault()
@@ -218,7 +217,6 @@ function createProject(){
         // Por cada usuario en lista de usuarios, agregar una fila con datos del usuario:
         userList.forEach(user => {
 
-            console.log(USER_CURRENT)
             if(user.id == USER_CURRENT.id){
                 return
             }
@@ -230,7 +228,6 @@ function createProject(){
                                         <button class="add__member--btn" id="addUser${user.id}-btn" type="submit" value="add member">Add</button>
                                     </div>`
                 
-        console.log(user.id)
         })
     }
 
@@ -324,7 +321,6 @@ function createProject(){
             </div>`
         })
 
-        console.log(projectMembers)
 
         // FOOTER CURRENT MEMBERS
         let footerCurrent = document.querySelector("#footerCurrent")
@@ -408,7 +404,6 @@ function createProject(){
         projectCreator = USER_CURRENT.firstName + " " + USER_CURRENT.lastName;
 
         projectDescr = document.querySelector("#projectDescr").value;
-        console.log(projectDescr)
 
         projectStartDate = new Date(trueProjectTime)
         
@@ -453,7 +448,6 @@ function createProject(){
             const foundCreator = projectMembers.find(user => user.id == USER_CURRENT.id)
             foundCreator.role = "ADMIN"
             foundCreator.admin = true
-            console.log(projectMembers)
         }
         addCreatorAsMember()
 
@@ -480,7 +474,6 @@ function createProject(){
             showConfirmButton: false,
         })
 
-        console.log(projectList);
 
         const addProject = JSON.stringify(projectList);
         localStorage.setItem("Lista de Proyectos", addProject);
